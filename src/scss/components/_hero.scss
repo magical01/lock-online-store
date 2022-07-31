@@ -1,0 +1,148 @@
+.hero {
+  background-color: rgba(0, 0, 0, 0.02);
+
+  &__slider {
+    padding-bottom: 48px;
+  }
+
+  &__item {
+    display: flex;
+    padding-top: 125px;
+    padding-left: 52px;
+    gap: 6%;
+  }
+
+  &__image {
+    width: 43%;
+  }
+
+  &__content {
+    max-width: 604px;
+    margin-top: 46px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    max-width: 300px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--gray-color);
+  }
+
+  &__newprice {
+    margin-right: 12px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--black-color);
+  }
+
+  &__oldprice {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    text-decoration-line: line-through;
+    color: #A4A4A4;
+  }
+
+  &__btn {
+    display: block;
+    margin-top: 16px;
+    padding: 12px 37px;
+    font-family: "SFProDisplay";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+  }
+}
+
+.descr-one {
+  margin-bottom: 16px;
+}
+
+.descr-two {
+  margin-bottom: 32px;
+}
+
+.hero__navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__pagination {
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ADD7FF;
+
+  &-active {
+    position: relative;
+    background-color: var(--blue-color);
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: -8px;
+      bottom: -8px;
+      border-radius: 50%;
+      border: 1px solid #ADD7FF;
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+    }
+  }
+}
+
+.hero__slider > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 12px;
+}
+
+.hero__slider > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -16px;
+}
+
+.hero-btn-next {
+  position: relative;
+  top: -3px;
+  right: -80px;
+
+  svg {
+    width: 11px;
+    height: 21px;
+  }
+}
+
+.hero-btn-prev {
+  position: relative;
+  top: -3px;
+  left: -80px;
+
+  svg {
+    width: 11px;
+    height: 21px;
+  }
+}

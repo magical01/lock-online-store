@@ -20,6 +20,7 @@ html {
   min-height: 100%;
   font-weight: 400;
   font-size: 16px;
+  color: var(--black-color);
 }
 
 img {
@@ -52,6 +53,14 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.title {
+  display: block;
+  margin: 0;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
 }
 
 .input-reset {
@@ -106,4 +115,44 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.promocode {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  font-family: "SFProDisplay";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.12em;
+  color: var(--white-color);
+  background-color: #454f5b;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__none {
+    font-size: 0;
+  }
+
+  &__text {
+    margin-left: 129px;
+    letter-spacing: 0.10em;
+  }
+
+  &__link {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      width: 100%;
+      border-bottom: 1px solid var(--white-color);
+    }
+  }
 }
