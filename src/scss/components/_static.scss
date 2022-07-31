@@ -1,0 +1,33 @@
+.static {
+  background-color: #f2f8ff;
+
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 207px;
+  }
+
+  &__num {
+    display: block;
+    margin-bottom: 16px;
+    font-family: "SFProDisplay";
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--gray-color);
+  }
+}
