@@ -22,9 +22,6 @@
   }
 
   &__image {
-    // display: inline-flex;
-    // align-items: center;
-    // justify-content: center;
     margin-bottom: 37px;
 
     svg {
@@ -35,6 +32,8 @@
   }
 
   &__descr {
+    text-align: center;
+    margin: 0;
     font-size: 20px;
     line-height: 32px;
     color: var(--gray-color);
