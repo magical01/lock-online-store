@@ -1,0 +1,167 @@
+.footer {
+  background-color: #0D2436;
+  box-shadow: inset 0px 1px 0px #C4CDD5;
+
+  &__top {
+    display: flex;
+    padding-bottom: 45px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 17.420%;
+
+    &-top {
+      margin-top: 12px;
+    }
+  }
+
+  &__right {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-right: 14.5%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: capitalize;
+
+    &-phone {
+      display: block;
+      margin-bottom: 16px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #C4CDD5;
+    }
+
+    &-email {
+      display: block;
+      margin-bottom: 16px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #C4CDD5;
+    }
+  }
+
+  &__nav {
+    min-width: 139px;
+
+    .footer__link + .footer__link {
+      margin-top: 20px;
+    }
+  }
+
+  &__contacts {
+    .footer__link:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    min-width: 146px;
+
+    .footer__link:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__container {
+    padding-top: 55px;
+  }
+
+  &__logo {
+    display: block;
+  }
+
+  &__item {
+    color: var(--white-color);
+  }
+
+  &__bottom {
+    border-top: 1px solid var(--gray-color);
+    padding-top: 24px;
+    padding-bottom: 25px;
+    text-align: center;
+
+    span {
+      font-family: "SFProDisplay";
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--white-color);
+      opacity: 0.6;
+    }
+  }
+}
+
+.social {
+  &__link + &__link {
+    margin-left: 24px;
+  }
+}
+
+
+.address {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  font-style: normal;
+}
+
+
+
+.vk {
+  display: inline-block;
+  width: 26px;
+  height: 15px;
+  background-image: url("../img/svg/vk.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.twitter {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  background-image: url("../img/svg/twitter.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.facebook {
+  display: inline-block;
+  width: 13px;
+  height: 26px;
+  background-image: url("../img/svg/facebook.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
