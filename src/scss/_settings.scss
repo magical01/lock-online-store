@@ -164,4 +164,17 @@ a {
   line-height: 26px;
   color: var(--white-color);
   background-color: var(--blue-color);
+  transition: all .3s;
+
+  @include hover {
+    background-color: #56A9F8;;
+  }
+
+  &:focus {
+    background-color: #2E81D0;
+  }
+
+  &:active {
+    background-color: #2E81D0;
+  }
 }

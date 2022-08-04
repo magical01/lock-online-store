@@ -1,0 +1,44 @@
+.breadcrumbs {
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    transition: all .3s;
+
+    &:not(:last-child) {
+      padding-right: 14px;
+
+      &::after {
+        content: "/";
+        position: absolute;
+        top: 3px;
+        right: 5px;
+      }
+    }
+  }
+
+  &__link {
+    line-height: 26px;
+    color: #141414;
+    transition: all .2s;
+
+    @include hover {
+      color: var(--blue-color);
+    }
+
+    &--current {
+      color: var(--gray-color);
+
+      @include hover {
+        color: var(--gray-color);
+      }
+    }
+  }
+}
