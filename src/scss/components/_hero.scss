@@ -88,6 +88,7 @@
   position: relative;
   margin-top: 40px;
   text-align: center;
+  z-index: 500;
 }
 
 .swiper-pagination-bullet {
@@ -96,6 +97,7 @@
   &-active {
     position: relative;
     background-color: var(--blue-color);
+    transition: all .1s;
 
     &:before {
       content: "";
@@ -107,6 +109,7 @@
       width: 24px;
       height: 24px;
       background-color: transparent;
+      transition: all .1s;
     }
   }
 }
@@ -123,10 +126,21 @@
   position: relative;
   top: -3px;
   right: -80px;
+  z-index: 505;
 
   svg {
     width: 11px;
     height: 21px;
+
+    path {
+      transition: all .3s;
+    }
+  }
+
+  &:hover {
+    svg path {
+      stroke: #C4CDD5;
+    }
   }
 }
 
@@ -134,9 +148,20 @@
   position: relative;
   top: -3px;
   left: -80px;
+  z-index: 505;
 
   svg {
     width: 11px;
     height: 21px;
+
+    path {
+      transition: all .3s;
+    }
+  }
+
+  &:hover {
+    svg path {
+      stroke: #C4CDD5;
+    }
   }
 }

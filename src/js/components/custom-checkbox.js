@@ -1,7 +1,6 @@
-const checkboxItem = document?.querySelectorAll('.descr-top__item');
-const filtersItem = document?.querySelectorAll('.filters__item');
+import vars from '../_vars';
 
-checkboxItem?.forEach(elem => {
+vars.checkboxItem?.forEach(elem => {
   elem.querySelector('input').addEventListener('change', () => {
     let checked = elem.querySelector('input').checked;
 
@@ -13,7 +12,7 @@ checkboxItem?.forEach(elem => {
   });
 });
 
-filtersItem?.forEach(elem => {
+vars.filtersItem?.forEach(elem => {
   elem.querySelector('input').addEventListener('change', () => {
     let checked = elem.querySelector('input').checked;
 

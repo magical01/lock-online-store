@@ -10,7 +10,7 @@
   <div class="catalog-product__filter filters">
     <strong class="filters__subject">Фильтр</strong>
     <div class="filters__content filters__content--open">
-      <div class="filters__top">
+      <div class="filters__top" role="button" aria-expanded="true" aria-label="Закрыть">
         <h4 class="filters__title">Цена</h4>
         <span class="filters__close">
           <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,7 +19,7 @@
           </svg>
         </span>
       </div>
-      <div class="filters__bottom">
+      <div class="filters__bottom" aria-hidden="false">
         <div class="filters__inputs">
           <label class="filters__label">
             <input class="filters__input input-reset" type="number" min="500" max="200000" placeholder="500"
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="filters__content filters__content--open">
-      <div class="filters__top">
+      <div class="filters__top" role="button" aria-expanded="true" aria-label="Закрыть фильтр">
         <h4 class="filters__title">Особенности</h4>
         <span class="filters__close">
           <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@
           </svg>
         </span>
       </div>
-      <div class="filters__bottom">
+      <div class="filters__bottom" aria-hidden="false">
         <ul class="filters__list list-reset">
           <li class="filters__item">
             <label class="custom-checkbox custom-checkbox--active">
@@ -74,8 +74,8 @@
       </div>
     </div>
     <div class="filters__content filters__content">
-      <div class="filters__top">
-        <h4 class="filters__title">Особенности</h4>
+      <div class="filters__top" role="button" aria-expanded="false" aria-label="Открыть фильтр">
+        <h4 class="filters__title">Цвет</h4>
         <span class="filters__close">
           <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 1L7 7L1 1" stroke="#938A9F" stroke-width="1.5" stroke-linecap="round"
@@ -83,7 +83,35 @@
           </svg>
         </span>
       </div>
-      <div class="filters__bottom">
+      <div class="filters__bottom" aria-hidden="true">
+        content
+      </div>
+    </div>
+    <div class="filters__content filters__content">
+      <div class="filters__top" role="button" aria-expanded="false" aria-label="Открыть фильтр">
+        <h4 class="filters__title">Материал</h4>
+        <span class="filters__close">
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1L7 7L1 1" stroke="#938A9F" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </span>
+      </div>
+      <div class="filters__bottom" aria-hidden="true">
+        content
+      </div>
+    </div>
+    <div class="filters__content filters__content">
+      <div class="filters__top" role="button" aria-expanded="false" aria-label="Открыть фильтр">
+        <h4 class="filters__title">Размеры</h4>
+        <span class="filters__close">
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1L7 7L1 1" stroke="#938A9F" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </span>
+      </div>
+      <div class="filters__bottom" aria-hidden="true">
         content
       </div>
     </div>

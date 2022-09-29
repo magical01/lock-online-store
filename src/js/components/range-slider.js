@@ -7,12 +7,12 @@ const inputs = [input0, input1];
 import noUiSlider from 'nouislider'
 
 noUiSlider.create(rangeSlider, {
-  start: [500, 200000],
+  start: [24500, 75000],
   connect: true,
   step: 1,
   range: {
       'min': [500],
-      'max': [200000]
+      'max': [100000]
   }
 });
 
