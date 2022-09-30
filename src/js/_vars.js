@@ -11,4 +11,10 @@ export default {
   filtersTop: document?.querySelectorAll('.filters__top'),
   reset: document?.querySelector('.reset-filters'),
   customSelect: document?.querySelectorAll('.custom-select'),
+  catalogPropsLeft: document?.querySelector('.catalog-props__left'),
+  productCheckboxesItem: document?.querySelectorAll('.product-checkboxes__item'),
+  accordions: document?.querySelectorAll('.accordion')
 }
+
+
+

@@ -14,16 +14,18 @@
   </div>
     @include('partials/header.html')
     <main class="main">
-      @include('partials/breadcrumbs.html')
-      <section class="catalog-product">
-        <div class="container catalog-product__container">
-          <h3 class="catalog-product__title">Накладные электронные замки <span>(854)</span></h3>
-          <div class="catalog-product__content">
-            @include('partials/catalog-filter.html')
-            @include('partials/catalog-product.html')
-          </div>
+
+      <div class="breadcrumbs">
+        <div class="container breadcrumbs__container">
+          <ul class="breadcrumbs__list list-reset">
+            <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link breadcrumbs__link--current">Дверной Замок Golden Soft для офиса</a></li>
+          </ul>
         </div>
-      </section>
+      </div>
+
+
+      @include('partials/product-page.html')
       @include('partials/recently-product.html')
       @include('partials/catalog-descr.html')
       @include('partials/callback.html')

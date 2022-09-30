@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.querySelectorAll('.filters__bottom').forEach(elem => {
       elem.style.maxHeight = null;
+    });
+
+    Array.from(vars.catalogPropsLeft.children).forEach(elem => {
+      elem.remove();
+    });
+
+    vars.filtersItem.forEach(elem => {
+      elem.querySelector('input').checked = false;
+      elem.querySelector('.custom-checkbox').classList.remove('custom-checkbox--active');
     })
   });
 

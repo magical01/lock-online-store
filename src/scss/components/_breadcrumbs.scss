@@ -29,15 +29,15 @@
     color: #141414;
     transition: all .2s;
 
-    @include hover {
+    &:hover {
       color: var(--blue-color);
     }
 
     &--current {
-      color: var(--gray-color);
+      color: var(--dis-color);
 
-      @include hover {
-        color: var(--gray-color);
+      &:hover {
+        color: var(--dis-color);
       }
     }
   }

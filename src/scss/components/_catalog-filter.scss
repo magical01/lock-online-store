@@ -236,9 +236,33 @@
     line-height: 24px;
 
     svg {
-      margin-left: 10px;
+      margin-left: 3px;
+      pointer-events: none;
     }
   }
+
+  &__btn + &__btn  {
+    margin-left: 7px;
+  }
+
+  // &__clear {
+  //   position: relative;
+  //   margin-left: 15px;
+  //   font-size: 14px;
+  //   line-height: 24px;
+
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     left: 0;
+  //     bottom: 2px;
+  //     width: 100%;
+  //     height: 1px;
+  //     background-color: currentColor;
+  //     opacity: 1;
+  //     transition: all .1s;
+  //   }
+  // }
 }
 
 .rating {
@@ -309,6 +333,18 @@
 .custom-select {
   position: relative;
 
+  // &:focus {
+  //   .custom-select__top {
+  //     &::after {
+  //       transform: rotate(180deg);
+  //     }
+  //   }
+
+  //   .custom-select__dropdown {
+  //     display: block;
+  //   }
+  // }
+
   &__top {
     position: relative;
     border: 1px solid var(--black-color);
@@ -363,6 +399,7 @@
   }
 }
 
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -411,6 +448,12 @@
     svg {
       width: 14px;
       height: 14px;
+    }
+  }
+
+  &-btn--disabled {
+    svg path {
+      stroke: #C4CDD5;;
     }
   }
 }

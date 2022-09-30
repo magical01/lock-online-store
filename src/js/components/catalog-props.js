@@ -11,12 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    elem?.addEventListener('focus', (e) => {
-      e.currentTarget.classList.add('custom-select--open');
-    });
-
-    elem?.addEventListener('blur', (e) => {
-      e.currentTarget.classList.remove('custom-select--open');
-    });
   });
 });
