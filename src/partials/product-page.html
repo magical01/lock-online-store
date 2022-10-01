@@ -325,21 +325,21 @@
                 <span class="tabs-content__date">20 августа, 2021</span>
                 <div class="tabs-content__rating rating">
                   <div class="rating__group">
-                    <input class="rating__star" id="reviews__5" name="reviews" type="radio" value="1"
+                    <input class="rating__star" id="review__5" name="review" type="radio" value="1"
                       aria-label="Ужасно">
-                    <label class="rating__label" for="reviews__5"></label>
-                    <input class="rating__star" id="reviews__4" name="reviews" type="radio" value="2"
+                    <label class="rating__label" for="review__5"></label>
+                    <input class="rating__star" id="review__4" name="review" type="radio" value="2"
                       aria-label="Сносно">
-                    <label class="rating__label" for="reviews__4"></label>
-                    <input class="rating__star" id="reviews__3" name="reviews" type="radio" value="3"
+                    <label class="rating__label" for="review__4"></label>
+                    <input class="rating__star" id="review__3" name="review" type="radio" value="3"
                       aria-label="Нормально" checked>
-                    <label class="rating__label" for="reviews__3"></label>
-                    <input class="rating__star" id="reviews__2" name="reviews" type="radio" value="4"
+                    <label class="rating__label" for="review__3"></label>
+                    <input class="rating__star" id="review__2" name="review" type="radio" value="4"
                       aria-label="Хорошо">
-                    <label class="rating__label" for="reviews__2"></label>
-                    <input class="rating__star" id="reviews__1" name="reviews" type="radio" value="5"
+                    <label class="rating__label" for="review__2"></label>
+                    <input class="rating__star" id="review__1" name="review" type="radio" value="5"
                       aria-label="Отлично">
-                    <label class="rating__label" for="reviews__1"></label>
+                    <label class="rating__label" for="review__1"></label>
                   </div>
                 </div>
               </div>
@@ -375,21 +375,21 @@
                 <span class="tabs-content__date">20 августа, 2021</span>
                 <div class="tabs-content__rating rating">
                   <div class="rating__group">
-                    <input class="rating__star" id="reviews__5" name="reviews" type="radio" value="1"
+                    <input class="rating__star" id="rev__5" name="rev" type="radio" value="1"
                       aria-label="Ужасно">
-                    <label class="rating__label" for="reviews__5"></label>
-                    <input class="rating__star" id="reviews__4" name="reviews" type="radio" value="2"
+                    <label class="rating__label" for="rev__5"></label>
+                    <input class="rating__star" id="rev__4" name="rev" type="radio" value="2"
                       aria-label="Сносно">
-                    <label class="rating__label" for="reviews__4"></label>
-                    <input class="rating__star" id="reviews__3" name="reviews" type="radio" value="3"
+                    <label class="rating__label" for="rev__4"></label>
+                    <input class="rating__star" id="rev__3" name="rev" type="radio" value="3"
                       aria-label="Нормально" checked>
-                    <label class="rating__label" for="reviews__3"></label>
-                    <input class="rating__star" id="reviews__2" name="reviews" type="radio" value="4"
+                    <label class="rating__label" for="rev__3"></label>
+                    <input class="rating__star" id="rev__2" name="rev" type="radio" value="4"
                       aria-label="Хорошо">
-                    <label class="rating__label" for="reviews__2"></label>
-                    <input class="rating__star" id="reviews__1" name="reviews" type="radio" value="5"
+                    <label class="rating__label" for="rev__2"></label>
+                    <input class="rating__star" id="rev__1" name="rev" type="radio" value="5"
                       aria-label="Отлично">
-                    <label class="rating__label" for="reviews__1"></label>
+                    <label class="rating__label" for="rev__1"></label>
                   </div>
                 </div>
               </div>
@@ -422,7 +422,9 @@
           </ul>
           <form class="tabs-content__form tabs-form" action="#">
             <div class="tabs-form__inner">
-              Ваша оценка
+              <span class="tabs-form__text">
+                Ваша оценка
+              </span>
               <div class="tabs-form__rating rating">
                 <div class="rating__group">
                   <input class="rating__star" id="form__5" name="form" type="radio" value="1" aria-label="Ужасно">
@@ -439,10 +441,18 @@
               </div>
             </div>
             <label class="tabs-form__label">
-              <span class="tabs-form__text">fff</span>
-              <input type="text" name="Имя" class="tabs-form__input input-reset" placeholder="Имя">
+              <span class="tabs-form__text">Ваше имя</span>
+              <input type="text" name="Имя" class="tabs-form__input input-reset tabs-form__name" placeholder="Введите Ваше имя">
             </label>
-            <button class="tabs-form__btn btn-reset">Оставить отзыв</button>
+            <label class="tabs-form__label">
+              <span class="tabs-form__text">Ваш Email</span>
+              <input type="text" name="Имя" class="tabs-form__input input-reset tabs-form__email" placeholder="Введите Ваш Email">
+            </label>
+            <label class="tabs-form__label">
+              <span class="tabs-form__text">Ваш комментарий</span>
+              <input type="text" name="Имя" class="tabs-form__input input-reset tabs-form__comment" placeholder="Введите Ваш комментарий">
+            </label>
+            <button class="tabs-form__btn btn-reset main-btn">Оставить отзыв</button>
           </form>
         </div>
       </div>
