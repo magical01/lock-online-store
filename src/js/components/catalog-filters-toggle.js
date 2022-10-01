@@ -1,16 +1,16 @@
 import vars from "../_vars";
 
-document.addEventListener('DOMContentLoaded', () => {
+export const changeCheckbox = (elem) => {
+  let checked = elem.querySelector('input').checked;
 
-  const changeCheckbox = (elem) => {
-    let checked = elem.querySelector('input').checked;
-
-    if (checked) {
-      elem.querySelector('.custom-checkbox').classList.add('custom-checkbox--active');
-    } else {
-      elem.querySelector('.custom-checkbox').classList.remove('custom-checkbox--active');
-    }
+  if (checked) {
+    elem.querySelector('.custom-checkbox').classList.add('custom-checkbox--active');
+  } else {
+    elem.querySelector('.custom-checkbox').classList.remove('custom-checkbox--active');
   }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
 
   const createChoiceItem = (text) => {
     return (
@@ -30,13 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
       changeCheckbox(elem)
     });
   });
-
-  vars.productCheckboxesItem?.forEach(elem => {
-    elem.querySelector('input').addEventListener('change', () => {
-      changeCheckbox(elem)
-    });
-  });
-
 
   vars.filtersItem?.forEach(elem => {
     elem.querySelector('input').addEventListener('change', () => {

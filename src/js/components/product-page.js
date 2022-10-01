@@ -1,6 +1,19 @@
 import vars from "../_vars";
+import {changeCheckbox} from "./catalog-filters-toggle";
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  vars.productCheckboxesItem?.forEach(elem => {
+    elem.querySelector('input').addEventListener('change', () => {
+      changeCheckbox(elem)
+    });
+  });
+
+  vars.tabsСheckboxes?.forEach(elem => {
+    elem.querySelector('input').addEventListener('change', () => {
+      changeCheckbox(elem)
+    });
+  });
 
   document.querySelectorAll('.accordion--active').forEach(elem => {
     elem.children[1].style.maxHeight = elem.children[1].scrollHeight + 'px';

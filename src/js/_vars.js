@@ -13,8 +13,8 @@ export default {
   customSelect: document?.querySelectorAll('.custom-select'),
   catalogPropsLeft: document?.querySelector('.catalog-props__left'),
   productCheckboxesItem: document?.querySelectorAll('.product-checkboxes__item'),
-  accordions: document?.querySelectorAll('.accordion')
+  accordions: document?.querySelectorAll('.accordion'),
+  tabsСheckboxes: document?.querySelectorAll('.tabs-content__checkbox')
 }
-
 
 

@@ -35,14 +35,14 @@
         <span class="product-checkboxes__text">Подходит для установки на:</span>
         <ul class="product-checkboxes__list list-reset">
           <li class="product-checkboxes__item">
-            <label class="custom-checkbox">
-              <input class="custom-checkbox__input visually-hidden" type="checkbox">
+            <label class="custom-checkbox custom-checkbox--active">
+              <input class="custom-checkbox__input visually-hidden" type="checkbox" checked>
               <span class="custom-checkbox__text">Деревянную дверь</span>
             </label>
           </li>
           <li class="product-checkboxes__item">
-            <label class="custom-checkbox">
-              <input class="custom-checkbox__input visually-hidden" type="checkbox">
+            <label class="custom-checkbox custom-checkbox--active">
+              <input class="custom-checkbox__input visually-hidden" type="checkbox" checked>
               <span class="custom-checkbox__text">Межкомнатную дверь</span>
             </label>
           </li>
@@ -139,10 +139,313 @@
     </div>
     <div class="product-page__tabs product-tabs">
       <ul class="product-tabs__list list-reset">
-        <li class="product-tabs__item">Характеристики</li>
-        <li class="product-tabs__item">Описание</li>
-        <li class="product-tabs__item">Отзывы</li>
+        <li class="product-tabs__item"><button class="product-tabs__btn btn-reset product-tabs__btn--active"
+            data-tabs-path="charact">Характеристики</button></li>
+        <li class="product-tabs__item"><button class="product-tabs__btn btn-reset"
+            data-tabs-path="descr">Описание</button></li>
+        <li class="product-tabs__item"><button class="product-tabs__btn btn-reset"
+            data-tabs-path="reviews">Отзывы</button></li>
       </ul>
+
+      <!-- <div class="product-tabs__content tabs-content product-tabs__content--active" data-tabs-path="charact">
+        <div class="tabs-content__inner">
+
+          <div class="tabs-content__left">
+            <ul class="tabs-content__list list-reset">
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Память на количество карт</span>
+                <span class="tabs-content__descr">2033</span>
+              </li>
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Приложение</span>
+                <span class="tabs-content__descr">Нет</span>
+              </li>
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Материал</span>
+                <span class="tabs-content__descr">Сталь, силиконовые вставки</span>
+              </li>
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Цвет</span>
+                <span class="tabs-content__descr">Черный, хром</span>
+              </li>
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Питание</span>
+                <span class="tabs-content__descr">DC 6V, 4 AAA</span>
+              </li>
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Разблокировка</span>
+                <span class="tabs-content__descr">Пин-код, карта или браслет Mifaire, ключ, приложение, отпечаток пальца</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tabs-content__right">
+            <ul class="tabs-content__list list-reset">
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Тип двери</span>
+                <span class="tabs-content__descr">Деревянная, металлическая</span>
+              </li>
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Толщина двери</span>
+                <span class="tabs-content__descr">38-55 мм</span>
+              </li>
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Размеры</span>
+                <span class="tabs-content__descr">302мм * 43мм * 22.55мм</span>
+              </li>
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Вес</span>
+                <span class="tabs-content__descr">2.5 кг</span>
+              </li>
+              <li class="tabs-content__item">
+                <span class="tabs-content__name">Комплектация</span>
+                <span class="tabs-content__descr">Без мартизы, с мартизой</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="product-tabs__content tabs-content" data-tabs-path="descr">
+        <div class="tabs-content__inner">
+
+          <div class="tabs-content__left">
+            <p class="tabs-content__description">Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный
+              глянцевый блеск, четкие линии, красивые формы – этот замок сразу заявляет о своем высоком статусе.
+              Изысканный черный цвет корпуса в обрамлении из золота мгновенно притягивает взгляды. Функционален, удобен
+              в работе и легок в уходе: для сохранения блеска достаточно лишь протереть поверхность салфеткой.</p>
+            <p class="tabs-content__description">
+              Подходит для установки на деревянную/межкомнатную дверь.
+            </p>
+            <strong class="tabs-content__title">
+              Преимущества умного замка от Golden Soft с приложением:
+            </strong>
+            <ul class="tabs-content__checkboxes list-reset">
+              <li class="tabs-content__checkbox">
+                <label class="custom-checkbox custom-checkbox--active">
+                  <input class="custom-checkbox__input visually-hidden" type="checkbox" checked>
+                  <span class="custom-checkbox__text">Минимизирует кражи среди персонала</span>
+                </label>
+              </li>
+              <li class="tabs-content__checkbox">
+                <label class="custom-checkbox custom-checkbox--active">
+                  <input class="custom-checkbox__input visually-hidden" type="checkbox" checked>
+                  <span class="custom-checkbox__text">Сложно взломать, высокая надежность</span>
+                </label>
+              </li>
+              <li class="tabs-content__checkbox">
+                <label class="custom-checkbox custom-checkbox--active">
+                  <input class="custom-checkbox__input visually-hidden" type="checkbox" checked>
+                  <span class="custom-checkbox__text">Можно отказаться от создания физических карт или ключей и высылать
+                    электронный ключ новым сотрудникам прямо на смартфон</span>
+                </label>
+              </li>
+              <li class="tabs-content__checkbox">
+                <label class="custom-checkbox custom-checkbox--active">
+                  <input class="custom-checkbox__input visually-hidden" type="checkbox" checked>
+                  <span class="custom-checkbox__text">Отслеживание статистики открытий с информацией о каждом
+                    открывавшем замок человеке</span>
+                </label>
+              </li>
+            </ul>
+            <p class="tabs-content__description">
+              Каждый ключ записывается в память замка с уникальным токеном, что делает почти невозможным подделку
+              цифрового ключа. Замки программируются с помощью Bluetooth-соединения с приложением на вашем устройстве
+              или с помощью мастер – карты, которая переводит замок в режим программирования, а после получения ключа вы
+              сможете выставить для себя уникальный пин-код или настроить отпечаток пальца прямо через приложение.
+              Также, вы всегда можете выписывать карты или браслеты стандарта Mifare с помощью Энкодера в связке с
+              приложением на ПК либо Android
+            </p>
+          </div>
+
+          <div class="tabs-content__right">
+            <picture>
+              <source srcset="img/tabs-descr.avif" type="image/avif">
+              <source srcset="img/tabs-descr.webp" type="image/webp">
+              <img loading="lazy" src="img/tabs-descr.png" class="image" width="499" height="650" alt="Дверной Замок Golden Soft для офиса">
+            </picture>
+          </div>
+        </div>
+      </div> -->
+      <div class="product-tabs__content tabs-content" data-tabs-path="reviews">
+        <div class="tabs-content__inner">
+          <ul class="tabs-content__list list-reset">
+            <li class="tabs-content__item">
+              <div class="tabs-content__top">
+                <strong class="tabs-content__name">Андрей Попенко</strong>
+                <span class="tabs-content__date">20 августа, 2021</span>
+                <div class="tabs-content__rating rating">
+                  <div class="rating__group">
+                    <input class="rating__star" id="reviews__5" name="reviews" type="radio" value="1"
+                      aria-label="Ужасно">
+                    <label class="rating__label" for="reviews__5"></label>
+                    <input class="rating__star" id="reviews__4" name="reviews" type="radio" value="2"
+                      aria-label="Сносно">
+                    <label class="rating__label" for="reviews__4"></label>
+                    <input class="rating__star" id="reviews__3" name="reviews" type="radio" value="3"
+                      aria-label="Нормально" checked>
+                    <label class="rating__label" for="reviews__3"></label>
+                    <input class="rating__star" id="reviews__2" name="reviews" type="radio" value="4"
+                      aria-label="Хорошо">
+                    <label class="rating__label" for="reviews__2"></label>
+                    <input class="rating__star" id="reviews__1" name="reviews" type="radio" value="5"
+                      aria-label="Отлично">
+                    <label class="rating__label" for="reviews__1"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-content__bottom">
+                <p class="tabs-content__description">
+                  Et feugiat eu scelerisque nulla mattis. At et enim dui mauris. Nisi, hendrerit dictum consequat
+                  tristique sed. Est ultrices etiam in lorem nulla a.Et feugiat eu scelerisque nulla mattis. At et enim
+                  dui mauris. Nisi
+                </p>
+                <div class="tabs-content__buttons">
+                  <button class="tabs-content__answer btn-reset">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.277778 0C0.124365 0 0 0.12438 0 0.27781V6.11182C0 6.72555 0.497461 7.22306 1.11111 7.22306H8.15L6.23333 9.1344C6.18075 9.18656 6.15117 9.25757 6.15117 9.33164C6.15117 9.40572 6.18075 9.47673 6.23333 9.52889L6.62778 9.91782C6.67994 9.97042 6.75093 10 6.825 10C6.89907 10 6.97007 9.97042 7.02222 9.91782L9.87778 7.06749C9.95594 6.98942 9.9999 6.88349 10 6.77301V6.56188C9.99872 6.45163 9.95494 6.34614 9.87778 6.2674L7.02222 3.41707C6.97007 3.36447 6.89907 3.33489 6.825 3.33489C6.75093 3.33489 6.67994 3.36447 6.62778 3.41707L6.23333 3.81156C6.18108 3.86276 6.15163 3.93285 6.15163 4.00602C6.15163 4.07919 6.18108 4.14928 6.23333 4.20049L8.15 6.11182H1.11111V0.27781C1.11111 0.12438 0.986746 0 0.833333 0H0.277778Z"
+                        fill="#4295E4" />
+                    </svg>
+                    Ответить
+                  </button>
+                  <button class="tabs-content__comments btn-reset">
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.358 0H1.88999C0.847822 0 0 0.847849 0 1.88999V8.28013C0 9.32227 0.847822 10.1701 1.88999 10.1701H2.63165L2.64616 11.8386C2.64746 11.9924 2.73577 12.1322 2.8741 12.1994C2.93032 12.2267 2.99085 12.2401 3.05108 12.2401C3.13903 12.2401 3.22634 12.2115 3.29858 12.1557L5.87121 10.1701H11.358C12.4002 10.1701 13.248 9.32227 13.248 8.28013V1.88999C13.248 0.847849 12.4002 0 11.358 0ZM12.438 8.28015C12.438 8.87567 11.9536 9.36015 11.358 9.36015H5.73311C5.64358 9.36015 5.55657 9.38983 5.48567 9.44453L3.44902 11.0164L3.4381 9.76163C3.43618 9.53934 3.25542 9.36015 3.03313 9.36015H1.88999C1.29448 9.36015 0.809993 8.87567 0.809993 8.28015V1.88999C0.809993 1.29448 1.29448 0.809993 1.88999 0.809993H11.3581C11.9536 0.809993 12.4381 1.29448 12.4381 1.88999V8.28015H12.438Z"
+                        fill="#C4CDD5" />
+                    </svg>
+                    1 комментарий
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="tabs-content__item">
+              <div class="tabs-content__top">
+                <strong class="tabs-content__name">Андрей Попенко</strong>
+                <span class="tabs-content__date">20 августа, 2021</span>
+                <div class="tabs-content__rating rating">
+                  <div class="rating__group">
+                    <input class="rating__star" id="reviews__5" name="reviews" type="radio" value="1"
+                      aria-label="Ужасно">
+                    <label class="rating__label" for="reviews__5"></label>
+                    <input class="rating__star" id="reviews__4" name="reviews" type="radio" value="2"
+                      aria-label="Сносно">
+                    <label class="rating__label" for="reviews__4"></label>
+                    <input class="rating__star" id="reviews__3" name="reviews" type="radio" value="3"
+                      aria-label="Нормально" checked>
+                    <label class="rating__label" for="reviews__3"></label>
+                    <input class="rating__star" id="reviews__2" name="reviews" type="radio" value="4"
+                      aria-label="Хорошо">
+                    <label class="rating__label" for="reviews__2"></label>
+                    <input class="rating__star" id="reviews__1" name="reviews" type="radio" value="5"
+                      aria-label="Отлично">
+                    <label class="rating__label" for="reviews__1"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-content__bottom">
+                <p class="tabs-content__description">
+                  Et feugiat eu scelerisque nulla mattis. At et enim dui mauris. Nisi, hendrerit dictum consequat
+                  tristique sed. Est ultrices etiam in lorem nulla a.Et feugiat eu scelerisque nulla mattis. At et enim
+                  dui mauris. Nisi
+                </p>
+                <div class="tabs-content__buttons">
+                  <button class="tabs-content__answer btn-reset">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.277778 0C0.124365 0 0 0.12438 0 0.27781V6.11182C0 6.72555 0.497461 7.22306 1.11111 7.22306H8.15L6.23333 9.1344C6.18075 9.18656 6.15117 9.25757 6.15117 9.33164C6.15117 9.40572 6.18075 9.47673 6.23333 9.52889L6.62778 9.91782C6.67994 9.97042 6.75093 10 6.825 10C6.89907 10 6.97007 9.97042 7.02222 9.91782L9.87778 7.06749C9.95594 6.98942 9.9999 6.88349 10 6.77301V6.56188C9.99872 6.45163 9.95494 6.34614 9.87778 6.2674L7.02222 3.41707C6.97007 3.36447 6.89907 3.33489 6.825 3.33489C6.75093 3.33489 6.67994 3.36447 6.62778 3.41707L6.23333 3.81156C6.18108 3.86276 6.15163 3.93285 6.15163 4.00602C6.15163 4.07919 6.18108 4.14928 6.23333 4.20049L8.15 6.11182H1.11111V0.27781C1.11111 0.12438 0.986746 0 0.833333 0H0.277778Z"
+                        fill="#4295E4" />
+                    </svg>
+                    Ответить
+                  </button>
+                  <button class="tabs-content__comments btn-reset">
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.358 0H1.88999C0.847822 0 0 0.847849 0 1.88999V8.28013C0 9.32227 0.847822 10.1701 1.88999 10.1701H2.63165L2.64616 11.8386C2.64746 11.9924 2.73577 12.1322 2.8741 12.1994C2.93032 12.2267 2.99085 12.2401 3.05108 12.2401C3.13903 12.2401 3.22634 12.2115 3.29858 12.1557L5.87121 10.1701H11.358C12.4002 10.1701 13.248 9.32227 13.248 8.28013V1.88999C13.248 0.847849 12.4002 0 11.358 0ZM12.438 8.28015C12.438 8.87567 11.9536 9.36015 11.358 9.36015H5.73311C5.64358 9.36015 5.55657 9.38983 5.48567 9.44453L3.44902 11.0164L3.4381 9.76163C3.43618 9.53934 3.25542 9.36015 3.03313 9.36015H1.88999C1.29448 9.36015 0.809993 8.87567 0.809993 8.28015V1.88999C0.809993 1.29448 1.29448 0.809993 1.88999 0.809993H11.3581C11.9536 0.809993 12.4381 1.29448 12.4381 1.88999V8.28015H12.438Z"
+                        fill="#C4CDD5" />
+                    </svg>
+                    1 комментарий
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="tabs-content__item">
+              <div class="tabs-content__top">
+                <strong class="tabs-content__name">Андрей Попенко</strong>
+                <span class="tabs-content__date">20 августа, 2021</span>
+                <div class="tabs-content__rating rating">
+                  <div class="rating__group">
+                    <input class="rating__star" id="reviews__5" name="reviews" type="radio" value="1"
+                      aria-label="Ужасно">
+                    <label class="rating__label" for="reviews__5"></label>
+                    <input class="rating__star" id="reviews__4" name="reviews" type="radio" value="2"
+                      aria-label="Сносно">
+                    <label class="rating__label" for="reviews__4"></label>
+                    <input class="rating__star" id="reviews__3" name="reviews" type="radio" value="3"
+                      aria-label="Нормально" checked>
+                    <label class="rating__label" for="reviews__3"></label>
+                    <input class="rating__star" id="reviews__2" name="reviews" type="radio" value="4"
+                      aria-label="Хорошо">
+                    <label class="rating__label" for="reviews__2"></label>
+                    <input class="rating__star" id="reviews__1" name="reviews" type="radio" value="5"
+                      aria-label="Отлично">
+                    <label class="rating__label" for="reviews__1"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-content__bottom">
+                <p class="tabs-content__description">
+                  Et feugiat eu scelerisque nulla mattis. At et enim dui mauris. Nisi, hendrerit dictum consequat
+                  tristique sed. Est ultrices etiam in lorem nulla a.Et feugiat eu scelerisque nulla mattis. At et enim
+                  dui mauris. Nisi
+                </p>
+                <div class="tabs-content__buttons">
+                  <button class="tabs-content__answer btn-reset">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.277778 0C0.124365 0 0 0.12438 0 0.27781V6.11182C0 6.72555 0.497461 7.22306 1.11111 7.22306H8.15L6.23333 9.1344C6.18075 9.18656 6.15117 9.25757 6.15117 9.33164C6.15117 9.40572 6.18075 9.47673 6.23333 9.52889L6.62778 9.91782C6.67994 9.97042 6.75093 10 6.825 10C6.89907 10 6.97007 9.97042 7.02222 9.91782L9.87778 7.06749C9.95594 6.98942 9.9999 6.88349 10 6.77301V6.56188C9.99872 6.45163 9.95494 6.34614 9.87778 6.2674L7.02222 3.41707C6.97007 3.36447 6.89907 3.33489 6.825 3.33489C6.75093 3.33489 6.67994 3.36447 6.62778 3.41707L6.23333 3.81156C6.18108 3.86276 6.15163 3.93285 6.15163 4.00602C6.15163 4.07919 6.18108 4.14928 6.23333 4.20049L8.15 6.11182H1.11111V0.27781C1.11111 0.12438 0.986746 0 0.833333 0H0.277778Z"
+                        fill="#4295E4" />
+                    </svg>
+                    Ответить
+                  </button>
+                  <button class="tabs-content__comments btn-reset">
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.358 0H1.88999C0.847822 0 0 0.847849 0 1.88999V8.28013C0 9.32227 0.847822 10.1701 1.88999 10.1701H2.63165L2.64616 11.8386C2.64746 11.9924 2.73577 12.1322 2.8741 12.1994C2.93032 12.2267 2.99085 12.2401 3.05108 12.2401C3.13903 12.2401 3.22634 12.2115 3.29858 12.1557L5.87121 10.1701H11.358C12.4002 10.1701 13.248 9.32227 13.248 8.28013V1.88999C13.248 0.847849 12.4002 0 11.358 0ZM12.438 8.28015C12.438 8.87567 11.9536 9.36015 11.358 9.36015H5.73311C5.64358 9.36015 5.55657 9.38983 5.48567 9.44453L3.44902 11.0164L3.4381 9.76163C3.43618 9.53934 3.25542 9.36015 3.03313 9.36015H1.88999C1.29448 9.36015 0.809993 8.87567 0.809993 8.28015V1.88999C0.809993 1.29448 1.29448 0.809993 1.88999 0.809993H11.3581C11.9536 0.809993 12.4381 1.29448 12.4381 1.88999V8.28015H12.438Z"
+                        fill="#C4CDD5" />
+                    </svg>
+                    1 комментарий
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <form class="tabs-content__form tabs-form" action="#">
+            <div class="tabs-form__inner">
+              Ваша оценка
+              <div class="tabs-form__rating rating">
+                <div class="rating__group">
+                  <input class="rating__star" id="form__5" name="form" type="radio" value="1" aria-label="Ужасно">
+                  <label class="rating__label" for="form__5"></label>
+                  <input class="rating__star" id="form__4" name="form" type="radio" value="2" aria-label="Сносно">
+                  <label class="rating__label" for="form__4"></label>
+                  <input class="rating__star" id="form__3" name="form" type="radio" value="3" aria-label="Нормально">
+                  <label class="rating__label" for="form__3"></label>
+                  <input class="rating__star" id="form__2" name="form" type="radio" value="4" aria-label="Хорошо">
+                  <label class="rating__label" for="form__2"></label>
+                  <input class="rating__star" id="form__1" name="form" type="radio" value="5" aria-label="Отлично">
+                  <label class="rating__label" for="form__1"></label>
+                </div>
+              </div>
+            </div>
+            <label class="tabs-form__label">
+              <span class="tabs-form__text">fff</span>
+              <input type="text" name="Имя" class="tabs-form__input input-reset" placeholder="Имя">
+            </label>
+            <button class="tabs-form__btn btn-reset">Оставить отзыв</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </section>

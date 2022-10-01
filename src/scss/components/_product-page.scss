@@ -28,6 +28,11 @@
   &__info {
     margin-bottom: 16px;
   }
+
+  &__rating {
+    font-size: 20px;
+  }
+
   &__num {
     display: inline-block;
     margin-right: 13px;
@@ -55,10 +60,12 @@
   }
 
   &__prices {
+    display: flex;
     margin-top: 24px;
   }
 
   &__newprice {
+    margin-right: 12px;
     font-weight: 600;
     font-size: 22px;
     line-height: 26px;
@@ -105,6 +112,8 @@
   &__dropdowns {
     margin-top: 32px;
   }
+
+
 }
 
 .product-checkboxes {
@@ -270,6 +279,7 @@
 
   &__list {
     display: flex;
+    margin-bottom: 36px;
   }
 
   &__item {
@@ -280,5 +290,211 @@
 
   &__item + &__item {
     margin-left: 62px;
+  }
+
+  &__btn {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: -10px;
+      width: 0%;
+      height: 3px;
+      background-color: var(--blue-color);
+    }
+    &--active {
+      position: relative;
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+[data-tabs-path="charact"] {
+
+  .tabs-content__inner {
+    display: flex;
+  }
+
+  .tabs-content__left {
+    width: 48.8%;
+    margin-right: calc(100% - 48.8% - 48.8%);
+  }
+
+  .tabs-content__right {
+    width: 48.8%;
+  }
+
+  .tabs-content__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 12px;
+    width: 100%;
+
+    &:nth-child(odd) {
+      background-color: #fafafa;
+    }
+  }
+
+  .tabs-content__name {
+    display: inline-block;
+    width: 50%;
+    font-weight: 500;
+    line-height: 26px;
+    color: #181818;;
+  }
+
+  .tabs-content__descr {
+    display: inline-block;
+    width: 50%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+  }
+}
+
+[data-tabs-path="descr"] {
+  .tabs-content__inner {
+    display: flex;
+  }
+
+  .tabs-content__left {
+    width: 57.4%;
+    margin-right: calc(100% - 57.4% - 40.3%);
+  }
+
+  .tabs-content__right {
+    width: 40.3%;
+  }
+
+  .tabs-content__description {
+    margin: 0;
+    line-height: 26px;
+    color: var(--gray-color);
+
+    &:nth-of-type(1) {
+      margin-bottom: 8px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 24px;
+    }
+
+    &:nth-of-type(3) {
+      margin-top: 24px;
+    }
+  }
+
+  .tabs-content__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .tabs-content__checkboxes {
+    margin-top: 24px;
+  }
+
+  .custom-checkbox__text {
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--gray-color);
+
+    &::before {
+      top: 3px;
+      border-radius: 2px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
+}
+
+[data-tabs-path="reviews"] {
+  .tabs-content__inner {
+    display: flex;
+  }
+
+  .tabs-content__list {
+    width: 66%;
+  }
+
+  .tabs-content__item {
+    border: 1px solid #EAEAEA;
+  }
+
+  .tabs-content__item + .tabs-content__item {
+    margin-top: 16px;
+  }
+
+  .tabs-content__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 16px 24px;
+  }
+
+  .tabs-content__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: capitalize;
+  }
+
+  .tabs-content__date {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: capitalize;
+    color: var(--gray-color);
+  }
+
+  .tabs-content__bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+  }
+
+  .tabs-content__description {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .tabs-content__buttons {
+    display: flex;
+    margin-top: auto;
+  }
+
+  .tabs-content__answer {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 23px;
+    font-size: 14px;
+    line-height: 26px;
+
+    svg {
+      margin-right: 7px;
+    }
+  }
+
+  .tabs-content__comments {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 26px;
+
+    svg {
+      margin-right: 7px;
+    }
   }
 }
