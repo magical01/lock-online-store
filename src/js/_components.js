@@ -6,4 +6,5 @@ import './components/catalog-filters';
 import './components/catalog-props';
 import './components/catalog-filters-toggle';
 import './components/product-page';
+import './components/modals';
 import './components/range-slider';
