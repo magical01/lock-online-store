@@ -1,16 +1,14 @@
 import vars from '../_vars';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // vars.filtersTop?.forEach(elem => {
-  //   elem?.addEventListener('click', (e) => {
-  //     e.currentTarget.closest('.filters__content').classList.toggle('filters__content--open');
-  //   });
-  // });
 
+  // default maxHeight
   document.querySelectorAll('.filters__content--open').forEach(elem => {
     elem.children[1].style.maxHeight = elem.children[1].scrollHeight + 'px';
   });
 
+
+  // reset filters
   vars.reset?.addEventListener('click', (e) => {
     vars.filtersContent.forEach(elem => {
       elem.classList.remove('filters__content--open');
@@ -29,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   });
 
+
+  // accordion filter
   vars.filtersTop.forEach(elem => {
     elem?.addEventListener('click', (e) => {
       const self = e.currentTarget.closest('.filters__content');

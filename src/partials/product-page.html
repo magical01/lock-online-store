@@ -1,14 +1,68 @@
 <section class="product-page">
   <div class="container product-page__container">
     <div class="product-page__images product-images">
-      <div class="product-images__top">
-        <picture class="product-images__picture">
-          <source srcset="img/product-page-1.avif" type="image/avif">
-          <source srcset="img/product-page-1.webp" type="image/webp">
-          <img loading="lazy" src="img/product-page-1.png" class="image" width="400" height="420" alt="">
-        </picture>
+      <div class="product-images__top slider-block">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture class="product-images__picture">
+              <source srcset="img/slider-bot-1.avif" type="image/avif">
+              <source srcset="img/slider-bot-1.webp" type="image/webp">
+              <img loading="lazy" src="img/slider-bot-1.png" class="image" width="400" height="420" alt="Дверной Замок Golden Soft для офиса">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture class="product-images__picture">
+              <source srcset="img/slider-bot-2.avif" type="image/avif">
+              <source srcset="img/slider-bot-2.webp" type="image/webp">
+              <img loading="lazy" src="img/slider-bot-2.png" class="image" width="400" height="420" alt="Дверной Замок Golden Soft для офиса">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture class="product-images__picture">
+              <source srcset="img/slider-bot-3.avif" type="image/avif">
+              <source srcset="img/slider-bot-3.webp" type="image/webp">
+              <img loading="lazy" src="img/slider-bot-3.png" class="image" width="400" height="420" alt="Дверной Замок Golden Soft для офиса">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture class="product-images__picture">
+              <source srcset="img/slider-bot-1.avif" type="image/avif">
+              <source srcset="img/slider-bot-1.webp" type="image/webp">
+              <img loading="lazy" src="img/slider-bot-1.png" class="image" width="400" height="420" alt="Дверной Замок Golden Soft для офиса">
+            </picture>
+          </div>
+        </div>
       </div>
-      <div class="product-images__bottom"></div>
+      <div class="product-images__bottom slider-nav">
+        <div class="slider-nav__item" tabindex="0">
+          <picture>
+            <source srcset="img/slider-bottom-1.avif" type="image/avif">
+            <source srcset="img/slider-bottom-1.webp" type="image/webp">
+            <img loading="lazy" src="img/slider-bottom-1.png" class="image" width="142" height="133" alt="Дверной Замок Golden Soft для офиса">
+          </picture>
+        </div>
+        <div class="slider-nav__item" tabindex="0">
+          <picture>
+            <source srcset="img/slider-bottom-2.avif" type="image/avif">
+            <source srcset="img/slider-bottom-2.webp" type="image/webp">
+            <img loading="lazy" src="img/slider-bottom-2.png" class="image" width="142" height="133" alt="Дверной Замок Golden Soft для офиса">
+          </picture>
+        </div>
+        <div class="slider-nav__item" tabindex="0">
+          <picture>
+            <source srcset="img/slider-bottom-2.avif" type="image/avif">
+            <source srcset="img/slider-bottom-2.webp" type="image/webp">
+            <img loading="lazy" src="img/slider-bottom-2.png" class="image" width="142" height="133" alt="Дверной Замок Golden Soft для офиса">
+          </picture>
+        </div>
+        <div class="slider-nav__item" tabindex="0">
+          <picture>
+            <source srcset="img/slider-bottom-1.avif" type="image/avif">
+            <source srcset="img/slider-bottom-1.webp" type="image/webp">
+            <img loading="lazy" src="img/slider-bottom-1.png" class="image" width="142" height="133" alt="Дверной Замок Golden Soft для офиса">
+          </picture>
+        </div>
+      </div>
     </div>
     <div class="product-page__text product-text">
       <div class="product-text__info">
@@ -56,8 +110,8 @@
             <div class="custom-select__dropdown">
               <ul class="custom-select__list list-reset" role="alert">
                 <li class="custom-select__item">Smart замок без приложения</li>
-                <li class="custom-select__item">Smart замок c приложением</li>
-                <li class="custom-select__item">Полная комплектация</li>
+                <li class="custom-select__item">Smart накладка на замок</li>
+                <li class="custom-select__item">Без мартизы, без приложения</li>
               </ul>
             </div>
           </div>
@@ -147,7 +201,7 @@
             data-tabs-path="reviews">Отзывы</button></li>
       </ul>
 
-      <!-- <div class="product-tabs__content tabs-content product-tabs__content--active" data-tabs-path="charact">
+      <div class="product-tabs__content tabs-content product-tabs__content--active" data-tabs-target="charact">
         <div class="tabs-content__inner">
 
           <div class="tabs-content__left">
@@ -204,8 +258,8 @@
             </ul>
           </div>
         </div>
-      </div> -->
-      <!-- <div class="product-tabs__content tabs-content" data-tabs-path="descr">
+      </div>
+      <div class="product-tabs__content tabs-content" data-tabs-target="descr">
         <div class="tabs-content__inner">
 
           <div class="tabs-content__left">
@@ -265,8 +319,8 @@
             </picture>
           </div>
         </div>
-      </div> -->
-      <div class="product-tabs__content tabs-content" data-tabs-path="reviews">
+      </div>
+      <div class="product-tabs__content tabs-content" data-tabs-target="reviews">
         <div class="tabs-content__inner">
           <ul class="tabs-content__list list-reset">
             <li class="tabs-content__item">
@@ -450,7 +504,8 @@
             </label>
             <label class="tabs-form__label">
               <span class="tabs-form__text">Ваш комментарий</span>
-              <input type="text" name="Имя" class="tabs-form__input input-reset tabs-form__comment" placeholder="Введите Ваш комментарий">
+              <!-- <input type="text" name="Имя" class="tabs-form__input input-reset tabs-form__comment" placeholder="Введите Ваш комментарий"> -->
+              <textarea class="tabs-form__comment" name="Комментарий" id="" cols="30" rows="10" placeholder="Введите Ваш комментарий"></textarea>
             </label>
             <button class="tabs-form__btn btn-reset main-btn">Оставить отзыв</button>
           </form>

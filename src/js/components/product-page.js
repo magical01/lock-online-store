@@ -1,7 +1,16 @@
 import vars from "../_vars";
 import {changeCheckbox} from "./catalog-filters-toggle";
 
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  const tabsHandler = (path) => {
+    vars.tabsBtn.forEach(elem => {elem.classList.remove('product-tabs__btn--active')});
+    document.querySelector(`[data-tabs-path="${path}"]`).classList.add('product-tabs__btn--active');
+
+    vars.tabsContent.forEach(elem => {elem.classList.remove('product-tabs__content--active')});
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('product-tabs__content--active');
+  }
 
   vars.productCheckboxesItem?.forEach(elem => {
     elem.querySelector('input').addEventListener('change', () => {
@@ -15,10 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  // choice only one color
+  vars.productColor?.addEventListener('click', (e) => {
+    if (e.target.classList.contains('color__button')) {
+      vars.productColorBtns.forEach(elem => elem.classList.remove('color__button--active'));
+
+      e.target.classList.add('color__button--active');
+    }
+  })
+
   document.querySelectorAll('.accordion--active').forEach(elem => {
     elem.children[1].style.maxHeight = elem.children[1].scrollHeight + 'px';
   });
 
+  // accordion
   vars.accordions.forEach(elem => {
     elem?.addEventListener('click', (e) => {
       const self = e.currentTarget;
@@ -36,8 +56,16 @@ document.addEventListener('DOMContentLoaded', () => {
 				content.setAttribute('aria-hidden', true);
 				content.style.maxHeight = null;
 			}
-
     });
+  });
+
+  // tabs
+
+  vars.tabs?.addEventListener('click', (e) => {
+    if (e.target.classList.contains('product-tabs__btn')) {
+      const path = e.target.dataset.tabsPath;
+      tabsHandler(path)
+    }
   });
 });
 

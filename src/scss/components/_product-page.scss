@@ -18,9 +18,50 @@
   &__picture {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 513px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03))
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03));
+    cursor: pointer;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .swiper-slide {
+    overflow: hidden;
+  }
+
+}
+
+.slider-block {
+  overflow: hidden;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  height: 133px;
+
+  &__item {
+    display: flex;
+    border: 1px solid #EAEAEA;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      background-color: rgba(125, 190, 255, 0.07);
+    }
+
+    picture {
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 80%;
+        object-fit: contain;
+      }
+    }
   }
 }
 
@@ -101,11 +142,24 @@
     font-size: 14px;
     line-height: 24px;
     color: #4D4D4D;
+    transition: all .3s;
 
     svg {
       margin-right: 10px;
       width: 17px;
       height: 15px;
+
+      path {
+        transition: all .3s;
+      }
+    }
+
+    &:hover {
+      color: var(--blue-color);
+
+      svg path {
+        stroke: var(--blue-color);
+      }
     }
   }
 
@@ -169,7 +223,7 @@
 .equipment {
   .custom-select__top {
     border: 1px solid #C4CDD5;
-    min-width: 314px;
+    min-width: 322px;
   }
 }
 
@@ -185,11 +239,13 @@
   }
 
   &__button {
+    position: relative;
     width: 39px;
     height: 39px;
+    transition: all .3s;
 
     &--white {
-      border: 1px solid var(--white-color);
+      border: 1px solid #C4CDD5;
       background-color: var(--white-color);
     }
 
@@ -205,6 +261,20 @@
 
     &--active {
       border: 1px solid var(--blue-color);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 15px;
+        height: 11px;
+        background-image: url("../img/svg/icon-color.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 
@@ -277,6 +347,14 @@
   margin-top: 40px;
   width: 100%;
 
+  &__content {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
   &__list {
     display: flex;
     margin-bottom: 36px;
@@ -293,6 +371,7 @@
   }
 
   &__btn {
+    position: relative;
     &::before {
       content: "";
       position: absolute;
@@ -301,9 +380,9 @@
       width: 0%;
       height: 3px;
       background-color: var(--blue-color);
+      transition: all .3s;
     }
     &--active {
-      position: relative;
 
       &::before {
         width: 100%;
@@ -312,7 +391,7 @@
   }
 }
 
-[data-tabs-path="charact"] {
+[data-tabs-target="charact"] {
 
   .tabs-content__inner {
     display: flex;
@@ -357,7 +436,7 @@
   }
 }
 
-[data-tabs-path="descr"] {
+[data-tabs-target="descr"] {
   .tabs-content__inner {
     display: flex;
   }
@@ -417,7 +496,7 @@
   }
 }
 
-[data-tabs-path="reviews"] {
+[data-tabs-target="reviews"] {
   .tabs-content__inner {
     display: flex;
   }
@@ -505,6 +584,7 @@
     margin-left: calc(100% - 66% - 31.7%);
     padding: 24px 26px 24px 21px;
     width: 31.7%;
+    height: fit-content;
 
     &__inner {
       display: flex;
@@ -538,6 +618,16 @@
     &__email {
       padding: 0 25px 0 16px;
       height: 48px;
+    }
+
+    &__comment {
+      border: 1px solid #E4E7E9;
+      padding: 12px 25px 12px 16px;
+      max-width: 100%;
+      min-width: 100%;
+      max-height: 140px;
+      min-height: 140px;
+      height: 140px;
     }
 
     &__input {
