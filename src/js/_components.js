@@ -7,4 +7,6 @@ import './components/catalog-props';
 import './components/catalog-filters-toggle';
 import './components/product-page';
 import './components/modals';
+import './components/stepper';
+import './components/simplebar';
 import './components/range-slider';

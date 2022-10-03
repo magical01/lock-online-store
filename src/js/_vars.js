@@ -21,4 +21,5 @@ export default {
   sliderNavItems: document?.querySelectorAll('.slider-nav__item'),
   productColor: document?.querySelector('.product-description__color'),
   productColorBtns: document?.querySelectorAll('.color__button'),
+  stepper: document.querySelectorAll('.stepper'),
 }

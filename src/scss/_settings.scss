@@ -179,3 +179,16 @@ a {
     background-color: #2E81D0;
   }
 }
+
+.price-symbol {
+  position: relative;
+  &::before {
+    content: "₽";
+    position: absolute;
+    right: 0px;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+}

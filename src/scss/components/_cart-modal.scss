@@ -42,8 +42,12 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
-
   }
+
+  &__list {
+    max-height: 120px;
+  }
+
   &__title {
     margin: 0;
     font-family: 'SFProDisplay', sans-serif;
@@ -55,5 +59,254 @@
   &__product {
     border-bottom: 1px solid #eaeaea;
     padding: 25px 0;
+  }
+
+  &__total {
+    margin: 0;
+    margin-top: 30px;
+    line-height: 26px;
+    color: #000;
+
+    &-price {
+      position: relative;
+      padding-right: 15px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    padding: 9px 40px;
+    width: 249px;
+  }
+
+  &__continue {
+    border: 1px solid #ADD7FF;
+    padding: 10px 20px;
+    transition: all .3s;
+
+    &:hover {
+      color: var(--white-color);
+      background-color: var(--blue-color);
+    }
+
+    &:active {
+      color: var(--white-color);
+      background-color: #2E81D0;
+    }
+  }
+}
+
+.cart {
+
+  .simplebar-scrollbar:before {
+    background-color: #C4CDD5;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item + &__item {
+    margin-top: 20px;
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.03);
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  &__title {
+    line-height: 26px;
+  }
+
+  &__gift {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+
+    &-link {
+      position: relative;
+      color: var(--blue-color);
+      transition: all .3s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // &__delete {
+
+  // }
+
+  &__price {
+    position: relative;
+    display: inline-block;
+    padding-right: 15px;
+    width: fit-content;
+  }
+}
+
+.stepper {
+  display: flex;
+  margin-top: auto;
+
+  &__btn {
+    font-size: 24px;
+    transition: all .2s;
+
+    &--disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__input {
+    border: 1px solid #EAEAEA;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 60px;
+    height: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.addition {
+  margin-top: 13px;
+
+  .simplebar-scrollbar:before {
+    background-color: #C4CDD5;
+  }
+
+  &__list {
+    margin-top: 16px;
+    max-height: 195px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item + &__item {
+    margin-top: 15px;
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__picture {
+    display: flex;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.03);
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__rating {
+    display: flex;
+    align-self: start;
+  }
+
+  &__reviews {
+    font-size: 13px;
+    line-height: 21px;
+    color: var(--gray-color);
+  }
+
+  &__prices {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  &__newprice {
+    margin-right: 5px;
+    padding-right: 10px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__oldprice {
+    font-size: 12px;
+    line-height: 20px;
+    text-decoration-line: line-through;
+    color: var(--gray-color);
+  }
+}
+
+.cart-main__btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: "SFProDisplay", sans-serif;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--blue-color);
+  transition: all .2s;
+
+  svg {
+    margin-right: 16px;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 }

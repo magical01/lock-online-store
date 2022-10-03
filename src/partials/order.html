@@ -1,0 +1,65 @@
+<section class="order">
+  <div class="container">
+    <h2 class="order__title title">Оформление заказа</h2>
+    <form class="order__form" action="#">
+      <div class="order__left">
+        <div class="order__contacts user-info">
+          <h4 class="user-info__title order__subject">1. Контактные данные</h4>
+          <div class="user-info__box">
+            <label class="user-info__label">
+              <span class="user-info__text">Фамилия</span>
+              <input class="user-info__input" type="text" name="Фамилия" placeholder="Зайцев">
+            </label>
+            <label class="user-info__label">
+              <span class="user-info__text">Имя</span>
+              <input class="user-info__input" type="text" name="Имя" placeholder="Михаил">
+            </label>
+            <label class="user-info__label">
+              <span class="user-info__text">Телефон</span>
+              <input class="user-info__input" type="tel" name="Телефон" placeholder="+7 (_ _ _) _ _  _ _  _ _ _">
+            </label>
+            <label class="user-info__label">
+              <span class="user-info__text">E-mail</span>
+              <input class="user-info__input" type="email" name="E-mail" placeholder="example@mail.ru">
+            </label>
+          </div>
+        </div>
+        <div class="order__delivery user-delivery">
+          <h4 class="user-delivery__title order__subject">2. Доставка</h4>
+          <div class="order__buttons">
+            <label class="order__label">
+              <input class="order__input" type="radio" name="delivery">
+              <span class="order__text">Сдек</span>
+            </label>
+            <label class="order__label">
+              <input class="order__input" type="radio" name="delivery">
+              <span class="order__text">Почта России</span>
+            </label>
+            <label class="order__label">
+              <input class="order__input" type="radio" name="delivery">
+              <span class="order__text">Деловые линии</span>
+            </label>
+          </div>
+        </div>
+        <div class="order__delivery payment">
+          <h4 class="payment__title order__subject">3. Оплата</h4>
+          <div class="order__buttons">
+            <label class="order__label">
+              <input class="order__input" type="radio" name="delivery">
+              <span class="order__text">Оплата при получении товара</span>
+            </label>
+            <label class="order__label">
+              <input class="order__input" type="radio" name="delivery">
+              <span class="order__text">Банковская карта</span>
+            </label>
+            <label class="order__label">
+              <span class="order__text">Комментарий</span>
+              <textarea class="order__textarea" name="Комментарий" cols="30" rows="10" placeholder="Напишите комментарий"></textarea>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="order__right"></div>
+    </form>
+  </div>
+</section>
