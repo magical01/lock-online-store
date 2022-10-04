@@ -22,4 +22,6 @@ export default {
   productColor: document?.querySelector('.product-description__color'),
   productColorBtns: document?.querySelectorAll('.color__button'),
   stepper: document.querySelectorAll('.stepper'),
+  equipmentCheckbox: document.querySelectorAll('.order-equipment__item'),
+  orderConfirm: document.querySelector('.order-confirm'),
 }

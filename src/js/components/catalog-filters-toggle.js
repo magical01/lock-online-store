@@ -25,12 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     )
   }
 
-  vars.checkboxItem?.forEach(elem => {
-    elem.querySelector('input').addEventListener('change', () => {
-      changeCheckbox(elem)
-    });
-  });
-
   vars.filtersItem?.forEach(elem => {
     elem.querySelector('input').addEventListener('change', () => {
       let checked = elem.querySelector('input').checked;

@@ -12,18 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('product-tabs__content--active');
   }
 
-  vars.productCheckboxesItem?.forEach(elem => {
-    elem.querySelector('input').addEventListener('change', () => {
-      changeCheckbox(elem)
-    });
-  });
-
-  vars.tabsСheckboxes?.forEach(elem => {
-    elem.querySelector('input').addEventListener('change', () => {
-      changeCheckbox(elem)
-    });
-  });
-
 
   // choice only one color
   vars.productColor?.addEventListener('click', (e) => {

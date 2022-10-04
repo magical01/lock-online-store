@@ -1,7 +1,7 @@
 <section class="order">
   <div class="container">
     <h2 class="order__title title">Оформление заказа</h2>
-    <form class="order__form" action="#">
+    <div class="order__form">
       <div class="order__left">
         <div class="order__contacts user-info">
           <h4 class="user-info__title order__subject">1. Контактные данные</h4>
@@ -28,16 +28,19 @@
           <h4 class="user-delivery__title order__subject">2. Доставка</h4>
           <div class="order__buttons">
             <label class="order__label">
-              <input class="order__input" type="radio" name="delivery">
-              <span class="order__text">Сдек</span>
+              <input class="order__input input-reset" type="radio" name="delivery">
+              <span class="order__checkbox"></span>
+              Сдек
             </label>
             <label class="order__label">
-              <input class="order__input" type="radio" name="delivery">
-              <span class="order__text">Почта России</span>
+              <input class="order__input input-reset" type="radio" name="delivery">
+              <span class="order__checkbox"></span>
+              Почта России
             </label>
             <label class="order__label">
-              <input class="order__input" type="radio" name="delivery">
-              <span class="order__text">Деловые линии</span>
+              <input class="order__input input-reset" type="radio" name="delivery">
+              <span class="order__checkbox"></span>
+              Деловые линии
             </label>
           </div>
         </div>
@@ -45,21 +48,106 @@
           <h4 class="payment__title order__subject">3. Оплата</h4>
           <div class="order__buttons">
             <label class="order__label">
-              <input class="order__input" type="radio" name="delivery">
-              <span class="order__text">Оплата при получении товара</span>
+              <input class="order__input input-reset" type="radio" name="payment">
+              <span class="order__checkbox"></span>
+              Оплата при получении товара
             </label>
             <label class="order__label">
-              <input class="order__input" type="radio" name="delivery">
-              <span class="order__text">Банковская карта</span>
+              <input class="order__input input-reset" type="radio" name="payment">
+              <span class="order__checkbox"></span>
+              Банковская карта
             </label>
-            <label class="order__label">
+            <label class="order__label order-comments">
               <span class="order__text">Комментарий</span>
-              <textarea class="order__textarea" name="Комментарий" cols="30" rows="10" placeholder="Напишите комментарий"></textarea>
+              <textarea class="order__textarea" name="Комментарий" cols="30" rows="10"
+                placeholder="Напишите комментарий" maxlength="300"></textarea>
             </label>
           </div>
         </div>
       </div>
-      <div class="order__right"></div>
-    </form>
+      <div class="order__right order-total">
+        <div class="order-total__top offset border-bottom">
+          <h3 class="order-total__title">Итого</h3>
+        </div>
+        <div class="order-total__content offset border-bottom">
+          <ul class="order-total__list list-reset">
+            <li class="order-total__item">
+              <picture class="order-total__picture">
+                <source srcset="img/slider-bottom-3.avif" type="image/avif">
+                <source srcset="img/slider-bottom-3.webp" type="image/webp">
+                <img loading="lazy" src="img/slider-bottom-3.png" class="image" width="136" height="120"
+                  alt="Дверной Замок Golden Soft для офиса">
+              </picture>
+              <div class="order-total__text">
+                <span class="order-total__name">
+                  Дверной Замок Golden Soft для офиса
+                  <button class="order-total__delete btn-reset" aria-label="Удалить товар">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.6673 1.33331L1.33398 14.6666M14.6673 14.6666L1.33398 1.33331L14.6673 14.6666Z"
+                        stroke="#181818" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </span>
+                <p class="order-total__gift">+ Подарок: <a class="order-total__gift-link" href="#">“Приложение к замкам
+                    Golden
+                    Service”</a>
+                </p>
+                <div class="order-total__box">
+                  <div class="order-total__stepper stepper">
+                    <button class="stepper__btn stepper__btn--minus btn-reset stepper__btn--disabled" aria-label="Минус">-</button>
+                    <input class="stepper__input input-reset" type="text" min="1" max="99" maxlength="2" value="1">
+                    <button class="stepper__btn stepper__btn--plus btn-reset" aria-label="Плюс">+</button>
+                  </div>
+                  <div class="order-total__prices">
+                    <span class="order-total__newprice">33 000₽</span>
+                    <span class="order-total__oldprice">37 000₽</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="order-total__edit">
+            <a class="order-total__link" href="#">Редактировать</a>
+            <span class="order-total__payment">
+              К оплате:
+              <span class="price-symbol">66 000</span>
+            </span>
+          </div>
+        </div>
+        <div class="order-total__equipment order-equipment offset border-bottom">
+          <h5 class="order-equipment__title">Комплектация</h5>
+          <ul class="order-equipment__list list-reset">
+            <li class="order-equipment__item">
+              <label class="custom-checkbox custom-checkbox--active">
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" checked>
+                <span class="custom-checkbox__text">Нужна установка</span>
+              </label>
+            </li>
+            <li class="order-equipment__item">
+              <label class="custom-checkbox">
+                <input class="custom-checkbox__input visually-hidden" type="checkbox">
+                <span class="custom-checkbox__text">Настройка софта</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="order-total__confirm order-confirm offset border-bottom">
+          <button class="order-confirm__btn btn-reset main-btn">Подтвердить заказ</button>
+          <div class="order-confirm__box">
+            <span class="order-confirm__promo">Промокод</span>
+            <button class="order-confirm__add btn-reset" aria-expanded="false">Добавить</button>
+          </div>
+          <div class="order-confirm__promocode order-promocode" aria-hidden="true">
+            <input class="order-promocode__input input-reset" type="text" name="Промокод" placeholder="Введите промокод">
+            <button class="order-promocode__btn btn-reset main-btn">Применить</button>
+          </div>
+        </div>
+        <div class="order-total__agreement offset">
+          <span>Оформляя заказ, я принимаю условия <a class="order-total__agreement-link" href="#">пользовательского соглашения</a></span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+
