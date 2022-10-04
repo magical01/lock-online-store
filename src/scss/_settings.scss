@@ -194,3 +194,20 @@ a {
     color: inherit;
   }
 }
+
+.input-form {
+  transition: all .3s;
+  &:focus {
+    outline: none;
+    border: 1px solid var(--blue-color);
+  }
+
+  &:active {
+    border: 1px solid var(--blue-color);
+  }
+
+  &--filled {
+    background-color: rgba(66, 149, 228, 0.04);
+    border: 1px solid rgba(66, 149, 228, 0.2);
+  }
+}

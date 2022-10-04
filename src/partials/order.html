@@ -8,19 +8,19 @@
           <div class="user-info__box">
             <label class="user-info__label">
               <span class="user-info__text">Фамилия</span>
-              <input class="user-info__input" type="text" name="Фамилия" placeholder="Зайцев">
+              <input class="user-info__input input-form" type="text" name="Фамилия" placeholder="Зайцев">
             </label>
             <label class="user-info__label">
               <span class="user-info__text">Имя</span>
-              <input class="user-info__input" type="text" name="Имя" placeholder="Михаил">
+              <input class="user-info__input input-form" type="text" name="Имя" placeholder="Михаил">
             </label>
             <label class="user-info__label">
               <span class="user-info__text">Телефон</span>
-              <input class="user-info__input" type="tel" name="Телефон" placeholder="+7 (_ _ _) _ _  _ _  _ _ _">
+              <input class="user-info__input input-form" type="tel" name="Телефон" placeholder="+7 (_ _ _) _ _  _ _  _ _ _">
             </label>
             <label class="user-info__label">
               <span class="user-info__text">E-mail</span>
-              <input class="user-info__input" type="email" name="E-mail" placeholder="example@mail.ru">
+              <input class="user-info__input input-form" type="email" name="E-mail" placeholder="example@mail.ru">
             </label>
           </div>
         </div>
@@ -28,17 +28,17 @@
           <h4 class="user-delivery__title order__subject">2. Доставка</h4>
           <div class="order__buttons">
             <label class="order__label">
-              <input class="order__input input-reset" type="radio" name="delivery">
+              <input class="order__input input-reset visually-hidden" type="radio" name="delivery">
               <span class="order__checkbox"></span>
               Сдек
             </label>
             <label class="order__label">
-              <input class="order__input input-reset" type="radio" name="delivery">
+              <input class="order__input input-reset visually-hidden" type="radio" name="delivery">
               <span class="order__checkbox"></span>
               Почта России
             </label>
             <label class="order__label">
-              <input class="order__input input-reset" type="radio" name="delivery">
+              <input class="order__input input-reset visually-hidden" type="radio" name="delivery">
               <span class="order__checkbox"></span>
               Деловые линии
             </label>
@@ -48,20 +48,20 @@
           <h4 class="payment__title order__subject">3. Оплата</h4>
           <div class="order__buttons">
             <label class="order__label">
-              <input class="order__input input-reset" type="radio" name="payment">
+              <input class="order__input input-reset visually-hidden" type="radio" name="payment">
               <span class="order__checkbox"></span>
               Оплата при получении товара
             </label>
             <label class="order__label">
-              <input class="order__input input-reset" type="radio" name="payment">
+              <input class="order__input input-reset visually-hidden" type="radio" name="payment">
               <span class="order__checkbox"></span>
               Банковская карта
             </label>
-            <label class="order__label order-comments">
+            <div class="order-comments">
               <span class="order__text">Комментарий</span>
               <textarea class="order__textarea" name="Комментарий" cols="30" rows="10"
                 placeholder="Напишите комментарий" maxlength="300"></textarea>
-            </label>
+            </div>
           </div>
         </div>
       </div>

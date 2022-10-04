@@ -24,4 +24,6 @@ export default {
   stepper: document.querySelectorAll('.stepper'),
   equipmentCheckbox: document.querySelectorAll('.order-equipment__item'),
   orderConfirm: document.querySelector('.order-confirm'),
+  inputForm: document.querySelectorAll('.input-form'),
+
 }

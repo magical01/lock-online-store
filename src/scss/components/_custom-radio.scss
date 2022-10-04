@@ -1,0 +1,41 @@
+.order {
+  &__label {
+    position: relative;
+    display: inline-block;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+  }
+
+  &__label + &__label {
+    margin-top: 12px;
+  }
+
+  &__input {
+
+    &:checked + .order__checkbox {
+      border: 1px solid var(--blue-color);
+      background-image: url("../img/svg/circle-radio.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:focus + .order__checkbox {
+      border: 1px solid var(--blue-color);
+    }
+
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 50%;
+    border: 1px solid #9E9AA4;
+    border-radius: 50%;
+    margin-left: -24px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--white-color);
+    transform: translateY(-50%);
+  }
+}
