@@ -1,5 +1,6 @@
-.graph-modal {
-  background-color: rgba(0, 0, 0, 0.5);
+
+.popup {
+  background-color: rgba(69, 79, 91, 0.6);
 
   &__container {
     position: relative;
@@ -34,9 +35,7 @@
       }
     }
   }
-}
 
-.popup {
   &__top {
     display: flex;
     justify-content: space-between;

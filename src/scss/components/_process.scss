@@ -1,0 +1,10 @@
+.process {
+  padding-top: 100px;
+  padding-bottom: 131px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+  }
+}

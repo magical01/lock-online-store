@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  vars.applicationCheckbox?.forEach(elem => {
+    elem.querySelector('input').addEventListener('change', () => {
+      changeCheckbox(elem)
+    });
+  });
+
 });
 
 
