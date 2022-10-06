@@ -1,0 +1,130 @@
+.about {
+  padding-top: 46px;
+  padding-bottom: 131px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__left {
+    position: relative;
+    width: 48.8%;
+    margin-right: calc(100% - 48.8% - 40%);
+    cursor: pointer;
+
+    &:hover {
+      .pattern-gray {
+        opacity: 1;
+
+        path {
+          fill: var(--blue-color);
+        }
+      }
+
+      .pattern-blue {
+        opacity: 1;
+
+        path {
+          fill: #7282A0;
+        }
+      }
+    }
+
+    picture {
+      position: relative;
+      display: flex;
+      z-index: 10;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 70px;
+        height: 70px;
+        background-image: url("../img/svg/play.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    svg {
+      position: absolute;
+      transition: all .2s;
+
+      path {
+        transition: all .3s;
+      }
+    }
+  }
+
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    padding-top: 117px;
+    width: 40%;
+  }
+
+  &__tab {
+    position: relative;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 16px;
+    font-family: "SFProDisplay", sans-serif;
+    font-size: 18px;
+    line-height: 38px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--blue-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 2px;
+      background-color: currentColor;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    span {
+      position: relative;
+      display: inline-block;
+      color: var(--blue-color);
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -5px;
+        opacity: 0.2;
+        width: 227px;
+        height: 61px;
+        background-color: #ADD7FF;
+      }
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+  }
+}
+
+.pattern-gray {
+  left: -5%;
+  top: -7%;
+
+}
+
+.pattern-blue {
+  right: -5%;
+  bottom: -7%;
+}

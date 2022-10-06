@@ -1,15 +1,5 @@
 import vars from "../_vars";
 
-export const changeCheckbox = (elem) => {
-  let checked = elem.querySelector('input').checked;
-
-  if (checked) {
-    elem.querySelector('.custom-checkbox').classList.add('custom-checkbox--active');
-  } else {
-    elem.querySelector('.custom-checkbox').classList.remove('custom-checkbox--active');
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
 
   const createChoiceItem = (text) => {

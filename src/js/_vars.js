@@ -26,5 +26,9 @@ export default {
   orderConfirm: document.querySelector('.order-confirm'),
   inputForm: document.querySelectorAll('.input-form'),
   applicationCheckbox: document.querySelectorAll('.application__item'),
+  projectsCheckbox: document.querySelectorAll('.projects-slide__item'),
+  shippingCheckbox: document.querySelectorAll('.shipping__checkboxes-item'),
 
 }
+
+

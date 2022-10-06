@@ -1,0 +1,52 @@
+.pay {
+  padding-top: 40px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    max-width: 818px;
+    border-bottom: 1px solid #C4CDD5;
+    padding-bottom: 40px;
+  }
+
+  &__item + &__item {
+    margin-top: 24px;
+  }
+
+  &__subject {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-left: 32px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      margin-left: -32px;
+      width: 20px;
+      height: 14px;
+      background-image: url("../img/svg/bank-card.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+  }
+}

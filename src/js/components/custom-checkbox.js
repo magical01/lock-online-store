@@ -1,7 +1,17 @@
 import vars from '../_vars';
-import {changeCheckbox} from "./catalog-filters-toggle";
+
+const changeCheckbox = (elem) => {
+  let checked = elem.querySelector('input').checked;
+
+  if (checked) {
+    elem.querySelector('.custom-checkbox').classList.add('custom-checkbox--active');
+  } else {
+    elem.querySelector('.custom-checkbox').classList.remove('custom-checkbox--active');
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
+
   vars.productCheckboxesItem?.forEach(elem => {
     elem.querySelector('input').addEventListener('change', () => {
       changeCheckbox(elem)
@@ -27,6 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   vars.applicationCheckbox?.forEach(elem => {
+    elem.querySelector('input').addEventListener('change', () => {
+      changeCheckbox(elem)
+    });
+  });
+
+  vars.projectsCheckbox?.forEach(elem => {
+    elem.querySelector('input').addEventListener('change', () => {
+      changeCheckbox(elem)
+    });
+  });
+
+  vars.shippingCheckbox?.forEach(elem => {
     elem.querySelector('input').addEventListener('change', () => {
       changeCheckbox(elem)
     });

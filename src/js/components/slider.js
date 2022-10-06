@@ -29,5 +29,19 @@ vars.sliderNavItems.forEach((elem, index) => {
   elem.addEventListener('click', (e) => {
     const index = +e.currentTarget.dataset.index;
     verticalSlider.slideTo(index);
-  })
-})
+  });
+});
+
+const projectSlider = new Swiper('.projects-swiper', {
+  loop: true,
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.projects__pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.projects-btn-next',
+    prevEl: '.projects-btn-prev'
+  }
+});
