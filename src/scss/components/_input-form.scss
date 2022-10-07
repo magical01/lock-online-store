@@ -1,0 +1,26 @@
+.input-form {
+  transition: all .3s;
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--blue-color);
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    border: 1px solid var(--blue-color);
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &--filled {
+    border: 1px solid rgba(#4295E4, 0.2);
+    background-color: rgba(66, 149, 228, 0.04);
+    transition: all .3s;
+  }
+}

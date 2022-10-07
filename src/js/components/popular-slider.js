@@ -9,5 +9,6 @@ const popularSlider = new Swiper('.popular__slider', {
   navigation: {
     nextEl: '.popular-btn-next',
     prevEl: '.popular-btn-prev'
-  }
+  },
+  speed: 500,
 });

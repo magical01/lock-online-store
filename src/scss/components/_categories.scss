@@ -52,6 +52,23 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
+    transition: all .3s;
+
+    &:hover {
+      border: 1px solid var(--blue-color);
+      color: var(--white-color);
+      background-color: var(--blue-color);
+    }
+
+    &:active {
+      background-color: #2E81D0;
+    }
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 3px;
+      transition: none;
+    }
   }
 
   &__center {
@@ -59,6 +76,13 @@
   }
 
   &__btn {
+    display: inline-block;
     padding: 12px 57px;
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 3px;
+      transition: none;
+    }
   }
 }

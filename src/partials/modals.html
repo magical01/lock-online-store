@@ -1,8 +1,8 @@
-<div class="graph-modal popup">
-  <div class="graph-modal__container popup__container" role="dialog" aria-modal="true" data-graph-target="cart-modal">
+<div class="graph-modal">
+  <div class="graph-modal__container popup popup__container" role="dialog" aria-modal="true" data-graph-target="cart-modal">
     <div class="popup__top">
       <h4 class="popup__title">Корзина</h4>
-      <button class="btn-reset js-modal-close graph-modal__close popup__close" aria-label="Закрыть модальное окно">
+      <button class="btn-reset js-modal-close graph-modal__close popup__close focus-offset" aria-label="Закрыть модальное окно">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M14.6673 1.33331L1.33398 14.6666M14.6673 14.6666L1.33398 1.33331L14.6673 14.6666Z" stroke="#181818"
             stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
@@ -22,13 +22,13 @@
               </picture>
               <div class="cart__content">
                 <span class="cart__title">Дверной Замок Golden Soft для офиса</span>
-                <p class="cart__gift">+ Подарок: <a class="cart__gift-link" href="#">“Приложение к замкам Golden
+                <p class="cart__gift">+ Подарок: <a class="cart__gift-link focus-offset" href="#">“Приложение к замкам Golden
                     Service”</a>
                 </p>
                 <div class="cart__stepper stepper">
-                  <button class="stepper__btn stepper__btn--minus btn-reset" aria-label="Минус">-</button>
-                  <input class="stepper__input input-reset" type="text" min="1" max="99" maxlength="2" value="1">
-                  <button class="stepper__btn stepper__btn--plus btn-reset" aria-label="Плюс">+</button>
+                  <button class="stepper__btn stepper__btn--minus btn-reset focus-offset" aria-label="Минус">-</button>
+                  <input class="stepper__input input-reset focus-offset" type="text" min="1" max="99" maxlength="2" value="1">
+                  <button class="stepper__btn stepper__btn--plus btn-reset focus-offset" aria-label="Плюс">+</button>
                 </div>
               </div>
             </div>
@@ -63,13 +63,13 @@
               </picture>
               <div class="cart__content">
                 <span class="cart__title">Дверной Замок Golden Soft для офиса</span>
-                <p class="cart__gift">+ Подарок: <a class="cart__gift-link" href="#">“Приложение к замкам Golden
+                <p class="cart__gift">+ Подарок: <a class="cart__gift-link focus-offset" href="#">“Приложение к замкам Golden
                     Service”</a>
                 </p>
                 <div class="cart__stepper stepper">
-                  <button class="stepper__btn stepper__btn--minus btn-reset" aria-label="Минус">-</button>
-                  <input class="stepper__input input-reset" type="text" min="1" max="99" maxlength="2" value="1">
-                  <button class="stepper__btn stepper__btn--plus btn-reset" aria-label="Плюс">+</button>
+                  <button class="stepper__btn stepper__btn--minus btn-reset focus-offset" aria-label="Минус">-</button>
+                  <input class="stepper__input input-reset focus-offset" type="text" min="1" max="99" maxlength="2" value="1">
+                  <button class="stepper__btn stepper__btn--plus btn-reset focus-offset" aria-label="Плюс">+</button>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@
         </p>
         <div class="popup__buttons">
           <a class="popup__link main-btn" href="order.html">Оформить заказ</a>
-          <button class="popup__continue btn-reset">Продолжить покупки</button>
+          <button class="popup__continue btn-reset js-modal-close">Продолжить покупки</button>
         </div>
       </div>
       <div class="popup__bottom addition">
@@ -136,7 +136,7 @@
                       <label class="rating__label" for="addition__1"></label>
                     </div>
                   </div>
-                  <a class="addition__reviews" href="#">(12) отзывов</a>
+                  <a class="addition__reviews focus-offset" href="#">(12) отзывов</a>
                 </div>
                 <div class="addition__prices">
                   <span class="addition__newprice price-symbol">9 000</span>
@@ -184,7 +184,7 @@
                       <label class="rating__label" for="addition__1"></label>
                     </div>
                   </div>
-                  <a class="addition__reviews" href="#">(12) отзывов</a>
+                  <a class="addition__reviews focus-offset" href="#">(12) отзывов</a>
                 </div>
                 <div class="addition__prices">
                   <span class="addition__newprice price-symbol">9 000</span>
@@ -232,7 +232,7 @@
                       <label class="rating__label" for="addition__1"></label>
                     </div>
                   </div>
-                  <a class="addition__reviews" href="#">(12) отзывов</a>
+                  <a class="addition__reviews focus-offset" href="#">(12) отзывов</a>
                 </div>
                 <div class="addition__prices">
                   <span class="addition__newprice price-symbol">9 000</span>
@@ -280,7 +280,7 @@
                       <label class="rating__label" for="addition__1"></label>
                     </div>
                   </div>
-                  <a class="addition__reviews" href="#">(12) отзывов</a>
+                  <a class="addition__reviews focus-offset" href="#">(12) отзывов</a>
                 </div>
                 <div class="addition__prices">
                   <span class="addition__newprice price-symbol">9 000</span>
@@ -300,6 +300,22 @@
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+
+  <div class="graph-modal__container success success__container" role="dialog" aria-modal="true" data-graph-target="wholesale-modal">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content success__content">
+      <picture class="success__picture">
+        <source srcset="img/success.avif" type="image/avif">
+        <source srcset="img/success.webp" type="image/webp">
+        <img loading="lazy" src="img/success.png" class="image" width="92" height="92" alt="Заявка принята">
+      </picture>
+      <h4 class="success__title">Ваша заявка успешно принята</h4>
+      <p class="success__descr">
+        Porttitor vitae ornare aliquet euismod nunc, tincidunt. In non elementum, ornare elementum nisi egestas vel ut.
+      </p>
+      <button class="success__btn btn-reset main-btn js-modal-close">Хорошо</button>
     </div>
   </div>
 </div>

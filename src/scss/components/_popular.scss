@@ -13,6 +13,14 @@
   &__slider {
     display: flex;
     justify-content: space-between;
+
+    .swiper-slide {
+      &:focus {
+        outline: 1px solid var(--blue-color);
+        outline-offset: 1px;
+        transition: none;
+      }
+    }
   }
 
   &-btn-next {
@@ -26,21 +34,13 @@
       }
     }
 
-    @include hover {
+    &:hover {
       svg {
         path {
           stroke: #C4CDD5;
         }
       }
     }
-
-    // &:focus {
-    //   svg {
-    //     path {
-    //       stroke: #C4CDD5;
-    //     }
-    //   }
-    // }
 
   }
 
@@ -55,7 +55,7 @@
       }
     }
 
-    @include hover {
+    &:hover {
       svg {
         path {
           stroke: #C4CDD5;
@@ -63,13 +63,6 @@
       }
     }
 
-    // &:focus {
-    //   svg {
-    //     path {
-    //       stroke: #C4CDD5;
-    //     }
-    //   }
-    // }
   }
 }
 
@@ -80,7 +73,16 @@
   width: 100%;
   transition: all .3s;
 
-  @include hover {
+
+  a {
+    &:focus {
+      outline: 1px solid var(--blue-color);
+      outline-offset: -1px;
+      transition: box-shadow .3s;
+    }
+  }
+
+  &:hover {
     box-shadow: 3px 3px 20px rgb(50 50 50 / 25%);
 
     .product-custom__price {
@@ -95,7 +97,7 @@
   }
 
   &__image {
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: rgba(0, 0, 0, 0.03);
   }
 
   &__content {
@@ -128,6 +130,7 @@
   &__newprice {
     display: inline-block;
     margin-right: 12px;
+    padding-right: 13px;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
@@ -204,11 +207,11 @@
       &::after {
         content: "";
         position: absolute;
-        left: 7px;
+        left: 6px;
         bottom: 5px;
         display: inline-block;
-        width: 10px;
-        height: 10px;
+        width: 11px;
+        height: 11px;
         background-image: url('../img/svg/redclose.svg');
         background-position: center;
         background-repeat: no-repeat;
@@ -255,9 +258,11 @@
     font-size: 15px;
     text-transform: uppercase;
     color: var(--blue-color);
+
   }
 
   &__cart {
     transition: all .3s;
   }
 }
+

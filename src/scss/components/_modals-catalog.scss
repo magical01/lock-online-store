@@ -37,21 +37,38 @@
 
   &__btn {
     padding: 10px 32px;
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 2px;
+      transition: none;
+    }
   }
 
   &__link {
+    position: relative;
     display: inline-block;
     margin-bottom: 20px;
+    transition: all .2s;
 
-    &--current {
-      border-bottom: 1px solid var(--blue-color);
-      padding-bottom: 5px;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 26px;
-      color: var(--black-color);
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 0%;
+      height: 1px;
+      background-color: var(--blue-color);
+      transition: all .3s;
     }
 
+    &:hover {
+      color: var(--black-color);
+
+      &::before {
+        width: 100%;
+      }
+    }
   }
 
   &__right {

@@ -1,14 +1,7 @@
-<!-- <section class="catalog-product">
-  <div class="container catalog-product__container">
-    <h2 class="catalog-product__title title">Накладные электронные замки</h2>
-
-  </div>
-</section> -->
-
 <div class="catalog-product__right catalog-grid">
   <div class="catalog-grid__props catalog-props">
     <div class="catalog-props__left catalog-choice">
-      <button class="catalog-props__btn btn-reset" data-choice-text="Электронные кодовые замки">
+      <button class="catalog-props__btn btn-reset focus-offset" data-choice-text="Электронные кодовые замки">
         Электронные кодовые замки
         <svg aria-hidden="true" width="10" height="10" viewBox="0 0 10 10" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -17,331 +10,479 @@
       </button>
     </div>
     <div class="catalog-props__right">
-      <div class="custom-select" tabindex="0" role="button" aria-label="Выберите комплектацию товара">
+      <button class="custom-select btn-reset" tabindex="0" aria-label="Выберите комплектацию товара">
         <div class="custom-select__top">Популярные</div>
         <div class="custom-select__dropdown">
           <ul class="custom-select__list list-reset" role="alert">
-            <li class="custom-select__item">Популярные</li>
-            <li class="custom-select__item">Сначала дешевые</li>
-            <li class="custom-select__item">Сначала дорогие</li>
-            <li class="custom-select__item">Высокий рейтинг</li>
+            <li class="custom-select__item" tabindex="0">Популярные</li>
+            <li class="custom-select__item" tabindex="0">Сначала дешевые</li>
+            <li class="custom-select__item" tabindex="0">Сначала дорогие</li>
+            <li class="custom-select__item" tabindex="0">Высокий рейтинг</li>
           </ul>
         </div>
-      </div>
+      </button>
     </div>
   </div>
   <ul class="catalog-grid__list list-reset">
     <li class="catalog-grid__item">
       <article class="product">
-        <span class="product__sale">Sale</span>
-        <span class="product__instock">
-          В наличии
-          <span></span>
-        </span>
-        <span class="product__gift">Подарок</span>
-        <div class="product__image">
-          <picture>
-            <source srcset="img/product-1.avif" type="image/avif">
-            <source srcset="img/product-1.webp" type="image/webp">
-            <img loading="lazy" src="img/product-1.png" class="product__img" width="288" height="320"
-              alt="Дверной Замок Golden Soft">
-          </picture>
-        </div>
-        <div class="product__content">
-          <div class="rating">
-            <div class="rating__group">
-              <input class="rating__star" id="one__5" name="one" type="radio" value="1" aria-label="Ужасно">
-              <label class="rating__label" for="one__5"></label>
-              <input class="rating__star" id="one__4" name="one" type="radio" value="2" aria-label="Сносно">
-              <label class="rating__label" for="one__4"></label>
-              <input class="rating__star" id="one__3" name="one" type="radio" value="3" aria-label="Нормально" checked>
-              <label class="rating__label" for="one__3"></label>
-              <input class="rating__star" id="one__2" name="one" type="radio" value="4" aria-label="Хорошо">
-              <label class="rating__label" for="one__2"></label>
-              <input class="rating__star" id="one__1" name="one" type="radio" value="5" aria-label="Отлично">
-              <label class="rating__label" for="one__1"></label>
-            </div>
+        <a href="product.html" tabindex="0">
+          <span class="product__sale">Sale</span>
+          <span class="product__outstock">
+            Нет в наличии
+            <span></span>
+          </span>
+          <span class="product__gift">Подарок</span>
+          <div class="product__image">
+            <picture>
+              <source srcset="img/popular-2.avif" type="image/avif">
+              <source srcset="img/popular-2.webp" type="image/webp">
+              <img loading="lazy" src="img/popular-2.png" class="product__img" width="288" height="320"
+                alt="Дверной Замок Golden Soft">
+            </picture>
           </div>
-          <h3 class="product__title">
-            <a href="#">
+          <div class="product__content">
+            <div class="rating">
+              <div class="rating__group">
+                <input class="rating__star" id="one__5" name="one" type="radio" value="1" aria-label="Ужасно">
+                <label class="rating__label" for="one__5"></label>
+                <input class="rating__star" id="one__4" name="one" type="radio" value="2" aria-label="Сносно">
+                <label class="rating__label" for="one__4"></label>
+                <input class="rating__star" id="one__3" name="one" type="radio" value="3" aria-label="Нормально"
+                  checked>
+                <label class="rating__label" for="one__3"></label>
+                <input class="rating__star" id="one__2" name="one" type="radio" value="4" aria-label="Хорошо">
+                <label class="rating__label" for="one__2"></label>
+                <input class="rating__star" id="one__1" name="one" type="radio" value="5" aria-label="Отлично">
+                <label class="rating__label" for="one__1"></label>
+              </div>
+            </div>
+            <h3 class="product__title">
               Дверной Замок Golden Soft для отеля
-            </a>
-          </h3>
-          <div class="product-custom">
-            <div class="product-custom__price">
-              <span class="product__newprice">33 000₽</span>
-              <span class="product__oldprice">37 000₽</span>
-            </div>
-            <div class="product-custom__cart">
-              <button class="to-cart btn-reset">Добавить в корзину</button>
+            </h3>
+            <div class="product-custom">
+              <div class="product-custom__price">
+                <span class="product__newprice price-symbol">7 000</span>
+                <span class="product__oldprice">8 000₽</span>
+              </div>
+              <div class="product-custom__cart">
+                <button class="to-cart btn-reset" tabindex="-1">Добавить в корзину</button>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </article>
     </li>
     <li class="catalog-grid__item">
       <article class="product">
-        <span class="product__sale">Sale</span>
-        <span class="product__instock">
-          В наличии
-          <span></span>
-        </span>
-        <span class="product__gift">Подарок</span>
-        <div class="product__image">
-          <picture>
-            <source srcset="img/product-1.avif" type="image/avif">
-            <source srcset="img/product-1.webp" type="image/webp">
-            <img loading="lazy" src="img/product-1.png" class="product__img" width="288" height="320"
-              alt="Дверной Замок Golden Soft">
-          </picture>
-        </div>
-        <div class="product__content">
-          <div class="rating">
-            <div class="rating__group">
-              <input class="rating__star" id="two__5" name="two" type="radio" value="1" aria-label="Ужасно">
-              <label class="rating__label" for="two__5"></label>
-              <input class="rating__star" id="two__4" name="two" type="radio" value="2" aria-label="Сносно">
-              <label class="rating__label" for="two__4"></label>
-              <input class="rating__star" id="two__3" name="two" type="radio" value="3" aria-label="Нормально" checked>
-              <label class="rating__label" for="two__3"></label>
-              <input class="rating__star" id="two__2" name="two" type="radio" value="4" aria-label="Хорошо">
-              <label class="rating__label" for="two__2"></label>
-              <input class="rating__star" id="two__1" name="two" type="radio" value="5" aria-label="Отлично">
-              <label class="rating__label" for="two__1"></label>
-            </div>
+        <a href="product.html" tabindex="0">
+          <span class="product__instock">
+            В наличии
+            <span></span>
+          </span>
+          <div class="product__image">
+            <picture>
+              <source srcset="img/popular-3.avif" type="image/avif">
+              <source srcset="img/popular-3.webp" type="image/webp">
+              <img loading="lazy" src="img/popular-3.png" class="product__img" width="288" height="320"
+                alt="Дверной Замок Golden Soft">
+            </picture>
           </div>
-          <h3 class="product__title">
-            <a href="#">
+          <div class="product__content">
+            <div class="rating">
+              <div class="rating__group">
+                <input class="rating__star" id="two__5" name="two" type="radio" value="1" aria-label="Ужасно">
+                <label class="rating__label" for="two__5"></label>
+                <input class="rating__star" id="two__4" name="two" type="radio" value="2" aria-label="Сносно">
+                <label class="rating__label" for="two__4"></label>
+                <input class="rating__star" id="two__3" name="two" type="radio" value="3" aria-label="Нормально"
+                  checked>
+                <label class="rating__label" for="two__3"></label>
+                <input class="rating__star" id="two__2" name="two" type="radio" value="4" aria-label="Хорошо">
+                <label class="rating__label" for="two__2"></label>
+                <input class="rating__star" id="two__1" name="two" type="radio" value="5" aria-label="Отлично">
+                <label class="rating__label" for="two__1"></label>
+              </div>
+            </div>
+            <h3 class="product__title">
               Дверной Замок Golden Soft для отеля
-            </a>
-          </h3>
-          <div class="product-custom">
-            <div class="product-custom__price">
-              <span class="product__newprice">33 000₽</span>
-              <span class="product__oldprice">37 000₽</span>
-            </div>
-            <div class="product-custom__cart">
-              <button class="to-cart btn-reset">Добавить в корзину</button>
+            </h3>
+            <div class="product-custom">
+              <div class="product-custom__price">
+                <span class="product__newprice price-symbol">37 000</span>
+              </div>
+              <div class="product-custom__cart">
+                <button class="to-cart btn-reset" tabindex="-1">Добавить в корзину</button>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </article>
     </li>
     <li class="catalog-grid__item">
       <article class="product">
-        <span class="product__sale">Sale</span>
-        <span class="product__instock">
-          В наличии
-          <span></span>
-        </span>
-        <span class="product__gift">Подарок</span>
-        <div class="product__image">
-          <picture>
-            <source srcset="img/product-1.avif" type="image/avif">
-            <source srcset="img/product-1.webp" type="image/webp">
-            <img loading="lazy" src="img/product-1.png" class="product__img" width="288" height="320"
-              alt="Дверной Замок Golden Soft">
-          </picture>
-        </div>
-        <div class="product__content">
-          <div class="rating">
-            <div class="rating__group">
-              <input class="rating__star" id="three__5" name="three" type="radio" value="1" aria-label="Ужасно">
-              <label class="rating__label" for="three__5"></label>
-              <input class="rating__star" id="three__4" name="three" type="radio" value="2" aria-label="Сносно">
-              <label class="rating__label" for="three__4"></label>
-              <input class="rating__star" id="three__3" name="three" type="radio" value="3" aria-label="Нормально"
-                checked>
-              <label class="rating__label" for="three__3"></label>
-              <input class="rating__star" id="three__2" name="three" type="radio" value="4" aria-label="Хорошо">
-              <label class="rating__label" for="three__2"></label>
-              <input class="rating__star" id="three__1" name="three" type="radio" value="5" aria-label="Отлично">
-              <label class="rating__label" for="three__1"></label>
-            </div>
+        <a href="product.html" tabindex="0">
+          <span class="product__sale">Sale</span>
+          <span class="product__instock">
+            В наличии
+            <span></span>
+          </span>
+          <span class="product__gift">Подарок</span>
+          <div class="product__image">
+            <picture>
+              <source srcset="img/popular-4.avif" type="image/avif">
+              <source srcset="img/popular-4.webp" type="image/webp">
+              <img loading="lazy" src="img/popular-4.png" class="product__img" width="288" height="320"
+                alt="Дверной Замок Golden Soft">
+            </picture>
           </div>
-          <h3 class="product__title">
-            <a href="#">
+          <div class="product__content">
+            <div class="rating">
+              <div class="rating__group">
+                <input class="rating__star" id="three__5" name="three" type="radio" value="1" aria-label="Ужасно">
+                <label class="rating__label" for="three__5"></label>
+                <input class="rating__star" id="three__4" name="three" type="radio" value="2" aria-label="Сносно">
+                <label class="rating__label" for="three__4"></label>
+                <input class="rating__star" id="three__3" name="three" type="radio" value="3" aria-label="Нормально"
+                  checked>
+                <label class="rating__label" for="three__3"></label>
+                <input class="rating__star" id="three__2" name="three" type="radio" value="4" aria-label="Хорошо">
+                <label class="rating__label" for="three__2"></label>
+                <input class="rating__star" id="three__1" name="three" type="radio" value="5" aria-label="Отлично">
+                <label class="rating__label" for="three__1"></label>
+              </div>
+            </div>
+            <h3 class="product__title">
               Дверной Замок Golden Soft для отеля
-            </a>
-          </h3>
-          <div class="product-custom">
-            <div class="product-custom__price">
-              <span class="product__newprice">33 000₽</span>
-              <span class="product__oldprice">37 000₽</span>
-            </div>
-            <div class="product-custom__cart">
-              <button class="to-cart btn-reset">Добавить в корзину</button>
+            </h3>
+            <div class="product-custom">
+              <div class="product-custom__price">
+                <span class="product__newprice price-symbol">9 000</span>
+                <span class="product__oldprice">12 000₽</span>
+              </div>
+              <div class="product-custom__cart">
+                <button class="to-cart btn-reset" tabindex="-1">Добавить в корзину</button>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </article>
     </li>
     <li class="catalog-grid__item">
       <article class="product">
-        <span class="product__sale">Sale</span>
-        <span class="product__instock">
-          В наличии
-          <span></span>
-        </span>
-        <span class="product__gift">Подарок</span>
-        <div class="product__image">
-          <picture>
-            <source srcset="img/product-1.avif" type="image/avif">
-            <source srcset="img/product-1.webp" type="image/webp">
-            <img loading="lazy" src="img/product-1.png" class="product__img" width="288" height="320"
-              alt="Дверной Замок Golden Soft">
-          </picture>
-        </div>
-        <div class="product__content">
-          <div class="rating">
-            <div class="rating__group">
-              <input class="rating__star" id="four__5" name="four" type="radio" value="1" aria-label="Ужасно">
-              <label class="rating__label" for="four__5"></label>
-              <input class="rating__star" id="four__4" name="four" type="radio" value="2" aria-label="Сносно">
-              <label class="rating__label" for="four__4"></label>
-              <input class="rating__star" id="four__3" name="four" type="radio" value="3" aria-label="Нормально"
-                checked>
-              <label class="rating__label" for="four__3"></label>
-              <input class="rating__star" id="four__2" name="four" type="radio" value="4" aria-label="Хорошо">
-              <label class="rating__label" for="four__2"></label>
-              <input class="rating__star" id="four__1" name="four" type="radio" value="5" aria-label="Отлично">
-              <label class="rating__label" for="four__1"></label>
-            </div>
+        <a href="product.html" tabindex="0">
+          <span class="product__sale">Sale</span>
+          <span class="product__outstock">
+            Нет в наличии
+            <span></span>
+          </span>
+          <span class="product__gift">Подарок</span>
+          <div class="product__image">
+            <picture>
+              <source srcset="img/popular-2.avif" type="image/avif">
+              <source srcset="img/popular-2.webp" type="image/webp">
+              <img loading="lazy" src="img/popular-2.png" class="product__img" width="288" height="320"
+                alt="Дверной Замок Golden Soft">
+            </picture>
           </div>
-          <h3 class="product__title">
-            <a href="#">
+          <div class="product__content">
+            <div class="rating">
+              <div class="rating__group">
+                <input class="rating__star" id="four__5" name="four" type="radio" value="1" aria-label="Ужасно">
+                <label class="rating__label" for="four__5"></label>
+                <input class="rating__star" id="four__4" name="four" type="radio" value="2" aria-label="Сносно">
+                <label class="rating__label" for="four__4"></label>
+                <input class="rating__star" id="four__3" name="four" type="radio" value="3" aria-label="Нормально"
+                  checked>
+                <label class="rating__label" for="four__3"></label>
+                <input class="rating__star" id="four__2" name="four" type="radio" value="4" aria-label="Хорошо">
+                <label class="rating__label" for="four__2"></label>
+                <input class="rating__star" id="four__1" name="four" type="radio" value="5" aria-label="Отлично">
+                <label class="rating__label" for="four__1"></label>
+              </div>
+            </div>
+            <h3 class="product__title">
               Дверной Замок Golden Soft для отеля
-            </a>
-          </h3>
-          <div class="product-custom">
-            <div class="product-custom__price">
-              <span class="product__newprice">33 000₽</span>
-              <span class="product__oldprice">37 000₽</span>
-            </div>
-            <div class="product-custom__cart">
-              <button class="to-cart btn-reset">Добавить в корзину</button>
+            </h3>
+            <div class="product-custom">
+              <div class="product-custom__price">
+                <span class="product__newprice price-symbol">7 000</span>
+                <span class="product__oldprice">8 000₽</span>
+              </div>
+              <div class="product-custom__cart">
+                <button class="to-cart btn-reset" tabindex="-1">Добавить в корзину</button>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </article>
     </li>
     <li class="catalog-grid__item">
       <article class="product">
-        <span class="product__sale">Sale</span>
-        <span class="product__instock">
-          В наличии
-          <span></span>
-        </span>
-        <span class="product__gift">Подарок</span>
-        <div class="product__image">
-          <picture>
-            <source srcset="img/product-1.avif" type="image/avif">
-            <source srcset="img/product-1.webp" type="image/webp">
-            <img loading="lazy" src="img/product-1.png" class="product__img" width="288" height="320"
-              alt="Дверной Замок Golden Soft">
-          </picture>
-        </div>
-        <div class="product__content">
-          <div class="rating">
-            <div class="rating__group">
-              <input class="rating__star" id="five__5" name="five" type="radio" value="1" aria-label="Ужасно">
-              <label class="rating__label" for="five__5"></label>
-              <input class="rating__star" id="five__4" name="five" type="radio" value="2" aria-label="Сносно">
-              <label class="rating__label" for="five__4"></label>
-              <input class="rating__star" id="five__3" name="five" type="radio" value="3" aria-label="Нормально"
-                checked>
-              <label class="rating__label" for="five__3"></label>
-              <input class="rating__star" id="five__2" name="five" type="radio" value="4" aria-label="Хорошо">
-              <label class="rating__label" for="five__2"></label>
-              <input class="rating__star" id="five__1" name="five" type="radio" value="5" aria-label="Отлично">
-              <label class="rating__label" for="five__1"></label>
-            </div>
+        <a href="product.html" tabindex="0">
+          <span class="product__sale">Sale</span>
+          <span class="product__instock">
+            В наличии
+            <span></span>
+          </span>
+          <span class="product__gift">Подарок</span>
+          <div class="product__image">
+            <picture>
+              <source srcset="img/popular-3.avif" type="image/avif">
+              <source srcset="img/popular-3.webp" type="image/webp">
+              <img loading="lazy" src="img/popular-3.png" class="product__img" width="288" height="320"
+                alt="Дверной Замок Golden Soft">
+            </picture>
           </div>
-          <h3 class="product__title">
-            <a href="#">
+          <div class="product__content">
+            <div class="rating">
+              <div class="rating__group">
+                <input class="rating__star" id="five__5" name="five" type="radio" value="1" aria-label="Ужасно">
+                <label class="rating__label" for="five__5"></label>
+                <input class="rating__star" id="five__4" name="five" type="radio" value="2" aria-label="Сносно">
+                <label class="rating__label" for="five__4"></label>
+                <input class="rating__star" id="five__3" name="five" type="radio" value="3" aria-label="Нормально"
+                  checked>
+                <label class="rating__label" for="five__3"></label>
+                <input class="rating__star" id="five__2" name="five" type="radio" value="4" aria-label="Хорошо">
+                <label class="rating__label" for="five__2"></label>
+                <input class="rating__star" id="five__1" name="five" type="radio" value="5" aria-label="Отлично">
+                <label class="rating__label" for="five__1"></label>
+              </div>
+            </div>
+            <h3 class="product__title">
               Дверной Замок Golden Soft для отеля
-            </a>
-          </h3>
-          <div class="product-custom">
-            <div class="product-custom__price">
-              <span class="product__newprice">33 000₽</span>
-              <span class="product__oldprice">37 000₽</span>
-            </div>
-            <div class="product-custom__cart">
-              <button class="to-cart btn-reset">Добавить в корзину</button>
+            </h3>
+            <div class="product-custom">
+              <div class="product-custom__price">
+                <span class="product__newprice price-symbol">33 000</span>
+                <span class="product__oldprice">37 000₽</span>
+              </div>
+              <div class="product-custom__cart">
+                <button class="to-cart btn-reset" tabindex="-1">Добавить в корзину</button>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </article>
     </li>
     <li class="catalog-grid__item">
       <article class="product">
-        <span class="product__sale">Sale</span>
-        <span class="product__instock">
-          В наличии
-          <span></span>
-        </span>
-        <span class="product__gift">Подарок</span>
-        <div class="product__image">
-          <picture>
-            <source srcset="img/product-1.avif" type="image/avif">
-            <source srcset="img/product-1.webp" type="image/webp">
-            <img loading="lazy" src="img/product-1.png" class="product__img" width="288" height="320"
-              alt="Дверной Замок Golden Soft">
-          </picture>
-        </div>
-        <div class="product__content">
-          <div class="rating">
-            <div class="rating__group">
-              <input class="rating__star" id="six__5" name="six" type="radio" value="1" aria-label="Ужасно">
-              <label class="rating__label" for="six__5"></label>
-              <input class="rating__star" id="six__4" name="six" type="radio" value="2" aria-label="Сносно">
-              <label class="rating__label" for="six__4"></label>
-              <input class="rating__star" id="six__3" name="six" type="radio" value="3" aria-label="Нормально" checked>
-              <label class="rating__label" for="six__3"></label>
-              <input class="rating__star" id="six__2" name="six" type="radio" value="4" aria-label="Хорошо">
-              <label class="rating__label" for="six__2"></label>
-              <input class="rating__star" id="six__1" name="six" type="radio" value="5" aria-label="Отлично">
-              <label class="rating__label" for="six__1"></label>
-            </div>
+        <a href="product.html" tabindex="0">
+          <span class="product__sale">Sale</span>
+          <span class="product__instock">
+            В наличии
+            <span></span>
+          </span>
+          <span class="product__gift">Подарок</span>
+          <div class="product__image">
+            <picture>
+              <source srcset="img/popular-4.avif" type="image/avif">
+              <source srcset="img/popular-4.webp" type="image/webp">
+              <img loading="lazy" src="img/popular-4.png" class="product__img" width="288" height="320"
+                alt="Дверной Замок Golden Soft">
+            </picture>
           </div>
-          <h3 class="product__title">
-            <a href="#">
+          <div class="product__content">
+            <div class="rating">
+              <div class="rating__group">
+                <input class="rating__star" id="six__5" name="six" type="radio" value="1" aria-label="Ужасно">
+                <label class="rating__label" for="six__5"></label>
+                <input class="rating__star" id="six__4" name="six" type="radio" value="2" aria-label="Сносно">
+                <label class="rating__label" for="six__4"></label>
+                <input class="rating__star" id="six__3" name="six" type="radio" value="3" aria-label="Нормально"
+                  checked>
+                <label class="rating__label" for="six__3"></label>
+                <input class="rating__star" id="six__2" name="six" type="radio" value="4" aria-label="Хорошо">
+                <label class="rating__label" for="six__2"></label>
+                <input class="rating__star" id="six__1" name="six" type="radio" value="5" aria-label="Отлично">
+                <label class="rating__label" for="six__1"></label>
+              </div>
+            </div>
+            <h3 class="product__title">
               Дверной Замок Golden Soft для отеля
-            </a>
-          </h3>
-          <div class="product-custom">
-            <div class="product-custom__price">
-              <span class="product__newprice">33 000₽</span>
-              <span class="product__oldprice">37 000₽</span>
-            </div>
-            <div class="product-custom__cart">
-              <button class="to-cart btn-reset">Добавить в корзину</button>
+            </h3>
+            <div class="product-custom">
+              <div class="product-custom__price">
+                <span class="product__newprice price-symbol">9 000</span>
+                <span class="product__oldprice">12 000₽</span>
+              </div>
+              <div class="product-custom__cart">
+                <button class="to-cart btn-reset" tabindex="-1">Добавить в корзину</button>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
+      </article>
+    </li>
+    <li class="catalog-grid__item">
+      <article class="product">
+        <a href="product.html" tabindex="0">
+          <span class="product__sale">Sale</span>
+          <span class="product__outstock">
+            Нет в наличии
+            <span></span>
+          </span>
+          <span class="product__gift">Подарок</span>
+          <div class="product__image">
+            <picture>
+              <source srcset="img/popular-2.avif" type="image/avif">
+              <source srcset="img/popular-2.webp" type="image/webp">
+              <img loading="lazy" src="img/popular-2.png" class="product__img" width="288" height="320"
+                alt="Дверной Замок Golden Soft">
+            </picture>
+          </div>
+          <div class="product__content">
+            <div class="rating">
+              <div class="rating__group">
+                <input class="rating__star" id="one__5" name="one" type="radio" value="1" aria-label="Ужасно">
+                <label class="rating__label" for="one__5"></label>
+                <input class="rating__star" id="one__4" name="one" type="radio" value="2" aria-label="Сносно">
+                <label class="rating__label" for="one__4"></label>
+                <input class="rating__star" id="one__3" name="one" type="radio" value="3" aria-label="Нормально"
+                  checked>
+                <label class="rating__label" for="one__3"></label>
+                <input class="rating__star" id="one__2" name="one" type="radio" value="4" aria-label="Хорошо">
+                <label class="rating__label" for="one__2"></label>
+                <input class="rating__star" id="one__1" name="one" type="radio" value="5" aria-label="Отлично">
+                <label class="rating__label" for="one__1"></label>
+              </div>
+            </div>
+            <h3 class="product__title">
+              Дверной Замок Golden Soft для отеля
+            </h3>
+            <div class="product-custom">
+              <div class="product-custom__price">
+                <span class="product__newprice price-symbol">7 000</span>
+                <span class="product__oldprice">8 000₽</span>
+              </div>
+              <div class="product-custom__cart">
+                <button class="to-cart btn-reset" tabindex="-1">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </article>
+    </li>
+    <li class="catalog-grid__item">
+      <article class="product">
+        <a href="product.html" tabindex="0">
+          <span class="product__sale">Sale</span>
+          <span class="product__instock">
+            В наличии
+            <span></span>
+          </span>
+          <span class="product__gift">Подарок</span>
+          <div class="product__image">
+            <picture>
+              <source srcset="img/popular-3.avif" type="image/avif">
+              <source srcset="img/popular-3.webp" type="image/webp">
+              <img loading="lazy" src="img/popular-3.png" class="product__img" width="288" height="320"
+                alt="Дверной Замок Golden Soft">
+            </picture>
+          </div>
+          <div class="product__content">
+            <div class="rating">
+              <div class="rating__group">
+                <input class="rating__star" id="two__5" name="two" type="radio" value="1" aria-label="Ужасно">
+                <label class="rating__label" for="two__5"></label>
+                <input class="rating__star" id="two__4" name="two" type="radio" value="2" aria-label="Сносно">
+                <label class="rating__label" for="two__4"></label>
+                <input class="rating__star" id="two__3" name="two" type="radio" value="3" aria-label="Нормально"
+                  checked>
+                <label class="rating__label" for="two__3"></label>
+                <input class="rating__star" id="two__2" name="two" type="radio" value="4" aria-label="Хорошо">
+                <label class="rating__label" for="two__2"></label>
+                <input class="rating__star" id="two__1" name="two" type="radio" value="5" aria-label="Отлично">
+                <label class="rating__label" for="two__1"></label>
+              </div>
+            </div>
+            <h3 class="product__title">
+              Дверной Замок Golden Soft для отеля
+            </h3>
+            <div class="product-custom">
+              <div class="product-custom__price">
+                <span class="product__newprice price-symbol">33 000</span>
+                <span class="product__oldprice">37 000₽</span>
+              </div>
+              <div class="product-custom__cart">
+                <button class="to-cart btn-reset" tabindex="-1">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </article>
+    </li>
+    <li class="catalog-grid__item">
+      <article class="product">
+        <a href="product.html" tabindex="0">
+          <span class="product__sale">Sale</span>
+          <span class="product__instock">
+            В наличии
+            <span></span>
+          </span>
+          <span class="product__gift">Подарок</span>
+          <div class="product__image">
+            <picture>
+              <source srcset="img/popular-4.avif" type="image/avif">
+              <source srcset="img/popular-4.webp" type="image/webp">
+              <img loading="lazy" src="img/popular-4.png" class="product__img" width="288" height="320"
+                alt="Дверной Замок Golden Soft">
+            </picture>
+          </div>
+          <div class="product__content">
+            <div class="rating">
+              <div class="rating__group">
+                <input class="rating__star" id="three__5" name="three" type="radio" value="1" aria-label="Ужасно">
+                <label class="rating__label" for="three__5"></label>
+                <input class="rating__star" id="three__4" name="three" type="radio" value="2" aria-label="Сносно">
+                <label class="rating__label" for="three__4"></label>
+                <input class="rating__star" id="three__3" name="three" type="radio" value="3" aria-label="Нормально"
+                  checked>
+                <label class="rating__label" for="three__3"></label>
+                <input class="rating__star" id="three__2" name="three" type="radio" value="4" aria-label="Хорошо">
+                <label class="rating__label" for="three__2"></label>
+                <input class="rating__star" id="three__1" name="three" type="radio" value="5" aria-label="Отлично">
+                <label class="rating__label" for="three__1"></label>
+              </div>
+            </div>
+            <h3 class="product__title">
+              Дверной Замок Golden Soft для отеля
+            </h3>
+            <div class="product-custom">
+              <div class="product-custom__price">
+                <span class="product__newprice price-symbol">9 000</span>
+                <span class="product__oldprice">12 000₽</span>
+              </div>
+              <div class="product-custom__cart">
+                <button class="to-cart btn-reset" tabindex="-1">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </a>
       </article>
     </li>
   </ul>
   <div class="pagination-wrapper">
-    <button class="pagination-prev-btn btn-reset pagination-btn--disabled" aria-label="Предыдущая страница товаров">
+    <button class="pagination-prev-btn btn-reset pagination-btn--disabled focus-offset"
+      aria-label="Предыдущая страница товаров">
       <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12.332 22.6667L1.66536 12L12.332 1.33332" stroke="#161C24" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" />
       </svg>
     </button>
     <ul class="pagination list-reset">
-      <li class="pagination__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
-      <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-      <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-      <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
-      <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
-      <li class="pagination__item"><a class="pagination__link" href="#">6</a></li>
-      <li class="pagination__item"><a class="pagination__link" href="#">7</a></li>
-      <li class="pagination__item"><a class="pagination__link" href="#">...</a></li>
-      <li class="pagination__item"><a class="pagination__link" href="#">15</a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__link--active focus-offset" href="#">1</a></li>
+      <li class="pagination__item"><a class="pagination__link focus-offset" href="#">2</a></li>
+      <li class="pagination__item"><a class="pagination__link focus-offset" href="#">3</a></li>
+      <li class="pagination__item"><a class="pagination__link focus-offset" href="#">4</a></li>
+      <li class="pagination__item"><a class="pagination__link focus-offset" href="#">5</a></li>
+      <li class="pagination__item"><a class="pagination__link focus-offset" href="#">6</a></li>
+      <li class="pagination__item"><a class="pagination__link focus-offset" href="#">7</a></li>
+      <li class="pagination__item"><a class="pagination__link focus-offset" href="#">...</a></li>
+      <li class="pagination__item"><a class="pagination__link focus-offset" href="#">15</a></li>
     </ul>
-    <button class="pagination-next-btn btn-reset" aria-label="Следующая страница товаров">
+    <button class="pagination-next-btn btn-reset focus-offset" aria-label="Следующая страница товаров">
       <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.66797 1.33334L12.3346 12L1.66797 22.6667" stroke="#161C24" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" />

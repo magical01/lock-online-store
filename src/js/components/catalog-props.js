@@ -10,6 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.custom-select__top').textContent = text;
       }
     });
-
   });
 });

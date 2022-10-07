@@ -9,14 +9,17 @@
     display: flex;
     padding-top: 125px;
     padding-left: 52px;
-    gap: 6%;
   }
 
   &__image {
     width: 43%;
+    margin-right: 6%;
   }
 
   &__content {
+    display: flex;
+    width: calc(100% - 43% - 6%);
+    flex-direction: column;
     max-width: 604px;
     margin-top: 46px;
   }
@@ -47,6 +50,11 @@
     color: var(--gray-color);
   }
 
+  &__prices {
+    display: flex;
+    align-items: center;
+  }
+
   &__newprice {
     margin-right: 12px;
     font-weight: 600;
@@ -65,8 +73,15 @@
 
   &__btn {
     display: block;
+    align-self: flex-start;
     margin-top: 16px;
     padding: 12px 37px;
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 3px;
+      transition: none;
+    }
   }
 }
 

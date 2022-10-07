@@ -53,6 +53,12 @@
       background-color: rgba(125, 190, 255, 0.07);
     }
 
+    &:focus {
+      outline: 1px solid var(--blue-color);
+      outline-offset: 0px;
+      transition: none;
+    }
+
     picture {
       display: flex;
       justify-content: center;
@@ -90,6 +96,7 @@
     font-weight: 600;
     font-size: 13px;
     color: var(--blue-color);
+
   }
 
   &__title {
@@ -134,6 +141,12 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 4px;
+      transition: none;
+    }
   }
 
   &__favorite {
@@ -160,6 +173,12 @@
       svg path {
         stroke: var(--blue-color);
       }
+    }
+
+    &:focus {
+      outline: 1px solid var(--blue-color);
+      outline-offset: 1px;
+      transition: none;
     }
   }
 
@@ -225,7 +244,16 @@
     border: 1px solid #C4CDD5;
     min-width: 322px;
   }
+
+  .custom-select--open {
+    .custom-select__top {
+      border: 1px solid var(--blue-color);
+      transition: all 0.2s;
+    }
+  }
 }
+
+
 
 .color {
   margin-left: 30px;
@@ -628,15 +656,32 @@
       max-height: 140px;
       min-height: 140px;
       height: 140px;
+      transition: all .3s;
+
+      &:focus {
+        outline: none;
+        border: 1px solid var(--blue-color);
+      }
     }
 
     &__input {
       border: 1px solid #E4E7E9;
+
+      &:focus {
+        border: 1px solid var(--blue-color);
+      }
     }
 
     &__btn {
       padding: 16px 50px;
       margin-top: 25px;
+
+      &:focus {
+        outline: 2px solid var(--blue-color);
+        outline-offset: 4px;
+        transition: none;
+      }
+
     }
   }
 }

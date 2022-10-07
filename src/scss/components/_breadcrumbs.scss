@@ -40,5 +40,11 @@
         color: var(--dis-color);
       }
     }
+
+    &:focus {
+      outline: 1px solid var(--blue-color);
+      outline-offset: 2px;
+      transition: none;
+    }
   }
 }

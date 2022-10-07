@@ -157,6 +157,12 @@ a {
       width: 100%;
       border-bottom: 1px solid var(--white-color);
     }
+
+    &:focus {
+      outline: 1px solid var(--blue-color);
+      outline-offset: 2px;
+      transition: none;
+    }
   }
 }
 
@@ -175,6 +181,9 @@ a {
 
   &:focus {
     background-color: #2E81D0;
+    outline: 2px solid var(--blue-color);
+    outline-offset: 4px;
+    transition: background-color .3s;
   }
 
   &:active {
@@ -195,19 +204,14 @@ a {
   }
 }
 
-.input-form {
-  transition: all .3s;
+.focus-offset {
   &:focus {
-    outline: none;
-    border: 1px solid var(--blue-color);
+    outline: 1px solid var(--blue-color);
+    outline-offset: 2px;
+    transition: none;
   }
+}
 
-  &:active {
-    border: 1px solid var(--blue-color);
-  }
-
-  &--filled {
-    background-color: rgba(66, 149, 228, 0.04);
-    border: 1px solid rgba(66, 149, 228, 0.2);
-  }
+.just-validate-error-field {
+  border: 1px solid #E04243 !important;
 }

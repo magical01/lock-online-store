@@ -15,12 +15,18 @@
 
   &__num {
     display: block;
+    opacity: 0;
     margin-bottom: 16px;
     font-family: "SFProDisplay";
     font-weight: 600;
     font-size: 32px;
     line-height: 38px;
     text-align: center;
+    transition: all .5s;
+
+    &--active {
+      opacity: 1;
+    }
   }
 
   &__name {

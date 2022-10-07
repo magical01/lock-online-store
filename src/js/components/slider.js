@@ -15,7 +15,8 @@ const swiper = new Swiper('.hero__slider', {
   navigation: {
     nextEl: '.hero-btn-next',
     prevEl: '.hero-btn-prev'
-  }
+  },
+  speed: 500,
 });
 
 const verticalSlider = new Swiper('.slider-block', {
@@ -30,6 +31,13 @@ vars.sliderNavItems.forEach((elem, index) => {
     const index = +e.currentTarget.dataset.index;
     verticalSlider.slideTo(index);
   });
+
+  elem.addEventListener('keydown', (e) => {
+    if (e.key == 'Enter') {
+      const index = +e.currentTarget.dataset.index;
+      verticalSlider.slideTo(index);
+    }
+  });
 });
 
 const projectSlider = new Swiper('.projects-swiper', {
@@ -43,5 +51,6 @@ const projectSlider = new Swiper('.projects-swiper', {
   navigation: {
     nextEl: '.projects-btn-next',
     prevEl: '.projects-btn-prev'
-  }
+  },
+  speed: 500,
 });

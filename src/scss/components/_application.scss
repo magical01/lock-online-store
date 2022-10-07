@@ -50,12 +50,19 @@
   }
 
   &__label {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-basis: 31.6%;
 
     &:last-child {
       margin-top: 16px;
+    }
+
+    .just-validate-error-label {
+      position: absolute;
+      bottom: -15px;
+      font-size: 12px;
     }
   }
 

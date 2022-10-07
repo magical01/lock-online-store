@@ -1,26 +1,26 @@
 <section class="order">
   <div class="container">
     <h2 class="order__title title">Оформление заказа</h2>
-    <div class="order__form">
+    <form class="order__form" action="#">
       <div class="order__left">
         <div class="order__contacts user-info">
           <h4 class="user-info__title order__subject">1. Контактные данные</h4>
           <div class="user-info__box">
             <label class="user-info__label">
               <span class="user-info__text">Фамилия</span>
-              <input class="user-info__input input-form" type="text" name="Фамилия" placeholder="Зайцев">
+              <input class="user-info__input input-form input-lastname" type="text" name="Фамилия" placeholder="Зайцев">
             </label>
             <label class="user-info__label">
               <span class="user-info__text">Имя</span>
-              <input class="user-info__input input-form" type="text" name="Имя" placeholder="Михаил">
+              <input class="user-info__input input-form input-firstname" type="text" name="Имя" placeholder="Михаил">
             </label>
             <label class="user-info__label">
               <span class="user-info__text">Телефон</span>
-              <input class="user-info__input input-form" type="tel" name="Телефон" placeholder="+7 (_ _ _) _ _  _ _  _ _ _">
+              <input class="user-info__input input-form input-tel" type="tel" name="Телефон" placeholder="+7 (_ _ _) _ _  _ _  _ _ _">
             </label>
             <label class="user-info__label">
               <span class="user-info__text">E-mail</span>
-              <input class="user-info__input input-form" type="email" name="E-mail" placeholder="example@mail.ru">
+              <input class="user-info__input input-form input-email" type="email" name="E-mail" placeholder="example@mail.ru">
             </label>
           </div>
         </div>
@@ -81,14 +81,14 @@
               <div class="order-total__text">
                 <span class="order-total__name">
                   Дверной Замок Golden Soft для офиса
-                  <button class="order-total__delete btn-reset" aria-label="Удалить товар">
+                  <button class="order-total__delete btn-reset focus-offset" aria-label="Удалить товар">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M14.6673 1.33331L1.33398 14.6666M14.6673 14.6666L1.33398 1.33331L14.6673 14.6666Z"
                         stroke="#181818" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </button>
                 </span>
-                <p class="order-total__gift">+ Подарок: <a class="order-total__gift-link" href="#">“Приложение к замкам
+                <p class="order-total__gift">+ Подарок: <a class="order-total__gift-link focus-offset" href="#">“Приложение к замкам
                     Golden
                     Service”</a>
                 </p>
@@ -107,7 +107,7 @@
             </li>
           </ul>
           <div class="order-total__edit">
-            <a class="order-total__link" href="#">Редактировать</a>
+            <a class="order-total__link focus-offset" href="#">Редактировать</a>
             <span class="order-total__payment">
               К оплате:
               <span class="price-symbol">66 000</span>
@@ -135,7 +135,7 @@
           <button class="order-confirm__btn btn-reset main-btn">Подтвердить заказ</button>
           <div class="order-confirm__box">
             <span class="order-confirm__promo">Промокод</span>
-            <button class="order-confirm__add btn-reset" aria-expanded="false">Добавить</button>
+            <button class="order-confirm__add btn-reset focus-offset" aria-expanded="false">Добавить</button>
           </div>
           <div class="order-confirm__promocode order-promocode" aria-hidden="true">
             <input class="order-promocode__input input-reset" type="text" name="Промокод" placeholder="Введите промокод">
@@ -143,10 +143,10 @@
           </div>
         </div>
         <div class="order-total__agreement offset">
-          <span>Оформляя заказ, я принимаю условия <a class="order-total__agreement-link" href="#">пользовательского соглашения</a></span>
+          <span>Оформляя заказ, я принимаю условия <a class="order-total__agreement-link focus-offset" href="#">пользовательского соглашения</a></span>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </section>
 

@@ -72,6 +72,13 @@
   cursor: pointer;
   user-select: none;
 
+  &__input {
+    &:focus .custom-checkbox__text::before {
+      border: 10px solid var(--black-color);
+      transition: none;
+    }
+  }
+
   &__text {
     position: relative;
     padding-left: 29px;

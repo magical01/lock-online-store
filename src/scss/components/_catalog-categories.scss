@@ -12,6 +12,14 @@
     justify-content: space-between;
     row-gap: 50px;
     margin-bottom: 50px;
+
+    a {
+      &:focus {
+        outline: 1px solid var(--blue-color);
+        outline-offset: 3px;
+        transition: none;
+      }
+    }
   }
 
   &__image {
@@ -20,5 +28,11 @@
 
   &__btn {
     padding: 12px 60px;
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 2px;
+      transition: none;
+    }
   }
 }

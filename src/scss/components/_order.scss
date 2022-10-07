@@ -61,10 +61,18 @@
     font-size: 14px;
     line-height: 24px;
     color: var(--black-color);
+    background-color: var(--white-color);
     resize: none;
+    transition: all .3s;
 
     &::placeholder {
       color: #adadad;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--blue-color);
+      transition: all .3s;
     }
   }
 
@@ -89,6 +97,7 @@
   }
 
   &__label {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 48.6%;
@@ -99,6 +108,12 @@
 
     &:nth-child(-n+2) {
       margin-bottom: 16px;
+    }
+
+    .just-validate-error-label {
+      position: absolute;
+      bottom: -15px;
+      font-size: 12px;
     }
   }
 
@@ -334,6 +349,12 @@
     align-self: center;
     padding: 9px 50px;
     width: 300px;
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 4px;
+      transition: background-color .2s;
+    }
   }
 
   &__box {

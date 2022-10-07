@@ -9,5 +9,8 @@ import './components/product-page';
 import './components/modals';
 import './components/stepper';
 import './components/order';
+import './components/inputs-filled';
+import './components/validation';
+import './components/anim-num';
 import './components/simplebar';
 import './components/range-slider';

@@ -28,7 +28,9 @@ export default {
   applicationCheckbox: document.querySelectorAll('.application__item'),
   projectsCheckbox: document.querySelectorAll('.projects-slide__item'),
   shippingCheckbox: document.querySelectorAll('.shipping__checkboxes-item'),
+  number: document.querySelectorAll('.static__num'),
 
 }
+
 
 
