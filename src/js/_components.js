@@ -12,5 +12,6 @@ import './components/order';
 import './components/inputs-filled';
 import './components/validation';
 import './components/anim-num';
+import './components/aos';
 import './components/simplebar';
 import './components/range-slider';

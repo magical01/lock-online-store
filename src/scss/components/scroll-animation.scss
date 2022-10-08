@@ -1,0 +1,62 @@
+// advantages
+[data-aos="adv-left"] {
+  transform: translate(-500px, 0px);
+  opacity: 0;
+  transition: all 1.3s ease-in-out;
+}
+[data-aos="adv-left"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition-delay: .4s;
+}
+
+
+[data-aos="adv-center"] {
+  transform: translate(0px, 300px);
+  opacity: 0;
+  transition: all 1.3s ease-in-out;
+}
+[data-aos="adv-center"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition-delay: .8s;
+}
+
+
+[data-aos="adv-right"] {
+  transform: translate(500px, 0px);
+  opacity: 0;
+  transition: all 1.3s ease-in-out;
+}
+[data-aos="adv-right"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition-delay: 1.2s;
+}
+
+// hero
+[data-aos="hero-left"] {
+  transform: translate(-500px, 0px);
+  opacity: 0;
+  transition: all 1.3s ease-in-out;
+}
+[data-aos="hero-left"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition-delay: .4s;
+}
+
+[data-aos="hero-right"] {
+  transform: translate(500px, 0px);
+  opacity: 0;
+  transition: all 1.3s ease-in-out;
+}
+[data-aos="hero-right"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition-delay: .4s;
+}
+
+
+
+

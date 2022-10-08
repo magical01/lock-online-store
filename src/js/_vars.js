@@ -29,6 +29,7 @@ export default {
   projectsCheckbox: document.querySelectorAll('.projects-slide__item'),
   shippingCheckbox: document.querySelectorAll('.shipping__checkboxes-item'),
   number: document.querySelectorAll('.static__num'),
+  statisticsNum: document.querySelectorAll('.statistics__number'),
 
 }
 

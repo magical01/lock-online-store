@@ -56,45 +56,56 @@ import vars from "../_vars";
 // });
 
 
-const section = document.querySelector('.static');
-let time = 3000;
-let flag = false;
 
+document.addEventListener('DOMContentLoaded', () => {
+  let flag = false;
 
-window.addEventListener('scroll', () => {
-  const cPos = section.offsetTop / 2;
-  const topWindow = window.scrollY;
+  const scrollAnim = (sectionSelector, activeSelector, mainSelector) => {
 
-  if (cPos < topWindow) {
-    if (!flag) {
-      vars.number.forEach(elem => {
-        elem.classList.add('static__num--active')
-        let initialValue = 0;
-        let num = elem.dataset.num;
-        let step;
-        let t = Math.round(time / (num / step));
+    const section = document.querySelector(sectionSelector);
+    const elemPosition = section?.offsetTop / 2;
+    const topWindow = window.scrollY;
+    const time = 3000;
 
-        if (num > 1000 && num < 2000) {
-          step = 15;
-        } else if (num > 2000 && num < 6000){
-          step = 47;
-        } else if (num < 1000 && num > 350) {
-          step = 6;
-        } else if (num < 350) {
-          step = 1;
-        }
+    if (elemPosition < topWindow) {
+      if (!flag) {
+        mainSelector?.forEach(elem => {
+          elem.classList.add(activeSelector);
+          let initialValue = 0;
+          let num = +elem.dataset.num;
+          let step;
 
-        let interval = setInterval(() => {
-          initialValue += step;
-          if (initialValue <= num) {
-            elem.innerHTML = initialValue;
-          } else {
-            flag = true;
-            clearInterval(interval)
+          if (num > 1000 && num < 2000) {
+            step = 15;
+          } else if (num > 2000 && num < 6000){
+            step = 47;
+          } else if (num < 1000 && num > 350) {
+            step = 6;
+          } else if (num < 350) {
+            step = 1;
           }
-        }, 40)
-      });
+
+          let t = Math.round(time / (num / step));
+
+          let interval = setInterval(() => {
+            initialValue += step;
+            if (initialValue <= num) {
+              elem.innerHTML = initialValue;
+              flag = true;
+            } else {
+              flag = true;
+              clearInterval(interval);
+            }
+          }, t);
+
+        });
+      }
     }
   }
-})
 
+  window.addEventListener('scroll', () => {
+    scrollAnim('.static', 'static__num--active', vars.number);
+    scrollAnim('.statistics', 'statistics__number--active', vars.statisticsNum);
+  });
+
+})

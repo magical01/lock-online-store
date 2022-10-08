@@ -21,10 +21,16 @@
 
   &__number {
     display: inline-block;
+    opacity: 0;
     margin-bottom: 12px;
     font-weight: 600;
     font-size: 72px;
     line-height: 72px;
+    transition: all 0.5s;
+
+    &--active {
+      opacity: 1;
+    }
   }
 
   &__text {

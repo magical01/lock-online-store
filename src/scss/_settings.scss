@@ -64,6 +64,21 @@ a {
   font-weight: 600;
   font-size: 44px;
   line-height: 62px;
+
+  @include xxl {
+    font-size: 40px;
+    line-height: 58px;
+  }
+
+  @include tablet {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  @include mobile {
+    font-size: 22px;
+    line-height: 34px;
+  }
 }
 
 .input-reset {
@@ -96,6 +111,14 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include xl {
+    padding: 0 20px;
+  }
+
+  @include small-tablet {
+    padding: 0 15px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -137,15 +160,34 @@ a {
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__none {
     font-size: 0;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__text {
     margin-left: 129px;
     letter-spacing: 0.10em;
+
+    @include tablet {
+      margin-left: 0;
+    }
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.02em;
+    }
   }
 
   &__link {
@@ -163,6 +205,10 @@ a {
       outline-offset: 2px;
       transition: none;
     }
+
+    @include tablet {
+      display: none;
+    }
   }
 }
 
@@ -175,7 +221,7 @@ a {
   background-color: var(--blue-color);
   transition: all .3s;
 
-  @include hover {
+  &:hover {
     background-color: #56A9F8;;
   }
 
@@ -189,6 +235,15 @@ a {
   &:active {
     background-color: #2E81D0;
   }
+
+  @include mobile {
+    line-height: 19px;
+  }
+
+  // @include mini-mobile {
+  //   width: 100%;
+  // }
+
 }
 
 .price-symbol {
