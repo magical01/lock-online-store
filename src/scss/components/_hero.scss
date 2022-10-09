@@ -7,8 +7,10 @@
 
   &__item {
     display: flex;
+    margin-bottom: 40px;
     padding-top: 125px;
     padding-left: 52px;
+    cursor: pointer;
 
     @include xxl {
       padding-left: 0;
@@ -22,6 +24,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
     }
   }
 
@@ -81,6 +87,10 @@
     line-height: 24px;
     color: var(--gray-color);
 
+    @include small-tablet {
+      max-width: none;
+    }
+
     @include mobile {
       display: none;
     }
@@ -98,6 +108,7 @@
   &__prices {
     display: flex;
     align-items: center;
+    margin-bottom: 16px;
   }
 
   &__newprice {
@@ -129,13 +140,16 @@
   &__btn {
     display: block;
     align-self: flex-start;
-    margin-top: 16px;
     padding: 12px 37px;
 
     &:focus {
       outline: 2px solid var(--blue-color);
       outline-offset: 3px;
       transition: none;
+    }
+
+    @include mobile {
+      padding: 15px 37px;
     }
 
     @include mini-mobile {
@@ -162,9 +176,9 @@
 
 .hero__pagination {
   position: relative;
-  margin-top: 40px;
   text-align: center;
   z-index: 500;
+
 }
 
 .swiper-pagination-bullet {
@@ -218,6 +232,7 @@
       stroke: #C4CDD5;
     }
   }
+
 }
 
 .hero-btn-prev {

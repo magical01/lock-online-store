@@ -29,6 +29,12 @@
   }
 }
 
+@mixin md-tablet {
+  @media (max-width: (882px)) {
+    @content;
+  }
+}
+
 @mixin small-tablet {
   @media (max-width: (768px)) {
     @content;

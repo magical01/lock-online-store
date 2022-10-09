@@ -2,10 +2,22 @@
   background-color: #0D2436;
   box-shadow: inset 0px 1px 0px #C4CDD5;
 
+  &__logo {
+
+    @include tablet {
+      width: 70px;
+      height: 57px;
+    }
+  }
+
   &__top {
     display: flex;
     // justify-content: space-between;
     padding-bottom: 45px;
+
+    @include md-tablet {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -15,8 +27,26 @@
     margin-right: 17.420%;
     min-width: 116px;
 
+    @include xxl {
+      margin-right: 8%;
+    }
+
+    @include tablet {
+      margin-right: 5%;
+    }
+
+    @include md-tablet {
+      flex-direction: initial;
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+
     &-top {
       margin-top: 12px;
+
+      @include md-tablet {
+        margin-top: 0;
+      }
     }
   }
 
@@ -29,16 +59,19 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    @include small-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 24px;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     max-width: 182px;
-
-    // &:not(:last-child) {
-    //   margin-right: 14.5%;
-    // }
   }
 
   &__title {
@@ -49,6 +82,14 @@
     line-height: 28px;
     text-transform: capitalize;
 
+    @include small-tablet {
+      margin-bottom: 12px;
+    }
+
+    @include mini-mobile {
+      font-size: 16px;
+    }
+
     &-phone {
       display: block;
       margin-bottom: 16px;
@@ -56,6 +97,20 @@
       font-size: 14px;
       line-height: 17px;
       color: #C4CDD5;
+
+      @include tablet {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 12px;
+
+      }
+
+      @include mini-mobile {
+        font-size: 12px;
+      }
     }
 
     &-email {
@@ -65,6 +120,15 @@
       font-size: 14px;
       line-height: 17px;
       color: #C4CDD5;
+
+      @include tablet {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 12px;
+      }
     }
   }
 
@@ -73,12 +137,20 @@
 
     .footer__link + .footer__link {
       margin-top: 20px;
+
+      @include small-tablet {
+        margin-top: 12px;
+      }
     }
   }
 
   &__contacts {
     .footer__link:not(:last-child) {
       margin-bottom: 20px;
+
+      @include small-tablet {
+        margin-bottom: 12px;
+      }
     }
   }
 
@@ -87,6 +159,10 @@
 
     .footer__link:not(:last-child) {
       margin-bottom: 20px;
+
+      @include small-tablet {
+        margin-bottom: 12px;
+      }
     }
   }
 
@@ -115,6 +191,14 @@
       }
     }
 
+    @include tablet {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    @include mini-mobile {
+      font-size: 12px;
+    }
   }
 
   &__container {
@@ -141,6 +225,11 @@
       line-height: 17px;
       color: var(--white-color);
       opacity: 0.6;
+
+      @include mini-mobile {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
   }
 }
@@ -149,9 +238,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // &__link + &__link {
-  //   margin-left: 24px;
-  // }
+
+  &__link + &__link {
+    @include md-tablet {
+      margin-left: 24px;
+    }
+  }
 
   &__link {
     svg {
@@ -168,6 +260,19 @@
   font-size: 16px;
   line-height: 26px;
   font-style: normal;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @include small-tablet {
+    max-width: 190px;
+  }
+
+  @include mini-mobile {
+    font-size: 12px;
+  }
 }
 
 

@@ -4,6 +4,11 @@
   &__container {
     padding-top: 40px;
     padding-bottom: 40px;
+
+    @include mobile {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
   }
 
   &__list {
@@ -11,6 +16,34 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 207px;
+
+    @include xxl {
+      padding: 0 100px;
+    }
+
+    @include tablet {
+      padding: 0 50px;
+    }
+
+    @include small-tablet {
+      padding: 0 15px;
+      justify-content: initial;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @include small-tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-basis: 50%;
+
+      &:nth-child(-n+2) {
+        margin-bottom: 24px;
+      }
+    }
   }
 
   &__num {
@@ -27,6 +60,12 @@
     &--active {
       opacity: 1;
     }
+
+    @include mobile {
+      margin-bottom: 8px;
+      font-size: 24px;
+      line-height: 34px;
+    }
   }
 
   &__name {
@@ -35,5 +74,15 @@
     font-size: 16px;
     line-height: 26px;
     color: var(--gray-color);
+
+    @include small-tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 }

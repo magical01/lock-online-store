@@ -2,12 +2,26 @@
   padding-top: 100px;
   padding-bottom: 96px;
 
+  @include small-tablet {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 36px;
+  }
+
   &__container {
     position: relative;
   }
 
   &__title {
     margin-bottom: 64px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
   }
 
   &__slider {
@@ -26,7 +40,17 @@
   &-btn-next {
     position: absolute;
     right: 118px;
-    top: 19px;
+    top: 13px;
+
+    @include small-tablet {
+      top: 60px;
+      right: 15px;
+    }
+
+    @include mobile {
+      top: 44px;
+    }
+
 
     svg {
       path {
@@ -47,7 +71,16 @@
   &-btn-prev {
     position: absolute;
     right: 200px;
-    top: 19px;
+    top: 13px;
+
+    @include small-tablet {
+      top: 60px;
+      right: 80px;
+    }
+
+    @include mobile {
+      top: 44px;
+    }
 
     svg {
       path {
@@ -98,11 +131,21 @@
 
   &__image {
     background-color: rgba(0, 0, 0, 0.03);
+
+    picture {
+      @include mini-mobile {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 
   &__content {
     padding: 10px 12px;
-    box-shadow: inset 0px -1px 0px #EAEAEA, inset 1px 0px 0px #EAEAEA, inset -1px 0px 0px #EAEAEA;
+    // box-shadow: inset 0px -1px 0px #EAEAEA, inset 1px 0px 0px #EAEAEA, inset -1px 0px 0px #EAEAEA;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;
   }
 
   &__img {
@@ -258,7 +301,6 @@
     font-size: 15px;
     text-transform: uppercase;
     color: var(--blue-color);
-
   }
 
   &__cart {

@@ -7,9 +7,9 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
     row-gap: 50px;
     margin-bottom: 50px;
 
@@ -19,6 +19,14 @@
         outline-offset: 3px;
         transition: none;
       }
+    }
+
+    @include xxl {
+      column-gap: 20px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

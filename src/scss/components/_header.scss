@@ -109,7 +109,7 @@
   &__link {
     position: relative;
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       left: 0;
@@ -121,7 +121,7 @@
     }
 
     &:hover {
-      &::after {
+      &::before {
         width: 100%;
       }
     }
@@ -131,7 +131,6 @@
       outline-offset: 2px;
       transition: none;
     }
-
 
     &-catalog {
       position: relative;
