@@ -3,6 +3,7 @@
 
   &__content {
     display: flex;
+    width: 100%;
     margin-top: 31px;
   }
 
@@ -175,7 +176,6 @@
       line-height: 24px;
 
       span {
-        // position: absolute;
         font-weight: 200;
         font-size: 12px;
         line-height: 24px;
@@ -227,13 +227,17 @@
 }
 
 .catalog-grid {
-  width: 924px;
+  width: calc(100% - 288px - 30px);
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
     row-gap: 40px;
+
+    @include xxl {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     .product__instock {
       top: 12px;
@@ -244,7 +248,7 @@
   }
 
   &__item {
-    width: 288px;
+    width: 100%;
   }
 }
 

@@ -133,6 +133,7 @@
     background-color: rgba(0, 0, 0, 0.03);
 
     picture {
+      display: flex;
       @include mini-mobile {
         display: flex;
         justify-content: center;
@@ -305,6 +306,12 @@
 
   &__cart {
     transition: all .3s;
+  }
+}
+
+.catalog-grid__item {
+  .product__image picture {
+    justify-content: center;
   }
 }
 

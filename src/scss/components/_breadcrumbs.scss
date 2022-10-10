@@ -46,5 +46,10 @@
       outline-offset: 2px;
       transition: none;
     }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 }

@@ -1,9 +1,21 @@
 .catalog-categories {
   padding-bottom: 100px;
 
+  @include small-tablet {
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 64px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
   }
 
   &__list {
@@ -21,26 +33,74 @@
       }
     }
 
-    @include xxl {
-      column-gap: 20px;
+    @include xl {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include small-tablet {
       grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 24px;
+    }
+
+    @include mobile {
+      margin-bottom: 32px;
     }
   }
 
+  &__item {
+    transition: all .3s;
+    .text-center {
+      @include mobile {
+        text-align: initial;
+
+        span {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+
+          @include mini-mobile {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+
+  }
+
   &__image {
+    border: 1px solid #EAEAEA;
     margin-bottom: 16px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02));
+    transition: box-shadow .3s;
+
+    picture {
+      display: flex;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
+
+    &:hover {
+      transition: box-shadow .3s;
+      box-shadow: 3px 3px 20px rgb(50 50 50 / 25%);
+    }
   }
 
   &__btn {
-    padding: 12px 60px;
+    padding: 15px 60px;
 
     &:focus {
       outline: 2px solid var(--blue-color);
       outline-offset: 2px;
       transition: none;
     }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }
+

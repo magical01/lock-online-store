@@ -19,6 +19,14 @@
       height: 1px;
       background-color: #eaeaea;
     }
+
+    @include md-tablet {
+      width: 95%;
+    }
+
+    @include mobile {
+      padding: 16px 16px 0px 16px;
+    }
   }
 
   &__close {
@@ -54,6 +62,12 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 34px;
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 
   &__product {
@@ -73,6 +87,19 @@
       font-weight: 500;
       font-size: 20px;
       line-height: 30px;
+
+      @include mobile {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    @include mobile {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      line-height: 20px;
     }
   }
 
@@ -80,6 +107,26 @@
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
+
+    &-inner {
+      @include mobile {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+
+    @include mobile {
+      justify-content: initial;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 0;
+      padding: 24px 16px;
+      width: 100%;
+      background-color: #FFFFFF;
+      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.25);
+    }
   }
 
   &__link {
@@ -92,6 +139,12 @@
       outline: 2px solid var(--blue-color);
       outline-offset: 4px;
       transition: background-color .3s;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+      padding: 15px 40px;
+      width: 100%;
     }
   }
 
@@ -114,6 +167,11 @@
       outline: 2px solid var(--blue-color);
       outline-offset: 4px;
       transition: background-color .3s;
+    }
+
+    @include mobile {
+      padding: 14px 20px;
+      width: 100%;
     }
   }
 }
@@ -139,6 +197,7 @@
   &__picture {
     display: flex;
     justify-content: center;
+    margin-right: 12px;
     padding-top: 5px;
     height: 120px;
     background-color: rgba(0, 0, 0, 0.03);
@@ -146,16 +205,38 @@
     img {
       object-fit: contain;
     }
+
+    @include mobile {
+      width: 100px;
+      height: 100px;
+    }
+
+    @include mini-mobile {
+      margin-right: 5px;
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    margin-left: 12px;
   }
 
   &__title {
     line-height: 26px;
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    @include mini-mobile {
+      span {
+        display: block;
+      }
+    }
   }
 
   &__gift {
@@ -166,20 +247,19 @@
     &-link {
       position: relative;
       color: var(--blue-color);
-      transition: all .3s;
-
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background-color: currentColor;
-      }
+      text-decoration: underline;
+      transition: opacity .3s;
 
       &:hover {
         opacity: 0.7;
+        transition: opacity .3s;
       }
+    }
+
+    @include mobile {
+      display: none;
+      font-size: 12px;
+      line-height: 20px;
     }
   }
 
@@ -194,6 +274,12 @@
     display: inline-block;
     padding-right: 15px;
     width: fit-content;
+
+    @include mobile {
+      align-self: flex-end;
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -214,6 +300,10 @@
       outline-offset: -1px;
       transition: opacity .2s;
     }
+
+    @include mini-mobile {
+      font-size: 18px;
+    }
   }
 
   &__input {
@@ -232,6 +322,11 @@
       outline-offset: -1px;
       transition: opacity .2s;
     }
+
+    @include mini-mobile {
+      width: 40px;
+      height: 23px;
+    }
   }
 }
 
@@ -245,6 +340,7 @@
   &__list {
     margin-top: 16px;
     max-height: 195px;
+
   }
 
   &__item {
@@ -262,23 +358,32 @@
 
   &__picture {
     display: flex;
+    margin-right: 16px;
     height: 90px;
     background-color: rgba(0, 0, 0, 0.03);
 
     img {
       object-fit: contain;
     }
+
+    @include mobile {
+      margin-right: 8px;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    margin-left: 16px;
   }
 
   &__title {
     font-size: 14px;
     line-height: 24px;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   &__rating {
@@ -290,6 +395,10 @@
     font-size: 13px;
     line-height: 21px;
     color: var(--gray-color);
+
+    @include mini-mobile {
+      display: block;
+    }
   }
 
   &__prices {
@@ -311,6 +420,7 @@
     text-decoration-line: line-through;
     color: var(--gray-color);
   }
+
 }
 
 .cart-main__btn {
@@ -334,5 +444,37 @@
     outline: 1px solid var(--blue-color);
     outline-offset: -1px;
     transition: opacity .2s;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 18px;
+
+    svg {
+      margin-right: 7px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @include mini-mobile {
+    align-self: flex-end;
+
+    span {
+      display: none;
+    }
+
+    svg {
+      margin-right: 0;
+    }
+  }
+}
+
+.addition__right {
+  @include mobile {
+    .cart-main__btn svg {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
