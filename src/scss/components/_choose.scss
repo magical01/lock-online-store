@@ -3,17 +3,73 @@
   padding-bottom: 100px;
   background-color: #F2F8FF;
 
+  @include small-tablet {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  &__container {
+    overflow: hidden;
+  }
+
   &__title {
     margin-bottom: 64px;
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
   }
 
   &__content {
     display: flex;
     padding-right: max(15px, calc((100% - 1240px) / 2));
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      padding: 0 20px;
+    }
+
+    @include md-tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include small-tablet {
+      padding: 0 15px;
+    }
   }
 
   &__left {
     width: calc(100% - 553px - 82px);
+    margin-right: 82px;
+
+    @include xxl {
+      width: calc(100% - 553px - 50px);
+      margin-right: 50px;
+    }
+
+    @include xl {
+      width: calc(100% - 553px - 30px);
+      margin-right: 30px;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include md-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__picture {
@@ -24,12 +80,27 @@
     img {
       width: 100%;
     }
+
+    @include small-tablet {
+      height: 450px;
+    }
+
+    @include mobile {
+      height: 350px;
+    }
+
+    @include mini-mobile {
+      height: 272px;
+    }
   }
 
   &__right {
     flex-shrink: 0;
-    margin-left: 82px;
     width: 553px;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 }
 
@@ -37,6 +108,10 @@
 
   &__item {
     display: flex;
+
+    @include md-tablet {
+      height: 115px;
+    }
 
     &:not(:last-child) {
       .choose-advantages__image {
@@ -49,6 +124,11 @@
           height: 76px;
           background-color: #C4CDD5;
           transform: translateX(-50%);
+
+          @include mobile {
+            bottom: -56px;
+            height: 48px;
+          }
         }
       }
     }
@@ -56,6 +136,10 @@
 
   &__item + &__item {
     margin-top: 32px;
+
+    @include mobile {
+      margin-top: 6px;
+    }
   }
 
   &__image {
@@ -69,6 +153,9 @@
     min-width: 56px;
     height: 56px;
 
+    @include mobile {
+      margin-right: 11px;
+    }
   }
 
   &__text {
@@ -81,11 +168,32 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 32px;
+
+    @include mobile {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    @include mini-mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   &__descr {
     margin: 0;
     line-height: 26px;
     opacity: 0.7;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    @include mini-mobile {
+      font-size: 12px;
+      line-height: 22px;
+    }
   }
 }

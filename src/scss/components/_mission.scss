@@ -1,9 +1,21 @@
 .mission {
-  padding-top: 130px;
-  padding-bottom: 133px;
 
   &__container {
     display: flex;
+    padding-top: 130px;
+    padding-bottom: 133px;
+    overflow: hidden;
+
+    @include md-tablet {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 42px;
+    }
+
+    @include mobile {
+      padding-top: 52px;
+      padding-bottom: 40px;
+    }
   }
 
   &__left {
@@ -14,6 +26,12 @@
     .bracket {
       display: block;
       margin-bottom: 14px;
+    }
+
+    @include md-tablet {
+      padding-top: 0;
+      order: 2;
+      width: 100%;
     }
   }
 
@@ -38,6 +56,13 @@
       height: 2px;
       background-color: currentColor;
     }
+
+    @include mobile {
+      margin-bottom: 17px;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.06em;
+    }
   }
 
   &__descr {
@@ -47,6 +72,16 @@
     line-height: 36px;
     text-transform: capitalize;
     color: var(--gray-color);
+
+    @include xl {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 
   &__right {
@@ -80,24 +115,52 @@
         transition: all .3s;
       }
     }
+
+    @include md-tablet {
+      padding-left: 20px;
+      order: 1;
+      width: fit-content;
+    }
+
+    .pattern-gray {
+      @include md-tablet {
+        left: 1.5%;
+      }
+    }
   }
 
   &__picture {
     position: relative;
     display: flex;
     z-index: 10;
+    width: 100%;
 
     &--small {
       position: absolute;
+      display: flex;
       left: -60px;
       bottom: -46px;
       z-index: 20;
-      display: flex;
+      width: 40%;
 
       img {
         height: 292px;
         object-fit: contain;
       }
+
+      @include md-tablet {
+        left: -2px;
+        width: 31%;
+      }
+
+      @include mobile {
+        bottom: -69px;
+      }
+
+      @include mini-mobile {
+        bottom: -100px;
+      }
     }
+
   }
 }

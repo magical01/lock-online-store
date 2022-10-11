@@ -1,11 +1,25 @@
 .shipping {
 
+  &__container {
+    overflow: hidden;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     border-bottom: 1px solid #C4CDD5;
     padding-bottom: 40px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 42px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 32px;
+    }
   }
 
   &__item {
@@ -43,10 +57,13 @@
 
   &__image {
     margin-bottom: 16px;
+
   }
 
   &__picture {
+    position: relative;
     display: flex;
+    width: fit-content;
   }
 
   &__checkboxes-item {
@@ -88,8 +105,18 @@
   font-size: 32px;
   line-height: 42px;
 
+  @include mobile {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+  }
 }
 
 .shipping__title {
   margin-bottom: 50px;
+
+  @include mobile {
+    margin-bottom: 42px;
+  }
 }

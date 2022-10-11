@@ -1,9 +1,29 @@
 .about {
-  padding-top: 46px;
-  padding-bottom: 131px;
-
   &__container {
     display: flex;
+    padding-top: 46px;
+    padding-bottom: 131px;
+    overflow: hidden;
+
+    @include xl {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    @include md-tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include small-tablet {
+      padding-top: 20px;
+      padding-bottom: 70px;
+    }
+
+    @include mobile {
+      padding-top: 15px;
+      padding-bottom: 40px;
+    }
   }
 
   &__left {
@@ -58,6 +78,19 @@
         transition: all .3s;
       }
     }
+
+    @include xxl {
+      margin-right: 5%;
+    }
+
+    @include xl {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    @include md-tablet {
+      width: fit-content;
+    }
   }
 
 
@@ -66,6 +99,23 @@
     flex-direction: column;
     padding-top: 117px;
     width: 40%;
+
+    @include xxl {
+      padding-top: 70px;
+      width: calc(100% - 48.8% - 5%);
+    }
+
+    @include xl {
+      width: 100%;
+    }
+
+    @include tablet {
+      padding-top: 30px;
+    }
+
+    @include md-tablet {
+      padding-top: 0;
+    }
   }
 
   &__tab {
@@ -89,10 +139,18 @@
       height: 2px;
       background-color: currentColor;
     }
+
+    @include mobile {
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.06em;
+    }
   }
 
   &__title {
     margin-bottom: 12px;
+
     span {
       position: relative;
       display: inline-block;
@@ -101,11 +159,21 @@
       &::before {
         content: "";
         position: absolute;
-        right: -5px;
+        right: -14px;
         opacity: 0.2;
-        width: 227px;
+        width: calc(100% - 22px);
         height: 61px;
         background-color: #ADD7FF;
+
+        @include tablet {
+          width: calc(100% - 10px);
+          height: 50px;
+        }
+
+        @include mobile {
+          width: calc(100% - 5px);
+          height: 40px;
+        }
       }
     }
   }
@@ -115,6 +183,10 @@
     font-size: 14px;
     line-height: 24px;
     color: var(--gray-color);
+
+    @include mobile {
+      line-height: 22px;
+    }
   }
 }
 
@@ -122,9 +194,16 @@
   left: -5%;
   top: -7%;
 
+  @include xl {
+    left: -2.5%;
+  }
 }
 
 .pattern-blue {
   right: -5%;
   bottom: -7%;
+
+  @include xl {
+    right: -2.5%;
+  }
 }

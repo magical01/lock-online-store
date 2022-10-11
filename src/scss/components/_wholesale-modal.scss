@@ -9,6 +9,12 @@
     background-color: var(--white-color);
     border: 1px solid #EAEAEA;
     box-shadow: 0px 33px 50px rgba(58, 87, 116, 0.03);
+
+    @include mobile {
+      padding: 48px 10px;
+      width: 90%;
+    }
+
   }
 
   &__content {
@@ -29,6 +35,11 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 34px;
+
+    @include mini-mobile {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 
   &__descr {
@@ -40,10 +51,19 @@
     line-height: 22px;
     text-align: center;
     color: var(--gray-color);
+
+    @include mini-mobile {
+      font-size: 12px;
+      line-height: 20px;
+    }
   }
 
   &__btn {
     padding: 12px 57px;
-    width: 252px;;
+    width: 252px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }

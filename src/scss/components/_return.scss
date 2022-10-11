@@ -2,6 +2,15 @@
   padding-top: 40px;
   padding-bottom: 100px;
 
+  @include small-tablet {
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -17,6 +26,12 @@
     margin-bottom: 12px;
     font-weight: 500;
     line-height: 26px;
+
+    @include mobile {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   &__item {
@@ -25,6 +40,10 @@
     font-size: 14px;
     line-height: 24px;
     color: var(--gray-color);
+
+    @include mobile {
+      line-height: 22px;
+    }
 
     &::before {
       content: "";
@@ -50,6 +69,10 @@
 
     a {
       text-decoration: underline;
+    }
+
+    @include mobile {
+      line-height: 22px;
     }
   }
 

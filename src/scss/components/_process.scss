@@ -77,7 +77,7 @@
     position: relative;
     display: flex;
 
-    @include mobile {
+    @include tablet {
       width: fit-content;
     }
   }

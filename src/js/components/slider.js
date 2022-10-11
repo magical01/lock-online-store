@@ -43,6 +43,7 @@ vars.sliderNavItems.forEach((elem, index) => {
 const projectSlider = new Swiper('.projects-swiper', {
   loop: true,
   slidesPerView: 'auto',
+  spaceBetween: 5,
   pagination: {
     el: '.projects__pagination',
     type: 'bullets',

@@ -2,22 +2,48 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  @include small-tablet {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   &__container {
     position: relative;
   }
 
   &__title {
     margin-bottom: 64px;
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
   }
 
   &__swiper-inner {
     border: 1px solid #C4CDD5;
     padding: 64px;
+
+    @include tablet {
+      padding: 15px;
+    }
   }
 
   &__pagination {
     margin-top: 44px;
     text-align: center;
+
+    @include mobile {
+      margin-top: 25px;
+    }
   }
 
   &__navigation {
@@ -73,20 +99,49 @@
 .projects-slide {
   &__content {
     display: flex;
+
+    @include md-tablet {
+      flex-direction: column;
+    }
   }
 
   &__picture {
     display: flex;
     width: 46.1%;
     margin-right: calc(100% - 46.1% - 50.6%);
+
+    @include md-tablet {
+      justify-content: center;
+      margin-top: 56px;
+      margin-right: 0;
+      margin-bottom: 16px;
+      width: 100%;
+    }
   }
 
   &__text {
     width: 50.6%;
 
+    @include md-tablet {
+      width: 100%;
+    }
+
     picture {
       display: flex;
       margin-bottom: 32px;
+
+      @include md-tablet {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-bottom: 0;
+        transform: translateX(-50%);
+      }
+
+      @include mobile {
+        left: auto;
+        transform: initial;
+      }
     }
   }
 
@@ -96,6 +151,11 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 34px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 
   &__list {
@@ -108,6 +168,11 @@
     .custom-checkbox__text {
       font-size: 16px;
       line-height: 26px;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 24px;
+      }
 
       &::before {
         top: 2px;
@@ -130,6 +195,11 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 34px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
 
     span {
       color: var(--blue-color);
