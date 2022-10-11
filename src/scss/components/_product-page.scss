@@ -228,9 +228,16 @@
   }
 }
 
+.product-checkboxes {
+  margin-bottom: 24px;
+}
+
 .product-description {
   display: flex;
-  margin-top: 24px;
+
+  @include xl {
+    flex-direction: column;
+  }
 
   &__title {
     margin-bottom: 8px;
@@ -240,6 +247,14 @@
 }
 
 .equipment {
+  margin-right: 30px;
+
+  @include xl {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    margin-right: 0;
+  }
   .custom-select__top {
     border: 1px solid #C4CDD5;
     min-width: 322px;
@@ -256,8 +271,10 @@
 
 
 .color {
-  margin-left: 30px;
-
+  @include xl {
+    order: 1;
+    margin-bottom: 16px;
+  }
   &__list {
     display: flex;
   }

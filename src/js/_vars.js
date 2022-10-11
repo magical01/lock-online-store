@@ -30,8 +30,7 @@ export default {
   shippingCheckbox: document.querySelectorAll('.shipping__checkboxes-item'),
   number: document.querySelectorAll('.static__num'),
   statisticsNum: document.querySelectorAll('.statistics__number'),
+  catalogFiltersOpen: document.querySelector('.catalog-mobile-filters'),
+  catalogProductLeft: document.querySelector('.catalog-product__left'),
 
 }
-
-
-

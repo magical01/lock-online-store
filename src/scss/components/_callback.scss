@@ -116,6 +116,10 @@
     position: absolute;
     bottom: -20px;
     font-size: 14px;
+
+    @include small-tablet {
+      bottom: -15px;
+    }
   }
 }
 
