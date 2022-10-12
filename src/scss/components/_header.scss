@@ -261,6 +261,7 @@
 }
 
 .basket {
+  position: relative;
   display: block;
   cursor: pointer;
 
@@ -276,6 +277,30 @@
         stroke: var(--blue-color);
       }
     }
+  }
+
+  &--active {
+    .basket__count {
+      display: flex;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-family: "SFProDisplay", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--white-color);
+    background-color: var(--blue-color);
   }
 }
 

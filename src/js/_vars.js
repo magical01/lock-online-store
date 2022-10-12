@@ -33,4 +33,10 @@ export default {
   catalogFiltersOpen: document.querySelector('.catalog-mobile-filters'),
   catalogProductLeft: document.querySelector('.catalog-product__left'),
 
+  productsBtn: document.querySelectorAll('.to-cart'),
+  basket: document.querySelector('.basket'),
+  basketCount: document.querySelector('.basket__count'),
+  cartList: document.querySelector('.cart'),
+  fullPrice: document.querySelector('.popup__total-price'),
+
 }

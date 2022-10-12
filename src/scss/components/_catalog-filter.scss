@@ -552,6 +552,10 @@
       width: 14px;
       height: 14px;
     }
+
+    @include mobile {
+      left: -16px;
+    }
   }
 
   &-next-btn {
@@ -560,6 +564,10 @@
     svg {
       width: 14px;
       height: 14px;
+    }
+
+    @include mobile {
+      right: -16px;
     }
   }
 

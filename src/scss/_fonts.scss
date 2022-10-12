@@ -5,6 +5,5 @@
 @include font-face("SFUIText", "../fonts/SFUIText-Bold", 700, normal);
 @include font-face("SFProDisplay", "../fonts/SFProDisplay-Regular", 400, normal);
 @include font-face("SFProDisplay", "../fonts/SFProDisplay-Medium", 500, normal);
-@include font-face("Euclid", "../fonts/euclid-circular-a-regular", 400, normal);
-@include font-face("Euclid", "../fonts/euclid-circular-a-medium", 500, normal);
-@include font-face("Euclid", "../fonts/euclid-circular-a-semibold", 600, normal);
+@include font-face("Euclid", "../fonts/EuclidCircularA-Regular", 400, normal);
+@include font-face("Euclid", "../fonts/EuclidCircularA-SemiBold", 600, normal);

@@ -19,13 +19,17 @@
   }
 
   &__list {
-    max-width: 818px;
     border-bottom: 1px solid #C4CDD5;
     padding-bottom: 40px;
 
     @include mobile {
       padding-bottom: 32px;
     }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
   }
 
   &__item + &__item {
@@ -67,6 +71,7 @@
 
   &__descr {
     margin: 0;
+    max-width: 818px;
     font-size: 14px;
     line-height: 24px;
     color: var(--gray-color);

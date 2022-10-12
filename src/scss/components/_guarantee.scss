@@ -13,10 +13,18 @@
   &__list {
     border-bottom: 1px solid #C4CDD5;
     padding-bottom: 40px;
-    max-width: 818px;
 
     @include mobile {
       padding-bottom: 36px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      max-width: 818px;
     }
   }
 

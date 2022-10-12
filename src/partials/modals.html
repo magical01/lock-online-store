@@ -1,8 +1,10 @@
 <div class="graph-modal">
-  <div class="graph-modal__container popup popup__container" role="dialog" aria-modal="true" data-graph-target="cart-modal">
+  <div class="graph-modal__container popup popup__container" role="dialog" aria-modal="true"
+    data-graph-target="cart-modal">
     <div class="popup__top">
       <h4 class="popup__title">Корзина</h4>
-      <button class="btn-reset js-modal-close graph-modal__close popup__close focus-offset" aria-label="Закрыть модальное окно">
+      <button class="btn-reset js-modal-close graph-modal__close popup__close focus-offset"
+        aria-label="Закрыть модальное окно">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M14.6673 1.33331L1.33398 14.6666M14.6673 14.6666L1.33398 1.33331L14.6673 14.6666Z" stroke="#181818"
             stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
@@ -10,93 +12,16 @@
       </button>
     </div>
     <div class="graph-modal__content popup__content">
-      <div class="popup__product">
+      <div class="popup__product popup__product-empty--show">
+        <div class="popup__empty">
+          <h4 class="popup__empty-title">Корзина пуста</h4>
+          <span class="popup__empty-text">Пожалуйста, добавьте товар в корзину</span>
+        </div>
         <ul class="popup__list list-reset cart" data-cart data-simplebar>
-          <li class="cart__item">
-            <div class="cart__left">
-              <picture class="cart__picture">
-                <source srcset="img/slider-bottom-3.avif" type="image/avif">
-                <source srcset="img/slider-bottom-3.webp" type="image/webp">
-                <img loading="lazy" src="img/slider-bottom-3.png" class="image" width="136" height="120"
-                  alt="Дверной Замок Golden Soft для офиса">
-              </picture>
-              <div class="cart__content">
-                <span class="cart__title">Golden Soft <span>для офиса</span></span>
-                <p class="cart__gift">+ Подарок: <a class="cart__gift-link focus-offset" href="#">“Приложение к замкам Golden
-                    Service”</a>
-                </p>
-                <div class="cart__stepper stepper">
-                  <button class="stepper__btn stepper__btn--minus btn-reset focus-offset" aria-label="Минус">-</button>
-                  <input class="stepper__input input-reset focus-offset" type="text" min="1" max="99" maxlength="2" value="1">
-                  <button class="stepper__btn stepper__btn--plus btn-reset focus-offset" aria-label="Плюс">+</button>
-                </div>
-              </div>
-            </div>
-            <div class="cart__right">
-              <button class="cart__delete btn-reset cart-main__btn" aria-label="Удалить товар">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M4 6H20L18.42 20.22C18.3658 20.7094 18.1331 21.1616 17.7663 21.49C17.3994 21.8184 16.9244 22 16.432 22H7.568C7.07564 22 6.60056 21.8184 6.23375 21.49C5.86693 21.1616 5.63416 20.7094 5.58 20.22L4 6Z"
-                    stroke="#4295E4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path
-                    d="M7.345 3.147C7.50675 2.80397 7.76271 2.514 8.083 2.31091C8.4033 2.10782 8.77474 2 9.154 2H14.846C15.2254 1.99981 15.5971 2.10755 15.9176 2.31064C16.2381 2.51374 16.4942 2.80381 16.656 3.147L18 6H6L7.345 3.147Z"
-                    stroke="#4295E4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M2 6H22" stroke="#4295E4" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path d="M10 11V16" stroke="#4295E4" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path d="M14 11V16" stroke="#4295E4" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-                <span>Удалить</span>
-              </button>
-              <span class="cart__price price-symbol">33 000</span>
-            </div>
-          </li>
-          <li class="cart__item">
-            <div class="cart__left">
-              <picture class="cart__picture">
-                <source srcset="img/slider-bottom-3.avif" type="image/avif">
-                <source srcset="img/slider-bottom-3.webp" type="image/webp">
-                <img loading="lazy" src="img/slider-bottom-3.png" class="image" width="136" height="120"
-                  alt="Golden Soft для офиса">
-              </picture>
-              <div class="cart__content">
-                <span class="cart__title">Golden Soft <span>для офиса</span></span>
-                <p class="cart__gift">+ Подарок: <a class="cart__gift-link focus-offset" href="#">“Приложение к замкам Golden
-                    Service”</a>
-                </p>
-                <div class="cart__stepper stepper">
-                  <button class="stepper__btn stepper__btn--minus btn-reset focus-offset" aria-label="Минус">-</button>
-                  <input class="stepper__input input-reset focus-offset" type="text" min="1" max="99" maxlength="2" value="1">
-                  <button class="stepper__btn stepper__btn--plus btn-reset focus-offset" aria-label="Плюс">+</button>
-                </div>
-              </div>
-            </div>
-            <div class="cart__right">
-              <button class="cart__delete btn-reset cart-main__btn" aria-label="Удалить товар">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M4 6H20L18.42 20.22C18.3658 20.7094 18.1331 21.1616 17.7663 21.49C17.3994 21.8184 16.9244 22 16.432 22H7.568C7.07564 22 6.60056 21.8184 6.23375 21.49C5.86693 21.1616 5.63416 20.7094 5.58 20.22L4 6Z"
-                    stroke="#4295E4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path
-                    d="M7.345 3.147C7.50675 2.80397 7.76271 2.514 8.083 2.31091C8.4033 2.10782 8.77474 2 9.154 2H14.846C15.2254 1.99981 15.5971 2.10755 15.9176 2.31064C16.2381 2.51374 16.4942 2.80381 16.656 3.147L18 6H6L7.345 3.147Z"
-                    stroke="#4295E4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M2 6H22" stroke="#4295E4" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path d="M10 11V16" stroke="#4295E4" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path d="M14 11V16" stroke="#4295E4" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-                <span>Удалить</span>
-              </button>
-              <span class="cart__price price-symbol">33 000</span>
-            </div>
-          </li>
+
         </ul>
         <p class="popup__total">
-          Итого: <span class="popup__total-price price-symbol">66 000</span>
+          Итого: <span class="popup__total-price price-symbol">0</span>
         </p>
         <div class="popup__buttons-inner">
           <div class="popup__buttons">
@@ -305,7 +230,8 @@
     </div>
   </div>
 
-  <div class="graph-modal__container success success__container" role="dialog" aria-modal="true" data-graph-target="wholesale-modal">
+  <div class="graph-modal__container success success__container" role="dialog" aria-modal="true"
+    data-graph-target="wholesale-modal">
     <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
     <div class="graph-modal__content success__content">
       <picture class="success__picture">

@@ -15,6 +15,7 @@
 
   &__container {
     display: flex;
+    overflow: hidden;
 
     @include small-tablet {
       display: grid;

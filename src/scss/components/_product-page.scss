@@ -2,15 +2,37 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
+
+    @include md-tablet {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
 
   &__images {
     width: 48.6%;
-    margin-right: 2.4%
+    margin-right: 2.4%;
+
+    @include md-tablet {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    @include md-tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
     width: calc(100% - 48.6% - 2.4%);
+
+    @include md-tablet {
+      width: 100%;
+    }
   }
 }
 
@@ -24,6 +46,18 @@
 
     img {
       object-fit: contain;
+    }
+
+    @include small-tablet {
+      height: 400px;
+
+      img {
+        padding: 30px 0;
+      }
+    }
+
+    @include mobile {
+      height: 300px;
     }
   }
 
@@ -39,14 +73,23 @@
 
 .slider-nav {
   display: flex;
-  justify-content: space-between;
   margin-top: 20px;
   height: 133px;
 
+  @include md-tablet {
+    justify-content: space-between;
+  }
+
+  @include small-tablet {
+    justify-content: initial;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
   &__item {
-    display: flex;
     border: 1px solid #EAEAEA;
-    cursor: pointer;
     transition: all .3s;
 
     &:hover {
@@ -62,22 +105,49 @@
     picture {
       display: flex;
       justify-content: center;
+      height: 100%;
 
       img {
         max-width: 80%;
         object-fit: contain;
       }
     }
+
+    &:nth-of-type(2) {
+      padding: 10px 0;
+    }
+
+    &:nth-of-type(3) {
+      padding: 10px 0;
+    }
+  }
+
+  &__item + &__item {
+    margin-left: 2%;
+
+    @include md-tablet {
+      margin-left: 0;
+    }
+
+    @include small-tablet {
+      margin-left: 7.3%;
+    }
+
+    @include mobile {
+      margin-left: 0;
+    }
   }
 }
 
 .product-text {
+
   &__info {
     margin-bottom: 16px;
   }
 
   &__rating {
     font-size: 20px;
+    margin-right: 9px;
   }
 
   &__num {
@@ -87,16 +157,23 @@
     line-height: 21px;
     letter-spacing: 0.05em;
     color: var(--gray-color);
-  }
 
+    @include mobile {
+      margin-right: 5px;
+      font-size: 12px;
+      line-height: 21px;
+    }
+  }
 
   &__reviews {
     display: inline-block;
-    margin-left: 9px;
     font-weight: 600;
     font-size: 13px;
     color: var(--blue-color);
 
+    @include mobile {
+      margin-right: 10px;
+    }
   }
 
   &__title {
@@ -105,6 +182,11 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 30px;
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 32px;
+    }
   }
 
   &__prices {
@@ -117,6 +199,11 @@
     font-weight: 600;
     font-size: 22px;
     line-height: 26px;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 
   &__oldprice {
@@ -125,6 +212,11 @@
     line-height: 24px;
     text-decoration-line: line-through;
     color: #A4A4A4;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   &__buttons {
@@ -146,6 +238,48 @@
       outline: 2px solid var(--blue-color);
       outline-offset: 4px;
       transition: none;
+    }
+
+    @include tablet {
+      margin-right: 15px;
+      width: 250px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &__mob-favorite {
+    display: none;
+
+    @include mobile {
+      display: inline-block;
+      width: 20px;
+      height: 17px;
+      svg {
+        width: 17px;
+        height: 15px;
+
+        path {
+          transition: all .3s;
+        }
+      }
+
+      &:hover {
+        color: var(--blue-color);
+
+        svg path {
+          stroke: var(--blue-color);
+        }
+      }
+
+      &:focus {
+        outline: 1px solid var(--blue-color);
+        outline-offset: 1px;
+        transition: none;
+      }
     }
   }
 
@@ -180,13 +314,15 @@
       outline-offset: 1px;
       transition: none;
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__dropdowns {
     margin-top: 32px;
   }
-
-
 }
 
 .product-checkboxes {
@@ -198,6 +334,10 @@
   &__list {
     margin-top: 8px;
     display: flex;
+
+    @include mini-mobile {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -209,6 +349,10 @@
 
   &__item + &__item {
     margin-left: 12px;
+
+    @include mini-mobile {
+      margin-left: 0;
+    }
   }
 
   .custom-checkbox__text {
@@ -240,6 +384,7 @@
   }
 
   &__title {
+    display: inline-block;
     margin-bottom: 8px;
     font-weight: 600;
     line-height: 24px;
@@ -258,6 +403,12 @@
   .custom-select__top {
     border: 1px solid #C4CDD5;
     min-width: 322px;
+
+    @include mobile {
+      padding: 10px 30px 10px 16px;
+      min-width: auto;
+      font-size: 14px;
+    }
   }
 
   .custom-select--open {
@@ -267,8 +418,6 @@
     }
   }
 }
-
-
 
 .color {
   @include xl {
@@ -288,6 +437,11 @@
     width: 39px;
     height: 39px;
     transition: all .3s;
+
+    @include mobile {
+      width: 24px;
+      height: 24px;
+    }
 
     &--white {
       border: 1px solid #C4CDD5;
@@ -355,6 +509,11 @@
 
   &__title {
     font-weight: 500;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   &__icon {
@@ -409,10 +568,24 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    @include mini-mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   &__item + &__item {
     margin-left: 62px;
+
+    @include mobile {
+      margin-left: 16px;
+    }
   }
 
   &__btn {
@@ -440,15 +613,42 @@
 
   .tabs-content__inner {
     display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   .tabs-content__left {
-    width: 48.8%;
     margin-right: calc(100% - 48.8% - 48.8%);
+    width: 48.8%;
+
+    @include tablet {
+      order: 2;
+      margin-right: 0;
+      width: 100%;
+
+      .tabs-content__item {
+        &:nth-child(odd) {
+          background-color: var(--white-color);
+        }
+
+        &:nth-child(even) {
+          background-color: #fafafa;
+        }
+      }
+    }
+
+
   }
 
   .tabs-content__right {
     width: 48.8%;
+
+    @include tablet {
+      order: 1;
+      width: 100%;
+    }
   }
 
   .tabs-content__item {
@@ -468,7 +668,12 @@
     width: 50%;
     font-weight: 500;
     line-height: 26px;
-    color: #181818;;
+    color: #181818;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   .tabs-content__descr {
@@ -478,21 +683,67 @@
     font-size: 14px;
     line-height: 24px;
     color: var(--gray-color);
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 20px;
+    }
   }
 }
 
 [data-tabs-target="descr"] {
   .tabs-content__inner {
     display: flex;
+
+    @include md-tablet {
+      flex-direction: column;
+    }
   }
 
   .tabs-content__left {
     width: 57.4%;
     margin-right: calc(100% - 57.4% - 40.3%);
+
+    @include xxl {
+      margin-right: 0;
+    }
+
+    @include md-tablet {
+      order: 2;
+      width: 100%;
+    }
   }
 
   .tabs-content__right {
     width: 40.3%;
+
+    picture {
+      display: flex;
+
+      @include md-tablet {
+        justify-content: center;
+
+        img {
+          height: 450px;
+          object-fit: contain;
+        }
+      }
+
+      @include mobile {
+        img {
+          height: 350px;
+        }
+      }
+    }
+
+    @include xxl {
+      width: calc(100% - 57.4%);
+    }
+
+    @include md-tablet {
+      order: 1;
+      width: 100%;
+    }
   }
 
   .tabs-content__description {
@@ -500,12 +751,21 @@
     line-height: 26px;
     color: var(--gray-color);
 
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
     &:nth-of-type(1) {
       margin-bottom: 8px;
     }
 
     &:nth-of-type(2) {
       margin-bottom: 24px;
+
+      @include mobile {
+        margin-bottom: 16px;
+      }
     }
 
     &:nth-of-type(3) {
@@ -514,13 +774,29 @@
   }
 
   .tabs-content__title {
+    display: inline-block;
+    margin-bottom: 24px;
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
+
+    @include mobile {
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 
   .tabs-content__checkboxes {
-    margin-top: 24px;
+    margin-bottom: 24px;
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
   }
 
   .custom-checkbox__text {
@@ -530,6 +806,11 @@
     line-height: 26px;
     color: var(--gray-color);
 
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
     &::before {
       top: 3px;
       border-radius: 2px;
@@ -537,6 +818,10 @@
 
     &::after {
       top: 8px;
+
+      @include mobile {
+        top: 7px;
+      }
     }
   }
 }
@@ -544,10 +829,20 @@
 [data-tabs-target="reviews"] {
   .tabs-content__inner {
     display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   .tabs-content__list {
     width: 66%;
+    margin-right: calc(100% - 66% - 31.7%);
+
+    @include tablet {
+      margin-bottom: 24px;
+      width: 100%;
+    }
   }
 
   .tabs-content__item {
@@ -564,6 +859,11 @@
     align-items: center;
     border-bottom: 1px solid #EAEAEA;
     padding: 16px 24px;
+
+    @include mobile {
+      padding: 16px 16px 14px 16px;
+      flex-wrap: wrap;
+    }
   }
 
   .tabs-content__name {
@@ -571,6 +871,11 @@
     font-size: 18px;
     line-height: 28px;
     text-transform: capitalize;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px
+    }
   }
 
   .tabs-content__date {
@@ -579,12 +884,23 @@
     line-height: 14px;
     text-transform: capitalize;
     color: var(--gray-color);
+
+    @include mobile {
+      width: 100%;
+      order: 2;
+
+    }
   }
 
   .tabs-content__bottom {
     display: flex;
     flex-direction: column;
     padding: 16px 24px;
+
+    @include mobile {
+      padding: 12px 16px 16px 16px;
+    }
+
   }
 
   .tabs-content__description {
@@ -626,16 +942,27 @@
     display: flex;
     flex-direction: column;
     border: 1px solid #EAEAEA;;
-    margin-left: calc(100% - 66% - 31.7%);
     padding: 24px 26px 24px 21px;
     width: 31.7%;
     height: fit-content;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 16px;
+    }
 
     &__inner {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 20px;
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
     }
 
     &__label {
@@ -658,26 +985,39 @@
     &__name {
       padding: 0 25px 0 16px;
       height: 48px;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
 
     &__email {
       padding: 0 25px 0 16px;
       height: 48px;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
 
     &__comment {
       border: 1px solid #E4E7E9;
       padding: 12px 25px 12px 16px;
-      max-width: 100%;
-      min-width: 100%;
-      max-height: 140px;
-      min-height: 140px;
+      width: 100%;
       height: 140px;
       transition: all .3s;
+      resize: none;
 
       &:focus {
         outline: none;
         border: 1px solid var(--blue-color);
+      }
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 24px;
       }
     }
 
