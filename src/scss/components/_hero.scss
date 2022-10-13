@@ -20,6 +20,10 @@
       padding-top: 20px;
     }
 
+    @include mobile {
+      padding-top: 0;
+    }
+
     @include small-tablet {
       display: flex;
       flex-direction: column;
