@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.popup__link').classList.remove('popup__link--disabled');
     } else {
       vars.basket.classList.remove('basket--active');
+      vars.fullPrice.textContent = '0';
       document.querySelector('.popup__product').classList.add('popup__product-empty--show');
       document.querySelector('.popup__link').classList.add('popup__link--disabled');
     }

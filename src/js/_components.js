@@ -13,6 +13,7 @@ import './components/validation';
 import './components/anim-num';
 import './components/mobile-filter';
 import './components/cart';
+import './components/comments';
 import './components/aos';
 import './components/simplebar';
 import './components/range-slider';

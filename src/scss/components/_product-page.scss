@@ -835,13 +835,42 @@
     }
   }
 
-  .tabs-content__list {
+  .tabs-content__left {
     width: 66%;
     margin-right: calc(100% - 66% - 31.7%);
 
     @include tablet {
       margin-bottom: 24px;
       width: 100%;
+    }
+  }
+
+  .tabs-content__list {
+    margin-bottom: 16px;
+  }
+
+  .tabs-content__btn-more {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+    transition: color .3s;
+
+    svg {
+      margin-right: 8px;
+      transition: transform .3s;
+    }
+
+    &:hover {
+      color: var(--blue-color);
+      transition: color .3s;
+      svg {
+        transition: transform .3s;
+        transform: rotate(180deg);
+
+      }
     }
   }
 
@@ -1030,7 +1059,7 @@
     }
 
     &__btn {
-      padding: 16px 50px;
+      padding: 12px 50px;
       margin-top: 25px;
 
       &:focus {

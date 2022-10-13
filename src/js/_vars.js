@@ -39,4 +39,7 @@ export default {
   cartList: document.querySelector('.cart'),
   fullPrice: document.querySelector('.popup__total-price'),
 
+  commentsList: document.querySelector(`[data-tabs-target="reviews"] .tabs-content__list`),
+  btnMore: document.querySelector('.tabs-content__btn-more'),
+
 }

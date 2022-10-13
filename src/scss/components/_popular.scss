@@ -142,10 +142,10 @@
   }
 
   &__content {
-    padding: 10px 12px;
     border-right: 1px solid #eaeaea;
     border-bottom: 1px solid #eaeaea;
     border-left: 1px solid #eaeaea;
+    padding: 10px 12px;
   }
 
   &__img {
@@ -325,3 +325,19 @@
   }
 }
 
+
+.popular__slider {
+  .product__title {
+    margin-bottom: 0;
+  }
+
+  .product__content {
+    display: flex;
+    flex-direction: column;
+    height: 86px;
+  }
+
+  .product-custom {
+    margin-top: auto;
+  }
+}
