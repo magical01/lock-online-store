@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fetchComments(countComments);
 
-  vars.btnMore?.addEventListener('click', (e) => {
+  vars.btnMore?.addEventListener('click', () => {
     countComments = countComments + 2;
 
     fetchComments(countComments);
@@ -83,4 +83,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-})
+});

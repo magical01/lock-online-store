@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollAnim = (sectionSelector, activeSelector, mainSelector) => {
 
     const section = document.querySelector(sectionSelector);
-    const elemPosition = section?.offsetTop / 2;
+    const elemPosition = section?.offsetTop / 4;
     const topWindow = window.scrollY;
     const time = 3000;
 

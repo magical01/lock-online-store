@@ -186,6 +186,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  document.querySelectorAll('.stepper').forEach(elem => {
+    if (elem.querySelector('.stepper__input').value == 1) {
+      elem.querySelector('.stepper__btn--minus').classList.add('stepper__btn--disabled');
+    } else {
+      elem.querySelector('.stepper__btn--minus').classList.remove('stepper__btn--disabled');
+    }
+  });
+
 //  stepper
   vars.cartList?.addEventListener('click', (e) => {
 
@@ -197,13 +205,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       parent.querySelector('.stepper__btn--minus').classList.remove('stepper__btn--disabled');
 
+      plusFullPrice(+priceWithoutSpaces(parent.querySelector('.cart__price').textContent))
+      printFullPrice();
+
       if (parent.querySelector('.stepper__input').value > 9) {
         parent.querySelector('.stepper__input').value = 10;
         parent.querySelector('.stepper__btn--plus').classList.add('stepper__btn--disabled');
+
       } else {
         parent.querySelector('.stepper__btn--plus').classList.remove('stepper__btn--disabled');
-        plusFullPrice(+priceWithoutSpaces(parent.querySelector('.cart__price').textContent))
-        printFullPrice();
+
       }
     }
 
@@ -215,16 +226,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
       parent.querySelector('.stepper__btn--plus').classList.remove('stepper__btn--disabled');
 
+      minusFullPrice(+priceWithoutSpaces(parent.querySelector('.cart__price').textContent))
+      printFullPrice();
+
       if (parent.querySelector('.stepper__input').value <= 1) {
         parent.querySelector('.stepper__input').value = 1;
         parent.querySelector('.stepper__btn--minus').classList.add('stepper__btn--disabled');
       } else {
         parent.querySelector('.stepper__btn--minus').classList.remove('stepper__btn--disabled');
-        minusFullPrice(+priceWithoutSpaces(parent.querySelector('.cart__price').textContent))
-        printFullPrice();
       }
     }
 
   });
 
+  vars.basket?.addEventListener('click', () => {
+    document.querySelectorAll('.stepper').forEach(elem => {
+      if (elem.querySelector('.stepper__input').value == 1) {
+        elem.querySelector('.stepper__btn--minus').classList.add('stepper__btn--disabled');
+      } else {
+        elem.querySelector('.stepper__btn--minus').classList.remove('stepper__btn--disabled');
+      }
+    });
+  })
 });
