@@ -886,12 +886,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     border-bottom: 1px solid #EAEAEA;
     padding: 16px 24px;
 
     @include mobile {
       padding: 16px 16px 14px 16px;
-      flex-wrap: wrap;
     }
   }
 
@@ -908,17 +908,14 @@
   }
 
   .tabs-content__date {
+    order: 2;
+    width: 100%;
     font-weight: 300;
     font-size: 12px;
     line-height: 14px;
     text-transform: capitalize;
     color: var(--gray-color);
 
-    @include mobile {
-      width: 100%;
-      order: 2;
-
-    }
   }
 
   .tabs-content__bottom {

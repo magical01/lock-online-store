@@ -22,21 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="tabs-content__date">${data[i].date}</span>
                 <div class="tabs-content__rating rating">
                   <div class="rating__group">
-                    <input class="rating__star" id="reviews__5" name="reviews" type="radio" value="1"
+                    <input class="rating__star" id="${data[i].id}__5" name="${data[i].id}" type="radio" value="1"
                       aria-label="Ужасно">
-                    <label class="rating__label" for="reviews__5"></label>
-                    <input class="rating__star" id="reviews__4" name="reviews" type="radio" value="2"
+                    <label class="rating__label" for="${data[i].id}__5"></label>
+                    <input class="rating__star" id="${data[i].id}__4" name="${data[i].id}" type="radio" value="2"
                       aria-label="Сносно">
-                    <label class="rating__label" for="reviews__4"></label>
-                    <input class="rating__star" id="reviews__3" name="reviews" type="radio" value="3"
+                    <label class="rating__label" for="${data[i].id}__4"></label>
+                    <input class="rating__star" id="${data[i].id}__3" name="${data[i].id}" type="radio" value="3"
                       aria-label="Нормально" checked>
-                    <label class="rating__label" for="reviews__3"></label>
-                    <input class="rating__star" id="reviews__2" name="reviews" type="radio" value="4"
+                    <label class="rating__label" for="${data[i].id}__3"></label>
+                    <input class="rating__star" id="${data[i].id}__2" name="${data[i].id}" type="radio" value="4"
                       aria-label="Хорошо">
-                    <label class="rating__label" for="reviews__2"></label>
-                    <input class="rating__star" id="reviews__1" name="reviews" type="radio" value="5"
+                    <label class="rating__label" for="${data[i].id}__2"></label>
+                    <input class="rating__star" id="${data[i].id}__1" name="${data[i].id}" type="radio" value="5"
                       aria-label="Отлично">
-                    <label class="rating__label" for="reviews__1"></label>
+                    <label class="rating__label" for="${data[i].id}__1"></label>
                   </div>
                 </div>
               </div>
