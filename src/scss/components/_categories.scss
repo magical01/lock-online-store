@@ -148,16 +148,18 @@
     font-size: 16px;
     line-height: 26px;
     text-align: center;
-    transition: all .3s;
+    transition: border .3s, color .3s, background-color .3s;
 
     &:hover {
       border: 1px solid var(--blue-color);
       color: var(--white-color);
       background-color: var(--blue-color);
+      transition: border .3s, color .3s, background-color .3s;
     }
 
     &:active {
       background-color: #2E81D0;
+      transition: background-color .3s;
     }
 
     &:focus {

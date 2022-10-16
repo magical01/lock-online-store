@@ -283,7 +283,7 @@
   }
 }
 
-.custom-checkbox__input:focus + .custom-checkbox__text::before {
+.custom-checkbox__input:focus-visible + .custom-checkbox__text::before {
   outline: 1px solid var(--blue-color);
   outline-offset: 3px;
   transition: none;

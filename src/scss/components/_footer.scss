@@ -182,12 +182,13 @@
       width: 0px;
       height: 1px;
       background-color: var(--white-color);
-      transition: all .3s;
+      transition: width .3s;
     }
 
     &:hover {
       &::after {
         width: 100%;
+        transition: width .3s;
       }
     }
 
@@ -248,7 +249,7 @@
   &__link {
     svg {
       path {
-        transition: all .3s;
+        transition: fill .3s;
       }
     }
   }
@@ -286,6 +287,7 @@
     svg {
       path {
         fill: var(--blue-color);
+        transition: fill .3s;
       }
     }
   }
@@ -300,6 +302,7 @@
     svg {
       path {
         fill: var(--blue-color);
+        transition: fill .3s;
       }
     }
   }
@@ -314,6 +317,7 @@
     svg {
       path {
         fill: var(--blue-color);
+        transition: fill .3s;
       }
     }
   }

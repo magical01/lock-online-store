@@ -37,21 +37,23 @@
     font-size: 18px;
     line-height: 21px;
     color: var(--gray-color);
-    transition: all .3s;
+    transition: color .3s;
 
     svg {
       margin-right: 9px;
       width: 19px;
       height: 19px;
       fill: var(--blue-color);
-      transition: all .3s;
+      transition: fill .3s;
     }
 
     &:hover {
       color: var(--blue-color);
+      transition: color .3s;
 
       svg {
-        fill: #2E81D0;;
+        fill: #2E81D0;
+        transition: fill .3s;
       }
     }
   }
@@ -117,12 +119,13 @@
       width: 0px;
       height: 1px;
       background-color: var(--gray-color);
-      transition: all .3s;
+      transition: width .3s;
     }
 
     &:hover {
       &::before {
         width: 100%;
+        transition: width .3s;
       }
     }
 
@@ -145,7 +148,7 @@
         position: relative;
         margin-left: 5px;
         top: -3px;
-        transition: all .3s;
+        transition: transform .3s;
 
         @include tablet {
           margin-left: 0;
@@ -158,6 +161,7 @@
       &--open {
         svg {
           transform: rotate(-180deg);
+          transition: transform .3s;
 
           path {
             stroke: var(--blue-color);
@@ -183,7 +187,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translateX(-100%);
-    transition: all .3s;
+    transition: opacity .3s, visibility .3s, transform .3s;
   }
 
   &__mobile-top {
@@ -247,7 +251,7 @@
 
   svg {
     path {
-      transition: all .3s;
+      transition: stroke .3s;
     }
   }
 
@@ -255,6 +259,7 @@
     svg {
       path {
         stroke: var(--blue-color);
+        transition: stroke .3s;
       }
     }
   }
@@ -267,7 +272,7 @@
 
   svg {
     path {
-      transition: all .3s;
+      transition: stroke .3s;
     }
   }
 
@@ -275,6 +280,7 @@
     svg {
       path {
         stroke: var(--blue-color);
+        transition: stroke .3s;
       }
     }
   }
@@ -317,4 +323,5 @@
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+  transition: opacity .3s, visibility .3s, transform .3s;
 }

@@ -227,13 +227,14 @@
     height: 21px;
 
     path {
-      transition: all .3s;
+      transition: stroke .3s;
     }
   }
 
   &:hover {
     svg path {
       stroke: #C4CDD5;
+      transition: stroke .3s;
     }
   }
 
@@ -250,13 +251,14 @@
     height: 21px;
 
     path {
-      transition: all .3s;
+      transition: stroke .3s;
     }
   }
 
   &:hover {
     svg path {
       stroke: #C4CDD5;
+      transition: stroke .3s;
     }
   }
 }
