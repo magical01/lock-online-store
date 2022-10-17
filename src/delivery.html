@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    <div class="promocode">
+      <div class="container promocode__container">
+        <span class="promocode__none">fontsize 0</span>
+        <span class="promocode__text">Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09</span>
+        <a class="promocode__link" href="#">Обратный звонок</a>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__inner">
+          <a class="logo focus-offset" href="index.html">
+            <img loading="lazy" src="img/svg/logo.svg" class="logo__image" width="50" height="42" alt="logo">
+          </a>
+          <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+            <span class="burger__line"></span>
+          </button>
+          <nav class="nav" title="Главное меню" data-menu>
+            <ul class="nav__list list-reset">
+              <li class="nav__mobile-inner nav__mobile-top">
+                <div class="nav__item"><a class="nav__link" href="index.html">Главная</a></div>
+                <div class="nav__item"><a class="nav__link nav__link-catalog" href="#">
+                    Каталог
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.2334 1.25L5.90006 5.91667L10.5667 1.25" stroke="#161C24" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a></div>
+                <div class="nav__item"><a class="nav__link" href="wholesale.html">Оптовая продажа</a></div>
+                <div class="nav__item"><a class="nav__link" href="about.html">О нас</a></div>
+              </li>
+              <li class="nav__mobile-bottom">
+                <a class="header__phone focus-offset" href="tel:+79665588499">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                  +7 (966) 55 88 499
+                </a>
+                <a class="nav__callback" href="#">Обратный звонок</a>
+              </li>
+            </ul>
+
+          </nav>
+          <div class="header__items">
+            <a class="header__phone focus-offset" href="tel:+79665588499">
+              <svg>
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+              +7 (966) 55 88 499
+            </a>
+            <button class="header__favorites favorites btn-reset focus-offset" aria-label="Открыть избранное">
+              <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.75 1C3.57485 1 1 3.60947 1 6.82891C1 9.42778 2.00625 15.5958 11.9112 21.831C12.0886 21.9415 12.2923 22 12.5 22C12.7077 22 12.9114 21.9415 13.0888 21.831C22.9937 15.5958 24 9.42778 24 6.82891C24 3.60947 21.4251 1 18.25 1C15.0748 1 12.5 4.53267 12.5 4.53267C12.5 4.53267 9.92515 1 6.75 1Z"
+                  stroke="#454F5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="header__basket basket btn-reset focus-offset" aria-label="Открыть корзину" data-graph-path="cart-modal">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.6665 9.33334H25.0532C25.4257 9.33336 25.7942 9.41144 26.1347 9.56255C26.4752 9.71366 26.7803 9.93446 27.0303 10.2107C27.2803 10.4869 27.4696 10.8125 27.5861 11.1664C27.7026 11.5203 27.7436 11.8946 27.7065 12.2653L26.9065 20.2654C26.8407 20.9234 26.5328 21.5334 26.0425 21.9772C25.5522 22.4209 24.9145 22.6667 24.2532 22.6667H11.5198C10.9031 22.6669 10.3054 22.4534 9.82843 22.0625C9.35145 21.6716 9.02471 21.1274 8.90384 20.5227L6.6665 9.33334Z"
+                  stroke="#454F5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M6.6665 9.33333L5.5865 5.00933C5.51427 4.721 5.34777 4.46508 5.11345 4.28221C4.87912 4.09934 4.59041 4.00001 4.29317 4H2.6665"
+                  stroke="#454F5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10.6665 28H13.3332" stroke="#454F5B" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M21.3335 28H24.0002" stroke="#454F5B" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <span class="basket__count">1</span>
+            </button>
+          </div>
+        </div>
+        <div class="modals-catalog">
+          <div class="modals-catalog__inner">
+            <button class="modals-catalog__close btn-reset focus-offset" aria-label="Закрыть каталог">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.6673 1.33331L1.33398 14.6666M14.6673 14.6666L1.33398 1.33331L14.6673 14.6666Z" stroke="#181818"
+                  stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="modals-catalog__left">
+              <ul class="modals-catalog__list list-reset">
+                <li class="modals-catalog__item"><a href="catalog.html"
+                    class="modals-catalog__link focus-offset">Накладные электронные замки</a></li>
+                <li class="modals-catalog__item"><a href="catalog.html" class="modals-catalog__link focus-offset">Врезные электронные замки</a></li>
+                <li class="modals-catalog__item"><a href="catalog.html" class="modals-catalog__link focus-offset">Замки для квартиры</a></li>
+                <li class="modals-catalog__item"><a href="catalog.html" class="modals-catalog__link focus-offset">Замки для дома</a></li>
+                <li class="modals-catalog__item"><a href="catalog.html" class="modals-catalog__link focus-offset">Замки для отелей</a></li>
+                <li class="modals-catalog__item"><a href="catalog.html" class="modals-catalog__link focus-offset">Замки для офиса</a></li>
+                <li class="modals-catalog__item"><a href="catalog.html" class="modals-catalog__link focus-offset">Замки для шкафчиков</a></li>
+                <li class="modals-catalog__item"><a href="catalog.html" class="modals-catalog__link focus-offset">Замки для раздевалок</a></li>
+              </ul>
+              <a class="modals-catalog__btn main-btn" href="catalog.html">Смотреть все</a>
+            </div>
+            <div class="modals-catalog__right">
+              <picture>
+                <source srcset="img/modals-image.avif" type="image/avif">
+                <source srcset="img/modals-image.webp" type="image/webp">
+                <img loading="lazy" src="img/modals-image.png" class="image" width="351" height="300" alt="Замок" aria-hidden="true">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="visually-hidden">Доставка и оплата</h1>
+      <div class="breadcrumbs">
+        <div class="container breadcrumbs__container">
+          <ul class="breadcrumbs__list list-reset">
+            <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link breadcrumbs__link--current">Доставка и оплата</a></li>
+          </ul>
+        </div>
+      </div>
+      @include('partials/shipping.html')
+      @include('partials/pay.html')
+      @include('partials/guarantee.html')
+      @include('partials/return.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+  @include('partials/modals.html')
+</body>
+
+</html>

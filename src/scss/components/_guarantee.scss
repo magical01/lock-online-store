@@ -1,0 +1,66 @@
+.guarantee {
+  padding-top: 40px;
+
+  @include mobile {
+    padding-top: 32px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    border-bottom: 1px solid #C4CDD5;
+    padding-bottom: 40px;
+
+    @include mobile {
+      padding-bottom: 36px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      max-width: 818px;
+    }
+  }
+
+  &__subject {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: 500;
+    line-height: 26px;
+
+    @include mobile {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      margin-left: -20px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--blue-color);
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 8px;
+  }
+}

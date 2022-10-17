@@ -1,0 +1,207 @@
+.application {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #F2F8FF;
+
+  @include small-tablet {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include mobile {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  &__container {
+    display: flex;
+    overflow: hidden;
+
+    @include small-tablet {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    padding-top: 111px;
+    width: 40.3%;
+    margin-right: calc(100% - 40.3% - 54.6%);
+
+    @include small-tablet {
+      padding-top: 0;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @include mobile {
+      margin-bottom: 8px;
+      text-align: center;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    line-height: 26px;
+    color: var(--gray-color);
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__right {
+    border: 1px solid #EAEAEA;
+    padding: 32px;
+    width: 54.6%;
+    background-color: var(--white-color);
+    box-shadow: 0px 33px 50px rgba(58, 87, 116, 0.03);
+
+    @include mobile {
+      padding: 24px 16px;
+    }
+
+    &-title {
+      margin: 0;
+      margin-bottom: 32px;
+      font-family: "SFProDisplay", sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 34px;
+
+      @include mobile {
+        font-family: "SFProDisplay", sans-serif;
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .just-validate-error-label {
+      position: absolute;
+      bottom: -15px;
+      font-size: 12px;
+    }
+  }
+
+  &__search {
+    grid-column: span 2/3;
+
+    @include tablet {
+      grid-column: initial;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__input {
+    border: 1px solid #EBECEC;
+    padding: 0px 13px;
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    line-height: 24px;
+
+    &::placeholder {
+      color: #adadad;
+    }
+  }
+
+  &__list {
+    margin-bottom: 32px;
+
+    @include md-tablet {
+      margin-bottom: 24px;
+    }
+
+    .custom-checkbox__text {
+      font-size: 16px;
+      line-height: 26px;
+
+      &:before {
+        top: 3px;
+      }
+
+      @include tablet {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 22px;
+      }
+    }
+
+    .custom-checkbox--active .custom-checkbox__text::after {
+      top: 7px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      display: inline-block;
+      margin-bottom: auto;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+
+      @include md-tablet {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include md-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    padding: 15px 40px;
+    width: 252px;
+
+    @include md-tablet {
+      width: 100%;
+    }
+  }
+}

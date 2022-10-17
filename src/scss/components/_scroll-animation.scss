@@ -1,0 +1,176 @@
+// advantages
+[data-aos="adv-left"] {
+  transform: translate(-500px, 0px);
+  opacity: 0;
+  visibility: hidden;
+
+  @media (max-width: 882px) {
+    transform: translate(-100%, 0px);
+  }
+}
+[data-aos="adv-left"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.3s ease-in-out, visibility 1.3s ease-in-out, transform 1.3s ease-in-out;
+  transition-delay: .4s;
+}
+
+
+[data-aos="adv-center"] {
+  transform: translate(0px, 300px);
+  opacity: 0;
+  visibility: hidden;
+
+  @media (max-width: 882px) {
+    transform: translate(100%, 0px);
+  }
+}
+[data-aos="adv-center"].shipping__item {
+  @media (max-width: 1024px) {
+    transform: translate(100%, 0px);
+  }
+}
+[data-aos="adv-right"].shipping__item {
+  @media (max-width: 1024px) {
+    transform: translate(-100%, 0px);
+  }
+}
+
+
+[data-aos="adv-center"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.3s ease-in-out, visibility 1.3s ease-in-out, transform 1.3s ease-in-out;
+  transition-delay: .8s;
+}
+
+
+[data-aos="adv-right"] {
+  transform: translate(500px, 0px);
+  opacity: 0;
+  visibility: hidden;
+
+  @media (max-width: 882px) {
+    transform: translate(-100%, 0px);
+  }
+}
+[data-aos="adv-right"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.3s ease-in-out, visibility 1.3s ease-in-out, transform 1.3s ease-in-out;
+  transition-delay: 1.2s;
+}
+
+// hero
+[data-aos="hero-left"] {
+  transform: translate(-500px, 0px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.3s ease-in-out, visibility 1.3s ease-in-out, transform 1.3s ease-in-out;
+
+}
+[data-aos="hero-left"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.3s ease-in-out, visibility 1.3s ease-in-out, transform 1.3s ease-in-out;
+  transition-delay: .4s;
+}
+
+[data-aos="hero-right"] {
+  transform: translate(500px, 0px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.3s ease-in-out, visibility 1.3s ease-in-out, transform 1.3s ease-in-out;
+
+}
+[data-aos="hero-right"].aos-animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.3s ease-in-out, visibility 1.3s ease-in-out, transform 1.3s ease-in-out;
+  transition-delay: .4s;
+}
+
+// choose
+
+[data-aos="choose"] .choose-advantages__item:nth-of-type(1) {
+  opacity: 0;
+  visibility: hidden;
+}
+[data-aos="choose"] .choose-advantages__item:nth-of-type(2) {
+  opacity: 0;
+  visibility: hidden;
+}
+[data-aos="choose"] .choose-advantages__item:nth-of-type(3) {
+  opacity: 0;
+  visibility: hidden;
+}
+[data-aos="choose"] .choose-advantages__item:nth-of-type(4) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+[data-aos="choose"].aos-animate .choose-advantages__item:nth-of-type(1) {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+[data-aos="choose"].aos-animate .choose-advantages__item:nth-of-type(2) {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transition-delay: 1s;
+}
+[data-aos="choose"].aos-animate .choose-advantages__item:nth-of-type(3) {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transition-delay: 1.5s;
+}
+[data-aos="choose"].aos-animate .choose-advantages__item:nth-of-type(4) {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transition-delay: 2s;
+}
+
+
+
+// @include mobile {
+//   .hero__slider [data-aos="hero-left"] {
+//     transform: translate(-100px, 0px);
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: all 1.3s ease-in-out;
+//   }
+//   .hero__slider [data-aos="hero-left"].aos-animate {
+//     transform: translate(0px, 0px);
+//     opacity: 1;
+//     visibility: visible;
+//     transition: all 0.5s ease-in-out;
+//     transition-delay: .4s;
+//   }
+
+//   .hero__slider [data-aos="hero-right"] {
+//     transform: translate(100px, 0px);
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: all 1.3s ease-in-out;
+//   }
+//   .hero__slider [data-aos="hero-right"].aos-animate {
+//     transform: translate(0px, 0px);
+//     opacity: 1;
+//     visibility: visible;
+//     transition: all 0.5s ease-in-out;
+//     transition-delay: .4s;
+//   }
+// }
+
+
+

@@ -1,0 +1,198 @@
+.categories {
+  padding-top: 100px;
+
+  @include small-tablet {
+    padding-top: 70px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+    text-align: center;
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+
+    @include mobile {
+      column-gap: 20px;
+      row-gap: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    padding: 40px 10px 40px 40px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02));
+
+    @include xxl {
+      padding-left: 20px;
+    }
+
+    @include md-tablet {
+      flex-direction: column;
+      padding: 0;
+      background: unset;
+    }
+
+    @include mobile {
+      & a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: calc(100% - 40.8% - 54%);
+    width: 40.8%;
+
+
+    @include md-tablet {
+      order: 2;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54%;
+
+    @include md-tablet {
+      order: 1;
+      padding: 25px;
+      width: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02));
+
+      picture img {
+        height: 250px;
+        object-fit: contain;
+      }
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+      padding: 15px;
+      picture img {
+        height: 170px;
+      }
+    }
+
+    @include mini-mobile {
+      padding: 5px;
+
+      picture img {
+        height: 160px;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 34px;
+
+    @include xxl {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    @include xl {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    border: 1px solid var(--gray-color);
+    border-radius: 2px;
+    margin-top: 16px;
+    padding: 11px 50px;
+    width: 100%;
+    font-family: "SFProDisplay";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    transition: border .3s, color .3s, background-color .3s;
+
+    &:hover {
+      border: 1px solid var(--blue-color);
+      color: var(--white-color);
+      background-color: var(--blue-color);
+      transition: border .3s, color .3s, background-color .3s;
+    }
+
+    &:active {
+      background-color: #2E81D0;
+      transition: background-color .3s;
+    }
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 3px;
+      transition: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__center {
+    text-align: center;
+
+    @include mobile {
+      display: flex;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 15px 57px;
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 3px;
+      transition: none;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

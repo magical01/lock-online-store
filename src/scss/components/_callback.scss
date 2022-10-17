@@ -1,0 +1,136 @@
+.callback {
+  background-color: #f2f8ff;
+
+  &__container {
+    padding-top: 64px;
+    padding-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 24px;
+    max-width: 518px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--gray-color);
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+.form {
+  @include md-tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include small-tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__input {
+    border: 1px solid rgba(22, 28, 36, 0.04);
+    padding-right: 30px;
+    padding-left: 16px;
+    width: 240px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 26px;
+    background-color: rgba(22, 28, 36, 0.04);
+
+    &::placeholder {
+      color: var(--gray-color);
+      transition: all .2s;
+    }
+
+    @include small-tablet {
+      width: 70%;
+    }
+
+    @include mobile {
+      width: 100%;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    margin-right: 24px;
+
+    @include md-tablet {
+      margin-right: 0;
+    }
+
+    @include small-tablet {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+  }
+
+
+  &__btn {
+    padding: 15px 70px;
+
+    &:focus {
+      outline: 2px solid var(--blue-color);
+      outline-offset: 3px;
+      transition: none;
+    }
+
+    @include small-tablet {
+      width: 70%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .just-validate-error-label {
+    position: absolute;
+    bottom: -20px;
+    font-size: 14px;
+
+    @include small-tablet {
+      bottom: -15px;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.form__label {
+  @include mobile {
+    &:last-child {
+      margin-bottom: 50px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.process {
+  padding-top: 100px;
+  padding-bottom: 131px;
+
+  @include small-tablet {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 72px;
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 26px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__number {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: 12px;
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    display: flex;
+
+    @include tablet {
+      width: fit-content;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+  }
+}
+
+.subject {
+  position: relative;
+  margin: 0;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-left: -12px;
+    width: 2px;
+    height: 19px;
+    background-color: var(--blue-color);
+    transform: translateY(-50%);
+  }
+
+  @include xxl {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @include small-tablet {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

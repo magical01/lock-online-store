@@ -1,0 +1,281 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black-color);
+  overflow-anchor: none;
+  // padding-right: 0px !important;
+
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-container {
+  // overflow: hidden;
+  background-color: var(--white-color);
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  display: block;
+  margin: 0;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+
+  @include xxl {
+    font-size: 40px;
+    line-height: 58px;
+  }
+
+  @include tablet {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  @include mobile {
+    font-size: 22px;
+    line-height: 34px;
+  }
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+
+  @include xxl {
+    padding: 0 50px;
+  }
+
+  @include xl {
+    padding: 0 20px;
+  }
+
+  @include small-tablet {
+    padding: 0 15px;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.promocode {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  font-family: "SFProDisplay";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.12em;
+  color: var(--white-color);
+  background-color: #454f5b;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  &__none {
+    font-size: 0;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__text {
+    margin-left: 129px;
+    letter-spacing: 0.10em;
+
+    @include tablet {
+      margin-left: 0;
+    }
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__link {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      width: 100%;
+      border-bottom: 1px solid var(--white-color);
+    }
+
+    &:focus {
+      outline: 1px solid var(--blue-color);
+      outline-offset: 2px;
+      transition: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.main-btn {
+  font-family: "SFProDisplay", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: #56A9F8;
+    transition: background-color .3s;
+  }
+
+  &:focus {
+    background-color: #2E81D0;
+    outline: 2px solid var(--blue-color);
+    outline-offset: 4px;
+    transition: background-color .3s;
+  }
+
+  &:active {
+    background-color: #2E81D0;
+    transition: background-color .3s;
+  }
+
+  @include mobile {
+    line-height: 19px;
+  }
+
+  // @include mini-mobile {
+  //   width: 100%;
+  // }
+
+}
+
+.price-symbol {
+  position: relative;
+
+  &::before {
+    content: "₽";
+    position: absolute;
+    right: 0px;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+}
+
+.focus-offset {
+  &:focus {
+    outline: 1px solid var(--blue-color);
+    outline-offset: 2px;
+    transition: none;
+  }
+}
+
+.just-validate-error-field {
+  border: 1px solid #E04243 !important;
+}

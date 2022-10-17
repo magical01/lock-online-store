@@ -1,0 +1,19 @@
+.recently {
+  padding-top: 100px;
+
+  @include small-tablet {
+    padding-top: 70px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+  }
+}

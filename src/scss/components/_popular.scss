@@ -1,0 +1,345 @@
+.popular {
+  padding-top: 100px;
+  padding-bottom: 96px;
+
+  @include small-tablet {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 36px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+
+    .swiper-slide {
+      &:focus {
+        outline: 1px solid var(--blue-color);
+        outline-offset: 1px;
+        transition: none;
+      }
+    }
+  }
+
+  &-btn-next {
+    position: absolute;
+    right: 118px;
+    top: 13px;
+
+    @include small-tablet {
+      top: 60px;
+      right: 15px;
+    }
+
+    @include mobile {
+      top: 44px;
+    }
+
+
+    svg {
+      path {
+        transition: stroke .3s;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          stroke: #C4CDD5;
+          transition: stroke .3s;
+        }
+      }
+    }
+
+  }
+
+  &-btn-prev {
+    position: absolute;
+    right: 200px;
+    top: 13px;
+
+    @include small-tablet {
+      top: 60px;
+      right: 80px;
+    }
+
+    @include mobile {
+      top: 44px;
+    }
+
+    svg {
+      path {
+        transition: stroke .3s;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          stroke: #C4CDD5;
+          transition: stroke .3s;
+        }
+      }
+    }
+
+  }
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: box-shadow .3s;
+
+  a {
+    &:focus {
+      outline: 1px solid var(--blue-color);
+      outline-offset: -1px;
+      transition: box-shadow .3s;
+    }
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 10px rgb(50 50 50 / 25%);
+    transition: box-shadow .3s;
+
+    .product-custom__price {
+      transform: translateY(-100%);
+      transition: transform .3s;
+    }
+
+    .product-custom__cart {
+      transform: translateY(-100%);
+      transition: transform .3s;
+    }
+  }
+
+  &__image {
+    background-color: rgba(0, 0, 0, 0.03);
+
+    picture {
+      display: flex;
+      @include mini-mobile {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__content {
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;
+    padding: 10px 12px;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--gray-color);
+
+    a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__newprice {
+    display: inline-block;
+    margin-right: 12px;
+    padding-right: 13px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__oldprice {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--gray-color);
+    text-decoration-line: line-through;
+  }
+
+  &__sale {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    padding: 8px 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.03);
+  }
+
+  &__instock {
+    position: absolute;
+    left: 40px;
+    top: 17px;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+
+    span {
+      position: absolute;
+      left: -30px;
+      bottom: 2px;
+      padding: 10px;
+      background-color: #fff;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        bottom: 4px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-image: url("../img/svg/check.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__outstock {
+    position: absolute;
+    left: 40px;
+    top: 17px;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gray-color);
+
+    span {
+      position: absolute;
+      left: -30px;
+      bottom: 2px;
+      padding: 11px;
+      background-color: #fff;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        bottom: 5px;
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        background-image: url("../img/svg/redclose.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__gift {
+    position: absolute;
+    top: 49px;
+    left: 10px;
+    padding: 6px 8px;
+    padding-left: 30px;
+    font-size: 12px;
+    line-height: 14px;
+    background-color: #fff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-image: url("../img/svg/gift.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.product-custom {
+  position: relative;
+  z-index: 25;
+  overflow: hidden;
+  height: 24px;
+
+  &__price {
+    transition: transform .3s;
+  }
+
+  .to-cart {
+    position: relative;
+    z-index: 30;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--blue-color);
+    transition: opacity 0.3s;
+
+    &:disabled {
+      opacity: 0.5;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+  }
+
+  &__cart {
+    transition: transform .3s;
+  }
+}
+
+.catalog-grid__item {
+  .product__image picture {
+    justify-content: center;
+  }
+}
+
+
+.popular__slider {
+  .product__title {
+    margin-bottom: 0;
+  }
+
+  .product__content {
+    display: flex;
+    flex-direction: column;
+    height: 86px;
+  }
+
+  .product-custom {
+    margin-top: auto;
+  }
+}

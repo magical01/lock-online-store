@@ -1,0 +1,290 @@
+.catalog-descr {
+  padding-top: 96px;
+  padding-bottom: 100px;
+
+  @include small-tablet {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.descr-top {
+  margin-bottom: 82px;
+
+  @include small-tablet {
+    margin-bottom: 40px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    @include small-tablet {
+      order: 2;
+    }
+  }
+
+  &__right {
+    width: 100%;
+
+    picture {
+      display: flex;
+
+      @include small-tablet {
+        justify-content: center;
+      }
+    }
+
+    @include small-tablet {
+      order: 1;
+      margin-bottom: 16px;
+    }
+
+    @include mobile {
+      picture {
+        img {
+          height: 350px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    @include mini-mobile {
+      picture {
+        img {
+          height: 300px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    margin-bottom: 24px;
+
+    @include md-tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+}
+
+.descr-bottom {
+  &__left {
+    width: 100%;
+    height: 564px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03));
+
+    @include xxl {
+      height: 520px;
+    }
+
+    @include xl {
+      height: 480px
+    }
+
+    @include tablet {
+      height: 440px;
+    }
+
+    @include md-tablet {
+      height: 390px;
+    }
+
+    @include mini-mobile {
+      height: 300px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 16px;
+    }
+
+    picture {
+      display: flex;
+      transform: translate(50px, 50px);
+
+      @include tablet {
+        transform: translate(30px, 30px);
+
+        img {
+          width: 300px;
+        }
+      }
+
+      @include md-tablet {
+        transform: translate(15px, 30px);
+      }
+
+      @include small-tablet {
+        justify-content: center;
+      }
+
+      @include mini-mobile {
+        transform: translate(-15px, 30px);
+
+        img {
+          width: 230px;
+        }
+      }
+
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.descr-title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 42px;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @include mobile {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.descr-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--gray-color);
+
+  &:nth-of-type(1) {
+    margin-bottom: 24px;
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  cursor: pointer;
+  user-select: none;
+
+
+  &__input {
+    &:focus .custom-checkbox__text::before {
+      border: 10px solid var(--black-color);
+      transition: none;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 29px;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(#161C24, 0.9);
+    transition: all .3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      margin-left: -29px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #C4CDD5;
+      background-color: #fff;
+      transition: all .1s;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &--active {
+    .custom-checkbox__text {
+      &::before {
+        border: 1px solid var(--blue-color);
+        background-color: var(--blue-color);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 9px;
+        left: 4px;
+        width: 8px;
+        height: 7px;
+        background-image: url('../img/svg/checkbox.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.custom-checkbox__input:focus-visible + .custom-checkbox__text::before {
+  outline: 1px solid var(--blue-color);
+  outline-offset: 3px;
+  transition: none;
+}
