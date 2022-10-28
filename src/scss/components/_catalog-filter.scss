@@ -467,6 +467,10 @@
       outline: 1px solid var(--blue-color);
       transition: none;
     }
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &--open {
